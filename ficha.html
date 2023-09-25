@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+    <title>Ficha de Ocorrência</title>
+    <link rel="stylesheet" href="ficha.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light d-none d-lg-block">
+    <div class="container">
+        <a class="navbar-brand mb-0 h1" href="#">Ficha de Ocorrência</a>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Página Inicial</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Sobre</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contato</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- Menu em offcanvas -->
+            <!-- Breve explicação das classes
+                - d-lg-none: Indica ao Bootstrap que este menu offcanvas não irá aparecer em telas maiores que 992px.
+                - navbar-toggler: Indica ao Bootstrap que este é um botão de alternância.
+                - data-bs-toggle: Indica que este botão será utilizado para alternar a visibilidade do offcanvas.
+                - data-bs-target: Indica qual elemento terá sua visibilidade alternada.
+                - offcanvas-start: Indica que o menu offcanvas deve começar com seus elementos alinhados à esquerda da tela.
+                - aria-label: É utilizado para melhorar a acessibilidade da página da web.
+            -->
+            <div class="d-lg-none">
+
+                <nav class="navbar navbar-light bg-light">
+                    <div class="container">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasNav">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">S.A. Bombeiros</a>
+                    </div>
+                </nav>
+
+                <div class="offcanvas offcanvas-start" id="offcanvasNav">
+
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                            aria-label="Fechar"></button>
+                    </div>
+
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Página Inicial</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Sobre</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contato</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Login</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </header>
+    </div>
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Anamnese
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>  <banner>
+            <titulos id="Anamnese">Anamnese da Emergência Médica</titulos>
+            <div>
+                <div class="dest2">
+                    <div>O que aconteceu (sinais e sintomas)</div>
+                    <div><input class="oa" type="text" id="oq-aconteceu" name="oq-aconteceu"
+                            placeholder="Digite o que aconteceu" required />
+                    </div>
+                </div>
+                <div class="dest2">
+                    <div class="duplo">
+                        <div>Aconteceu outras vezes?</div>
+                        <div>
+                            <input type="checkbox" class="espass" id="s-acontecu" name="s-acontecu"
+                                value="s-acontecu">
+                            <label for="s-acontecu">Sim</label>
+                            <input type="checkbox" class="espass" id="n-acontecu" name="n-acontecu"
+                                value="n-acontecu">
+                            <label for="n-acontecu">Não</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dest2">
+                    <div>A quanto tempo aconteceu?</div>
+                    <div><input class="oa" type="text" id="tempo-aconteceu" name="tempo-aconteceu"
+                            placeholder="Digite a quanto tempo aconteceu" required />
+                    </div>
+                </div>
+
+                <div class="dest2">
+                    <div class="duplo">
+                        <div>Possui algum problema de saúde?</div>
+                        <input type="checkbox" class="espass" id="s-problema-saude"
+                            name="s-problema-saude" value="s-problema-saude">
+                        <label for="s-problema-saude">Sim</label>
+                        <input type="checkbox" class="espass" id="n-problema-saude"
+                            name="n-problema-saude" value="n-problema-saude">
+                        <label for="n-problema-saude">Não</label>
+                    </div>
+                </div>
+
+                <div class="dest2">
+                    <div>Quais?</div>
+                    <div><input class="oa" type="text" id="p-quais" name="p-quais"
+                            placeholder="Digite quais doenças" required />
+                    </div>
+                </div>
+
+                <div class="dest2">
+                    <div class="duplo">
+                        <div>Faz uso de medicação?</div>
+                        <input type="checkbox" class="espass" id="s-faz" name="s-faz" value="s-faz">
+                        <label for="s-faz">Sim</label>
+                        <input type="checkbox" class="espass" id="naof" name="naof" value="naof">
+                        <label for="naof">Não</label>
+                    </div>
+                </div>
+
+                <div class="dest2">
+                    <div class="duplo">
+                        <div>Horário da útima medicação:</div>
+                        <input type="text" class="insere" id="h-medicacao" placeholder="00:00">
+                    </div>
+                </div>
+
+                <div class="dest2">
+                    <div>Quais?</div>
+                    <div><input class="oa" type="text" id="m-quais" name="m-quais"
+                            placeholder="Digite quais medicações" required />
+                    </div>
+                </div>
+
+                <div class="dest2">
+                    <div>Alérgico a alguma coisa?</div>
+                    <input type="checkbox" class="espass" id="alergico" name="alergico"
+                        value="alergico">
+                    <label for="alergico">Sim</label>
+                    <input type="checkbox" class="espass" id="nao_alergico" name="nao_alergico"
+                        value="nao_alergico">
+                    <label for="nao_alergico">Não</label>
+                </div>
+
+                <div class="dest2">
+                    <div>Se sim, especifique</div>
+                    <div><input class="oa" type="text" id="ss-alergia" name="ss-alergia"
+                            placeholder="Digite a alérgia" required />
+                    </div>
+                </div>
+
+                <div class="dest2">
+                    <div class="duplo">
+                        <div>Ingeriu alimento ou líquido ≥ 6 horas:</div>
+                        <input type="checkbox" class="espass" id="ingeriu" name="ingeriu"
+                            value="ingeriu">
+                        <label for="ingeriu">Sim</label>
+                        <input type="checkbox" class="espass" id="nao_ingere" name="nao_ingere"
+                            value="nao_ingere">
+                        <label for="nao_ingere">Não</label>
+                    </div>
+                </div>
+
+                <div class="dest2">
+                    <div class="duplo">
+                        <div>Que horas?:</div>
+                        <input type="text" id="i-horas" class="insere" placeholder="00:00">
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Accordion Item #2
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Accordion Item #3
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
