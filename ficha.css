@@ -11,12 +11,28 @@ body {
         border-radius: 5px;
         margin-bottom: 5px;
         padding-left: 4px;
+        display: grid;
+        grid-template-rows: auto;
+        grid-gap: 10px;
     }
     banner {
         display: block;
        
     }
-    .duplo {
-        column-gap: 40px;
-        column-count: 2;
+    .inputs{
+        width: 50%;
+        height: 100%;
+        background-color: #E4F1FF;
+        border: none;
+        border-radius: 5px;
+        margin: 0 0 10px 0px ;
     }
+    .accordion-body{
+        background-color: #BDD8F4;
+    }
+ .btn-outline-danger{
+    width: 10%;
+ }
+.titles{
+    margin-left: 10px;
+}

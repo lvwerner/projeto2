@@ -25,7 +25,7 @@
                 <a class="nav-link" href="#">Contato</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
+                <a class="nav-link" href="teladelogin.html">Login</a>
             </li>
         </ul>
     </div>
@@ -70,7 +70,7 @@
                                 <a class="nav-link" href="#">Contato</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Login</a>
+                                <a class="nav-link" href="teladelogin.html">Login</a>
                             </li>
                         </ul>
                     </div>
@@ -83,101 +83,103 @@
 <div class="accordion" id="accordionExample">
     <div class="accordion-item">
       <h2 class="accordion-header">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Anamnese
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><p>
+          Anamnese da Emergência Médica</p>
         </button>
       </h2>
       <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
         <div class="accordion-body">
-          <strong>  <banner>
-            <titulos id="Anamnese">Anamnese da Emergência Médica</titulos>
+          <strong>  
+            <banner>
             <div>
                 <div class="dest2">
                     <div>O que aconteceu (sinais e sintomas)</div>
-                    <div><input class="oa" type="text" id="oq-aconteceu" name="oq-aconteceu"
+                    <div><input class="inputs" type="text" id="oq-aconteceu" name="oq-aconteceu"
                             placeholder="Digite o que aconteceu" required />
                     </div>
+                    <br>
                 </div>
                 <div class="dest2">
                     <div class="duplo">
                         <div>Aconteceu outras vezes?</div>
                         <div>
-                            <input type="checkbox" class="espass" id="s-acontecu" name="s-acontecu"
-                                value="s-acontecu">
-                            <label for="s-acontecu">Sim</label>
-                            <input type="checkbox" class="espass" id="n-acontecu" name="n-acontecu"
-                                value="n-acontecu">
-                            <label for="n-acontecu">Não</label>
+                            <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
+                    <label class="btn btn-outline-danger" for="vbtn-radio1">Sim</label>
+                    <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
+                    <label class="btn btn-outline-danger" for="vbtn-radio2">Não</label>
                         </div>
                     </div>
                 </div>
-
+                <br>
                 <div class="dest2">
                     <div>A quanto tempo aconteceu?</div>
-                    <div><input class="oa" type="text" id="tempo-aconteceu" name="tempo-aconteceu"
+                    <div><input class="inputs" type="text" id="tempo-aconteceu" name="tempo-aconteceu"
                             placeholder="Digite a quanto tempo aconteceu" required />
                     </div>
                 </div>
-
+                <br>
                 <div class="dest2">
                     <div class="duplo">
                         <div>Possui algum problema de saúde?</div>
-                        <input type="checkbox" class="espass" id="s-problema-saude"
-                            name="s-problema-saude" value="s-problema-saude">
-                        <label for="s-problema-saude">Sim</label>
-                        <input type="checkbox" class="espass" id="n-problema-saude"
-                            name="n-problema-saude" value="n-problema-saude">
-                        <label for="n-problema-saude">Não</label>
+                        <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
+                    <label class="btn btn-outline-danger" for="vbtn-radio1">Sim</label>
+                    <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
+                    <label class="btn btn-outline-danger" for="vbtn-radio2">Não</label>
                     </div>
                 </div>
+                <br>
 
                 <div class="dest2">
                     <div>Quais?</div>
-                    <div><input class="oa" type="text" id="p-quais" name="p-quais"
+                    <div><input class="inputs" type="text" id="p-quais" name="p-quais"
                             placeholder="Digite quais doenças" required />
                     </div>
                 </div>
+                <br>
 
                 <div class="dest2">
                     <div class="duplo">
                         <div>Faz uso de medicação?</div>
-                        <input type="checkbox" class="espass" id="s-faz" name="s-faz" value="s-faz">
-                        <label for="s-faz">Sim</label>
-                        <input type="checkbox" class="espass" id="naof" name="naof" value="naof">
-                        <label for="naof">Não</label>
+                        <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
+                    <label class="btn btn-outline-danger" for="vbtn-radio1">Sim</label>
+                    <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
+                    <label class="btn btn-outline-danger" for="vbtn-radio2">Não</label>
                     </div>
                 </div>
+                <br>
 
                 <div class="dest2">
                     <div class="duplo">
                         <div>Horário da útima medicação:</div>
-                        <input type="text" class="insere" id="h-medicacao" placeholder="00:00">
+                        <input type="time" class="inputs" id="h-medicacao" placeholder="00:00">
                     </div>
                 </div>
+                <br>
 
                 <div class="dest2">
                     <div>Quais?</div>
-                    <div><input class="oa" type="text" id="m-quais" name="m-quais"
+                    <div><input class="inputs" type="text" id="m-quais" name="m-quais"
                             placeholder="Digite quais medicações" required />
                     </div>
                 </div>
+                <br>
 
                 <div class="dest2">
                     <div>Alérgico a alguma coisa?</div>
-                    <input type="checkbox" class="espass" id="alergico" name="alergico"
-                        value="alergico">
-                    <label for="alergico">Sim</label>
-                    <input type="checkbox" class="espass" id="nao_alergico" name="nao_alergico"
-                        value="nao_alergico">
-                    <label for="nao_alergico">Não</label>
+                    <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
+                    <label class="btn btn-outline-danger" for="vbtn-radio1">Sim</label>
+                    <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
+                    <label class="btn btn-outline-danger" for="vbtn-radio2">Não</label>
                 </div>
+                <br>
 
                 <div class="dest2">
                     <div>Se sim, especifique</div>
-                    <div><input class="oa" type="text" id="ss-alergia" name="ss-alergia"
+                    <div><input class="inputs" type="text" id="ss-alergia" name="ss-alergia"
                             placeholder="Digite a alérgia" required />
                     </div>
                 </div>
+                <br>
 
                 <div class="dest2">
                     <div class="duplo">
@@ -190,14 +192,16 @@
                         <label for="nao_ingere">Não</label>
                     </div>
                 </div>
+                <br>
 
                 <div class="dest2">
                     <div class="duplo">
-                        <div>Que horas?:</div>
-                        <input type="text" id="i-horas" class="insere" placeholder="00:00">
+                        <div class="titles">Que horas?:</div>
+                        <input type="time" id="i-horas" class="inputs" placeholder="00:00">
                     </div>
                 </div>
-            </div>
+            </div>      <br>
+
         </div>
       </div>
     </div>
