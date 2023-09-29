@@ -1,44 +1,102 @@
-body{
+body {
     background-color: #BDD8F4;
 }
-    .dest2 {
-        background-color: #BDD8F4;
-        border-radius: 5px;
-        margin-bottom: 5px;
-        padding-left: 4px;
-        display: grid;
-        grid-template-rows: auto;
-        grid-gap: 10px;
-    }
-    banner {
-        display: block;
-       
-    }
-    .inputs{
-        width: 50%;
-        height: 100%;
-        background-color: #E4F1FF;
-        border: none;
-        border-radius: 5px;
-        margin: 0 0 10px 0px ;
-    }
-    .accordion-body{
-        background-color: #BDD8F4;
-    }
- .btn-outline-danger{
-    width: 10%;
- }
-.titles{
+
+.dest2 {
+    background-color: #BDD8F4;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding-left: 4px;
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+}
+
+banner {
+    display: block;
+
+}
+
+.inputs {
+    width: 50%;
+    height: 100%;
+    background-color: #E4F1FF;
+    border: none;
+    border-radius: 5px;
+    margin: 0 0 10px 0px;
+}
+
+.accordion-body {
+    background-color: #BDD8F4;
+}
+
+.btn-outline-danger {
+    width: 18%;
+    font-size: 100%;
+}
+
+.titles {
     margin-left: 10px;
 }
-.accordion{
+
+.accordion {
     width: 95%;
     margin-left: 2.5%;
     margin-top: 1%;
     filter: drop-shadow(0 0 10px #BDD8F4);
 }
+
 .causas {
     font-weight: 400;
     line-height: 25px;
     column-count: 3;
+    display: block;
+}
+
+/* Criar o checkbox customizado */
+.checkmark {
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 2px;
+}
+
+/* Adicionar uma cor de fundo cinza ao passar o mouse */
+.dest3:hover input.checkmark {
+    background-color: #ccc;
+}
+
+/* Quando o checkbox é clicado,adicionar um fundo rosa  */
+.dest3 input:checked.checkmark{
+    background-color: #ff0a54;
+}
+.dest3 .checkmark:after { 
+    -webkit-transform: rotate(45deg);
+    content:"";
+    position: absolute;
+    display: none;
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -ms-transform: rotate(45deg); transform: rotate(45deg);
+    }
+     /* Exibir o ícone quando selecionado */
+    .container input:checked~ .checkmark:after {
+        display: block;
+     }
+    /* Tabela */
+.table {
+    display: flex;
+    flex-direction: column;
+    border-collapse: collapse;
+    text-align: center;
+}
+.dest4{
+    width: 90%;
+    max-width: 90%;
 }
