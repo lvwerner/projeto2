@@ -5,8 +5,6 @@
     border-radius: 30px;
     text-align: initial;
     box-shadow: 0 0 20px rgb(63, 129, 222);
-    display: inline-grid;
-    grid-template-columns: repeat(50%);
    }
    .card >h1{
     margin-left: 3%;
