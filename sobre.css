@@ -1,0 +1,74 @@
+.card {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
+    border-radius: 30px;
+    text-align: initial;
+    box-shadow: 0 0 20px rgb(63, 129, 222);
+    display: inline-grid;
+    grid-template-columns: repeat(50%);
+   }
+   .card >h1{
+    margin-left: 3%;
+    margin-top: 1%;
+    text-align: initial;
+    font-size: 20px;
+    font-family: 'Open Sans', coursive;
+    font-weight: 600;
+   }
+   #textao,
+   .card >p{
+    margin-left: 4%;
+    margin-right: 4%;
+    text-align: justify;
+
+   }
+   #principal{
+    background-color: #BDD8F4;
+   }
+   .navbar{
+    background-color: #BDD8F4;
+   }
+   
+   #textao{
+    width: 50%;
+   }
+   #img{
+    width: 50%;
+   }
+   .carousel-container {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.carousel-slide {
+    display: none;
+    width: 100%;
+}
+
+.carousel-img {
+    width: 90%;
+    height: auto;
+    margin-left: 5%;
+}
+.carousel-img >img{
+    width: 90%;
+    height: auto;
+
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
