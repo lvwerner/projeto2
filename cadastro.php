@@ -4,7 +4,7 @@ $CPF = $_POST["CPF"];
 $Senha = $_POST["Senha"];
 
 $con = mysqli_connect('localhost','root','root');
-mysqli_select_db('sa_bombas', $con);
+mysqli_select_db('ajaxds1', $con);
 
 	
 $query = "SELECT cpf, senha FROM user WHERE cpf = $CPF and senha = $Senha";
