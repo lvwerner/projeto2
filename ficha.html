@@ -13,8 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light d-none d-lg-block">
+<body >
+    <nav class="navbar navbar-expand-lg navbar- bg-light d-none d-lg-block">
         <div class="container">
             <a class="navbar-brand mb-0 h1" href="#">Ficha de Ocorrência</a>
             <ul class="navbar-nav ml-auto">
@@ -220,17 +220,75 @@
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Accordion Item #2
-                </button>
+                    Dados Iniciais                </button>
             </h2>
             <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the
-                    collapse plugin adds the appropriate classes that we use to style each element. These classes
-                    control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                    modify any of this with custom CSS or overriding our default variables. It's also worth noting that
-                    just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit
-                    overflow.
+                    <banner>
+                        <div>
+                            <div class="dest2">
+                                <label for="data">Data:</label><br>
+                                <input type="text" class="form-control" placeholder="dd/mm/aaaa" data-mask="00/00/0000"
+                                    maxlength="10" autocomplete="off">
+                            </div>
+
+                            <div class="dest2">
+                                <div class="duplo">
+                                    <div class="radio">
+                                        <label for="sexo">Sexo:</label>
+                                        <input name="radios" class="b1" type="radio" id="s-f">Feminino
+                                        <input name="radios" type="radio" id="s-m">Masculino
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="dest2">
+                                <label for="nome-hospital">Nome do Hospital:</label><br>
+                                <input type="text" class="form-control" id="nome-hospital" name="nome-hospital"
+                                    placeholder="Digite o nome do Hospital" required />
+                            </div>
+
+                            <div class="dest2">
+                                <label for="nome-paciente">Nome:</label><br>
+                                <input type="text" class="form-control" id="nome-paciente" name="nome-paciente"
+                                    placeholder="Digite o nome do paciente" required />
+                            </div>
+
+                            <div class="dest2">
+                                <label for="idade">Idade;</label><br>
+                                <input type="text" class="form-control" id="idade" name="idade"
+                                    placeholder="Digite a idade do paciente" required />
+                            </div>
+
+                            <div class="dest2">
+                                <label for="fone">Fone:</label><br>
+                                <input type="text" class="form-control phone-mask" placeholder="0000-0000">
+                            </div>
+
+                            <div class="dest2">
+                                <label for="cpf">RG/CPF Paciente:</label><br>
+                                <input type="text" class="form-control cpf-mask" placeholder="000.000.000-00">
+                            </div>
+
+                            <div class="dest2">
+                                <label for="nome-acompanhante">Acompanhante:</label><br>
+                                <input type="text" class="form-control" id="nome-acompanhante" name="nome-acompanhante"
+                                    placeholder="Digite o nome do acompanhante" required />
+                            </div>
+
+                            <div class="dest2">
+                                <label for="idade-acompanhante">Idade:</label><br>
+                                <input type="text" class="form-control" id="idade-acompanhante"
+                                    name="idade-acompanhante" placeholder="Digite a idade do acompanhante" required />
+                            </div>
+
+                            <div class="dest2">
+                                <label for="local-ocorrencia">Local da Ocorrência:</label><br>
+                                <input type="text" class="form-control" id="local-ocorrencia" name="local-ocorrencia"
+                                    placeholder="Digite o local da ocorrência" required />
+                            </div>
+                        </div>
+                    </banner>
                 </div>
             </div>
         </div>

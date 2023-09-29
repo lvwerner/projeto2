@@ -1,10 +1,5 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-    font-family: 'Open Sans', coursive;
-    background-color: #E4F1FF;
-    /* align-items: center; */
+body{
+    background-color: #BDD8F4;
 }
     .dest2 {
         background-color: #BDD8F4;
@@ -35,4 +30,8 @@ body {
  }
 .titles{
     margin-left: 10px;
+}
+.accordion{
+    width: 95%;
+    margin-left: 2.5%;
 }
