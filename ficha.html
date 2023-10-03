@@ -916,6 +916,86 @@
                 </div>
             </div>
         </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSeven">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                Problemas Encontrados Suspeitos
+              </button>
+            </h2>
+            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+
+                <banner>
+                    <titulos id="problemas">Problemas Encontrados Suspeitos</titulos>
+                    <div>
+
+                        <div class="dest2">
+                            <input type="checkbox" class="checkmark" id="psiquiatrico" name="psiquiatrico"
+                                value="psiquiatrico">
+                            <label for="psiquiatrico">Psiquiátrico</label>
+                        </div>
+
+                        <div class="dest2">
+                            <input type="checkbox" class="checkmark" id="respiratório" name="respiratório"
+                                value="respiratório">
+                            <label for="respiratório">Respiratório:</label><br>
+                            <select class="le" name="respiratório">
+                                <option value="respiratório"></option>
+                                <option value="respiratório">DPOC</option>
+                                <option value="respiratório">Inalação Fumaça</option>
+                            </select>
+                        </div>
+
+                        <div class="dest2">
+                            <input type="checkbox" class="checkmark" id="diabetes" name="diabetes" value="diabetes">
+                            <label for="diabetes">Diabetes:</label><br>
+                            <select class="le" name="diabetes">
+                                <option value="diabetes"></option>
+                                <option value="diabetes">Hiperglicemia</option>
+                                <option value="diabetes">Hipoglicemia</option>
+                            </select>
+                        </div>
+
+                        <div class="dest2">
+                            <input type="checkbox" class="checkmark" id="obstetrico" name="obstetrico"
+                                value="obstetrico">
+                            <label for="obstetrico">Obstétrico:</label><br>
+                            <select class="le" name="obstetrico">
+                                <option value="obstetrico"></option>
+                                <option value="obstetrico">Parto Emergencial</option>
+                                <option value="obstetrico">Gestante</option>
+                                <option value="obstetrico">Hemor. Excessiva</option>
+                            </select>
+                        </div>
+
+                        <div class="dest2">
+                            <input type="checkbox" class="checkmark" id="transporte" name="transporte"
+                                value="transporte">
+                            <label for="transporte">Transporte:</label><br>
+                            <select class="le" name="transporte">
+                                <option value="transporte"></option>
+                                <option value="transporte">Aéreo</option>
+                                <option value="transporte">Clínico</option>
+                                <option value="transporte">Emergencial</option>
+                                <option value="transporte">Pós-trauma</option>
+                                <option value="transporte">Samu</option>
+                                <option value="transporte">Sem remoção</option>
+                                <option value="transporte">Outros</option>
+                            </select>
+                        </div>
+
+                        <div class="dest2">
+                            <input type="checkbox" class="checkmark" id="prob-outros" name="prob-outros"
+                                value="prob-outros">
+                            <label for="prob-outros">Outros:</label><br>
+                            <input type="text" class="form-control" id="prob-outros" name="prob-outros"
+                                placeholder="Digite os outros" required />
+                        </div>
+                    </div>
+                </banner>
+              </div>
+            </div>
+          </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
