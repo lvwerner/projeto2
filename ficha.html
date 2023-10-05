@@ -25,11 +25,15 @@
                     <a class="nav-link" href="sobre.html">Sobre</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="perfil.html">Perfil</a>
+                    <a class="nav-link" href="perfil.php">Perfil</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="login.html">Login</a>
                 </li>
+                <form action="logout.php" method="post">
+                    <input type="submit" name="logout" value="Sair" class="logout-button nav-link" />
+                </form>
+                
             </ul>
         </div>
     </nav>
@@ -68,12 +72,16 @@
                         <a class="nav-link" href="sobre.html">Sobre</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="perfil.html">Perfil</a>
+                        <a class="nav-link" href="perfil.php">Perfil</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="login.html">Login</a>
                     </li>
                 </ul>
+                <form action="logout.php" method="post">
+                    <input type="submit" name="logout" value="Logout" class="logout-button" />
+                </form>
+                
             </div>
 
         </div>

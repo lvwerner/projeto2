@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, maximum-scale=1.0">
@@ -81,22 +78,42 @@
 
     </div>
     </header>
-    <div class="card" id="card">
-        <div class="card__content">
-            <form action="conexao.php" method="get">
-                <div class="login-container">
-                    <div class="login-header">
-                        <div class="titulo">PERFIL</div>
-                    </div>
-                    <!-- Preencha os campos de entrada com os dados do usuário -->
-                    <input type="text" class="login-input" id="nome" name="nome" value="<?php echo $nome_completo; ?>"
-                        placeholder="Insira seu nome" />
-                    <input type="number" class="login-input" id="CPF" name="CPF" value="<?php echo $cpf; ?>"
-                        placeholder="xxx.xxx.xxx-xx" maxlength="11" minlength="11" />
-                    <input type="email" class="login-input" id="Email" name="Email" value="<?php echo $email; ?>"
-                        placeholder="********" />
+    <?php
+session_start();
 
-                </div>
-        </div>
-        
-</body>
+// Verificar se o usuário está logado na sessão
+if (!isset($_SESSION['cpf'])) {
+    // Redirecionar para a página de login, caso não esteja logado
+    header("Location: login.html");
+    exit();
+}
+
+// Conectar ao banco de dados
+$mysqli = new mysqli("localhost", "root", "", "sa_bombeiros");
+
+// Verificar a conexão
+if ($mysqli->connect_error) {
+    die("Erro de conexão com o banco de dados: " . $mysqli->connect_error);
+}
+
+// Obter o CPF do usuário logado na sessão
+$cpfUsuarioLogado = $_SESSION['cpf'];
+
+// Consultar os dados do usuário logado
+$query = "SELECT * FROM usuarios WHERE cpf = '$cpfUsuarioLogado'";
+$result = $mysqli->query($query);
+
+// Verificar se a consulta retornou resultados
+if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+    echo "ID: " . $row["id"] . "<br>";
+    echo "Nome Completo: " . $row["nome_completo"] . "<br>";
+    echo "Email: " . $row["email"] . "<br>";
+    echo "CPF: " . $row["cpf"] . "<br>";
+} else {
+    echo "Não foram encontrados registros para o usuário logado.";
+}
+
+// Fechar a conexão com o banco de dados
+$mysqli->close();
+?>
