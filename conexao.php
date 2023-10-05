@@ -2,7 +2,7 @@
 session_start();
 
 // Conectar ao banco de dados MySQL
-$mysqli = new mysqli("localhost", "root", "", "sa_bombeiros");
+include 'connect.php';
 
 // Verificar a conexão
 if ($mysqli->connect_error) {
