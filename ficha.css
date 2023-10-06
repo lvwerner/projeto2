@@ -90,10 +90,8 @@ banner {
         display: block;
      }
     /* Tabela */
-.table {
-    display: flex;
-    flex-direction: column;
-    border-collapse: collapse;
+#table tr{
+    
     text-align: center;
 }
 .dest4{
@@ -103,4 +101,7 @@ banner {
 
 .check2{
     width: 50%;
+}
+.form-check-input{
+    width: 987654323px;
 }
