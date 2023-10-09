@@ -252,11 +252,12 @@
             </h2>
             <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
+                    <form action="dadosinicias.php" method="post">
                     <banner>
                         <div>
                             <div class="dest2">
                                 <label for="data">Data:</label><br>
-                                <input type="date" class="inputs" placeholder="dd/mm/checkmarka" data-mask="00/00/0000"
+                                <input type="date" name="data" class="inputs" placeholder="dd/mm/checkmarka" data-mask="00/00/0000"
                                     maxlength="10" autocomplete="off">
                             </div>
 
@@ -264,22 +265,22 @@
                                 <div class="duplo">
                                     <div class="checkbox">
                                         <label for="sexo">Sexo:</label>
-                                        <input name="checkboxs" class="b1" type="checkbox" class="checkmark"
+                                        <input name="sexo" class="b1" type="checkbox" class="checkmark"
                                             id="s-f">Feminino
-                                        <input name="checkboxs" type="checkbox" class="checkmark" id="s-m">Masculino
+                                        <input name="sexo" type="checkbox" class="checkmark" id="s-m">Masculino
                                     </div>
                                 </div>
                             </div>
 
                             <div class="dest2">
                                 <label for="nome-hospital">Nome do Hospital:</label><br>
-                                <input type="text" class="inputs" id="nome-hospital" name="nome-hospital"
+                                <input type="text" class="inputs" id="nome-hospital" name="nome_hospital"
                                     placeholder="Digite o nome do Hospital" required />
                             </div>
 
                             <div class="dest2">
                                 <label for="nome-paciente">Nome:</label><br>
-                                <input type="text" class="inputs" id="nome-paciente" name="nome-paciente"
+                                <input type="text" class="inputs" id="nome-paciente" name="nome_paciente"
                                     placeholder="Digite o nome do paciente" required />
                             </div>
 
@@ -291,32 +292,35 @@
 
                             <div class="dest2">
                                 <label for="fone">Fone:</label><br>
-                                <input type="text" class="inputs phone-mask" placeholder="0000-0000">
+                                <input type="text" name="fone" class="inputs phone-mask" placeholder="0000-0000">
                             </div>
 
                             <div class="dest2">
                                 <label for="cpf">RG/CPF Paciente:</label><br>
-                                <input type="text" class="inputs cpf-mask" placeholder="000.000.000-00">
+                                <input type="text" name="rg_cpf_paciente" class="inputs cpf-mask" placeholder="000.000.000-00">
                             </div>
 
                             <div class="dest2">
                                 <label for="nome-acompanhante">Acompanhante:</label><br>
                                 <input type="text" class="inputs" id="nome-acompanhante" class="inputs"
-                                    name="nome-acompanhante" placeholder="Digite o nome do acompanhante" required />
+                                    name="nome_acompanhante" placeholder="Digite o nome do acompanhante" required />
                             </div>
 
                             <div class="dest2">
                                 <label for="idade-acompanhante">Idade:</label><br>
-                                <input type="text" class="inputs" id="idade-acompanhante" name="idade-acompanhante"
+                                <input type="text" class="inputs" id="idade-acompanhante" name="idade_acompanhante"
                                     placeholder="Digite a idade do acompanhante" required />
                             </div>
 
                             <div class="dest2">
                                 <label for="local-ocorrencia">Local da Ocorrência:</label><br>
-                                <input type="text" class="inputs" id="local-ocorrencia" name="local-ocorrencia"
+                                <input type="text" class="inputs" id="local-ocorrencia" name="local_ocorrencia"
                                     placeholder="Digite o local da ocorrência" required />
                             </div>
                         </div>
+                            <!-- Botão de Envio -->
+                        <input type="submit" name="Salvar" value="Salvar e Continuar" />
+                    </form>
                     </banner>
                 </div>
             </div>
@@ -330,6 +334,7 @@
             </h2>
             <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
+                    <form action="gestacional.php" method="post">
                     <banner>
                         <div class="dest2">
                             <div>Período da gestação</div>
@@ -519,9 +524,11 @@
                                         name="nome-acompanhante" placeholder="Digite o nome do bebê" required />
                                 </div>
                             </div>
+                            <!-- Botão de Envio -->
+                        <input type="submit" name="Salvar" value="Salvar e Continuar" />
                             <br>
                     </banner>
-
+                    </form>
                 </div>
             </div>
         </div>
@@ -534,6 +541,7 @@
             </h2>
             <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
+                    <!-- <form action="tipodeocorrencia.php" method="post"> -->
                     <banner>
                         <div>
                             <div class="causas">
