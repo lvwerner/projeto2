@@ -100,145 +100,147 @@
             </h2>
             <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    <strong>
+                    <form action="processar.php" method="post">
                         <banner>
-                            <div>
-                                <div class="dest2">
-                                    <div>O que aconteceu (sinais e sintomas)</div>
-                                    <div><input class="inputs" type="text" id="oq-aconteceu" name="oq-aconteceu"
-                                            placeholder="Digite o que aconteceu" required />
-                                    </div>
-                                    <br>
-                                </div>
-                                <div class="dest2">
-                                    <div class="duplo">
-                                        <div>Aconteceu outras vezes?</div>
-                                        <div class="form-check form-check-inline mb-3">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                id="inlineRadio1" value="option1">
-                                            <label class="form-check-label" for="inlineRadio1">Sim</label>
-                                        </div>
-
-                                        <div class="form-check form-check-inline mb-3">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                id="inlineRadio2" value="option2">
-                                            <label class="form-check-label" for="inlineRadio2">Não</label>
-                                        </div>
-                                    </div>
+                        <div>
+                            <div class="dest2">
+                                <div>O que aconteceu (sinais e sintomas)</div>
+                                <div><input class="inputs" type="text" id="oq-aconteceu" name="oq_aconteceu"
+                                        placeholder="Digite o que aconteceu" required />
                                 </div>
                                 <br>
-                                <div class="dest2">
-                                    <div>A quanto tempo aconteceu?</div>
-                                    <div><input class="inputs" type="text" id="tempo-aconteceu" name="tempo-aconteceu"
-                                            placeholder="Digite a quanto tempo aconteceu" required />
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="dest2">
-                                    <div class="duplo">
-                                        <div>Possui algum problema de saúde?</div>
-                                        <div class="form-check form-check-inline mb-3">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions2"
-                                                id="inlineRadio3" value="option3">
-                                            <label class="form-check-label" for="inlineRadio3">Sim</label>
-                                        </div>
-
-                                        <div class="form-check form-check-inline mb-3">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions2"
-                                                id="inlineRadio4" value="option4">
-                                            <label class="form-check-label" for="inlineRadio4">Não</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br>
-
-                                <div class="dest2">
-                                    <div>Quais?</div>
-                                    <div><input class="inputs" type="text" id="p-quais" name="p-quais"
-                                            placeholder="Digite quais doenças" required />
-                                    </div>
-                                </div>
-                                <br>
-
-                                <div class="dest2">
-                                    <div class="duplo">
-                                        <div>Faz uso de medicação?</div>
-                                        <div class="form-check form-check-inline mb-3">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions3"
-                                                id="inlineRadio5" value="option5">
-                                            <label class="form-check-label" for="inlineRadio5">Sim</label>
-                                        </div>
-
-                                        <div class="form-check form-check-inline mb-3">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions3"
-                                                id="inlineRadio6" value="option6">
-                                            <label class="form-check-label" for="inlineRadio6">Não</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br>
-
-                                <div class="dest2">
-                                    <div class="duplo">
-                                        <div>Horário da útima medicação:</div>
-                                        <input type="time" class="inputs" id="h-medicacao" placeholder="00:00">
-                                    </div>
-                                </div>
-                                <br>
-
-                                <div class="dest2">
-                                    <div>Quais?</div>
-                                    <div><input class="inputs" type="text" id="m-quais" name="m-quais"
-                                            placeholder="Digite quais medicações" required />
-                                    </div>
-                                </div>
-                                <br>
-
-                                <div class="dest2">
-                                    <div>Alérgico a alguma coisa?</div>
+                            </div>
+                            <div class="dest2">
+                                <div class="duplo">
+                                    <div>Aconteceu outras vezes?</div>
                                     <div class="form-check form-check-inline mb-3">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions4"
-                                            id="inlineRadio7" value="option7">
-                                        <label class="form-check-label " for="inlineRadio7">Sim</label>
+                                        <input class="form-check-input" type="radio" name="aconteceu_outras_vezes"
+                                            id="inlineRadio1" value="option1">
+                                        <label class="form-check-label" for="inlineRadio1">Sim</label>
                                     </div>
 
                                     <div class="form-check form-check-inline mb-3">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions4"
-                                            id="inlineRadio8" value="option8">
-                                        <label class="form-check-label" for="inlineRadio8">Não</label>
+                                        <input class="form-check-input" type="radio" name="aconteceu_outras_vezes"
+                                            id="inlineRadio2" value="option2">
+                                        <label class="form-check-label" for="inlineRadio2">Não</label>
                                     </div>
                                 </div>
-                                <br>
+                            </div>
+                            <br>
+                            <div class="dest2">
+                                <div>A quanto tempo aconteceu?</div>
+                                <div><input class="inputs" type="text" id="tempo-aconteceu" name="tempo_aconteceu"
+                                        placeholder="Digite a quanto tempo aconteceu" required />
+                                </div>
+                            </div>
+                            <br>
+                            <div class="dest2">
+                                <div class="duplo">
+                                    <div>Possui algum problema de saúde?</div>
+                                    <div class="form-check form-check-inline mb-3">
+                                        <input class="form-check-input" type="radio" name="possui_problema_saude"
+                                            id="inlineRadio3" value="option3">
+                                        <label class="form-check-label" for="inlineRadio3">Sim</label>
+                                    </div>
 
-                                <div class="dest2">
-                                    <div>Se sim, especifique</div>
-                                    <div><input class="inputs" type="text" id="ss-alergia" name="ss-alergia"
-                                            placeholder="Digite a alérgia" required />
+                                    <div class="form-check form-check-inline mb-3">
+                                        <input class="form-check-input" type="radio" name="possui_problema_saude"
+                                            id="inlineRadio4" value="option4">
+                                        <label class="form-check-label" for="inlineRadio4">Não</label>
                                     </div>
                                 </div>
-                                <br>
+                            </div>
+                            <br>
 
-                                <div class="dest2">
-                                    <div class="duplo">
-                                        <div>Ingeriu alimento ou líquido ≥ 6 horas:</div>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="ingeriu"
-                                            name="ingeriu" value="ingeriu">
-                                        <label for="ingeriu">Sim</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="nao_ingere"
-                                            name="nao_ingere" value="nao_ingere">
-                                        <label for="nao_ingere">Não</label>
+                            <div class="dest2">
+                                <div>Quais?</div>
+                                <div><input class="inputs" type="text" id="p-quais" name="quais_doencas"
+                                        placeholder="Digite quais doenças" required />
+                                </div>
+                            </div>
+                            <br>
+
+                            <div class="dest2">
+                                <div class="duplo">
+                                    <div>Faz uso de medicação?</div>
+                                    <div class="form-check form-check-inline mb-3">
+                                        <input class="form-check-input" type="radio" name="faz_uso_medicacao"
+                                            id="inlineRadio5" value="option5">
+                                        <label class="form-check-label" for="inlineRadio5">Sim</label>
+                                    </div>
+
+                                    <div class="form-check form-check-inline mb-3">
+                                        <input class="form-check-input" type="radio" name="faz_uso_medicacao"
+                                            id="inlineRadio6" value="option6">
+                                        <label class="form-check-label" for="inlineRadio6">Não</label>
                                     </div>
                                 </div>
-                                <br>
+                            </div>
+                            <br>
 
-                                <div class="dest2">
-                                    <div class="duplo">
-                                        <div class="titles">Que horas?:</div>
-                                        <input type="time" id="i-horas" class="inputs" placeholder="00:00">
-                                    </div>
+                            <div class="dest2">
+                                <div class="duplo">
+                                    <div>Horário da útima medicação:</div>
+                                    <input type="time" class="inputs" id="h-medicacao" name="horario_ultima_medicacao" placeholder="00:00">
                                 </div>
-                            </div> <br>
+                            </div>
+                            <br>
 
+                            <div class="dest2">
+                                <div>Quais?</div>
+                                <div><input class="inputs" type="text" id="m-quais" name="quais_medicacoes"
+                                        placeholder="Digite quais medicações" required />
+                                </div>
+                            </div>
+                            <br>
+
+                            <div class="dest2">
+                                <div>Alérgico a alguma coisa?</div>
+                                <div class="form-check form-check-inline mb-3">
+                                    <input class="form-check-input" type="radio" name="alergico_alguma_coisa"
+                                        id="inlineRadio7" value="option7">
+                                    <label class="form-check-label " for="inlineRadio7">Sim</label>
+                                </div>
+
+                                <div class="form-check form-check-inline mb-3">
+                                    <input class="form-check-input" type="radio" name="alergico_alguma_coisa"
+                                        id="inlineRadio8" value="option8">
+                                    <label class="form-check-label" for="inlineRadio8">Não</label>
+                                </div>
+                            </div>
+                            <br>
+
+                            <div class="dest2">
+                                <div>Se sim, especifique</div>
+                                <div><input class="inputs" type="text" id="ss-alergia" name="especificacao_alergia"
+                                        placeholder="Digite a alérgia" required />
+                                </div>
+                            </div>
+                            <br>
+
+                            <div class="dest2">
+                                <div class="duplo">
+                                    <div>Ingeriu alimento ou líquido ≥ 6 horas:</div>
+                                    <input type="checkbox" class="checkmark" class="checkmark" id="ingeriu"
+                                        name="ingeriu_limento_liquido" value="ingeriu">
+                                    <label for="ingeriu">Sim</label>
+                                    <input type="checkbox" class="checkmark" class="checkmark" id="nao_ingere"
+                                        name="ingeriu_limento_liquido" value="nao_ingere">
+                                    <label for="nao_ingere">Não</label>
+                                </div>
+                            </div>
+                            <br>
+
+                            <div class="dest2">
+                                <div class="duplo">
+                                    <div class="titles">Que horas?:</div>
+                                    <input type="time" id="i-horas" name="horas_ingeriu" class="inputs" placeholder="00:00">
+                                </div>
+                            </div>
+                        </div> <br>
+                        <!-- Botão de Envio -->
+                        <input type="submit" name="Salvar" value="Salvar e Continuar" />
+                        </form>
                 </div>
             </div>
         </div>
@@ -842,10 +844,12 @@
                                     </td>
                                 </tr>
                                 <th colspan="2"><label for="resp">TOTAL (GCS)(3-15)</label><br>
-                                    <input type="text" class="inputs" id="resp" name="resp" placeholder="Digite o total" required />
+                                    <input type="text" class="inputs" id="resp" name="resp" placeholder="Digite o total"
+                                        required />
                                 </th>
                                 <th colspan="2"><label for="resp">TOTAL (GCS)(3-15)</label><br>
-                                    <input type="text" class="inputs" id="resp" name="resp" placeholder="Digite o total" required />
+                                    <input type="text" class="inputs" id="resp" name="resp" placeholder="Digite o total"
+                                        required />
                                 </th>
                             </table>
                         </div>
