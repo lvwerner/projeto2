@@ -2,7 +2,7 @@
 session_start();
 
 // Conectar ao banco de dados MySQL
-include 'connect.php';
+$mysqli = include 'connect.php';
 
 // Verificar a conexão
 if ($mysqli->connect_error) {
