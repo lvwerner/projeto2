@@ -95,7 +95,7 @@ if (!isset($_SESSION['cpf'])) {
 }
 
 // Conectar ao banco de dados
-$mysqli = new mysqli("localhost", "root", "root", "sa_bombeiros");
+$mysqli = new mysqli("localhost", "root", "", "sa_bombeiros");
 
 // Verificar a conexão
 if ($mysqli->connect_error) {

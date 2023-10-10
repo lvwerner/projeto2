@@ -89,6 +89,7 @@
     </div>
     </header>
     </div>
+    <form action="processar.php" method="post">
     <div class="accordion" id="accordionExample">
         <div class="accordion-item">
             <h2 class="accordion-header">
@@ -100,7 +101,6 @@
             </h2>
             <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    <form action="processar.php" method="post">
                         <banner>
                         <div>
                             <div class="dest2">
@@ -238,9 +238,6 @@
                                 </div>
                             </div>
                         </div> <br>
-                        <!-- Botão de Envio -->
-                        <input type="submit" name="Salvar" value="Salvar e Continuar" />
-                        </form>
                 </div>
             </div>
         </div>
@@ -252,12 +249,11 @@
             </h2>
             <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    <form action="dadosinicias.php" method="post">
                     <banner>
                         <div>
                             <div class="dest2">
                                 <label for="data">Data:</label><br>
-                                <input type="date" name="data" class="inputs" placeholder="dd/mm/checkmarka" data-mask="00/00/0000"
+                                <input type="date" name="dia" class="inputs" placeholder="dd/mm/checkmarka" data-mask="00/00/0000"
                                     maxlength="10" autocomplete="off">
                             </div>
 
@@ -318,9 +314,6 @@
                                     placeholder="Digite o local da ocorrência" required />
                             </div>
                         </div>
-                            <!-- Botão de Envio -->
-                        <input type="submit" name="Salvar" value="Salvar e Continuar" />
-                    </form>
                     </banner>
                 </div>
             </div>
@@ -334,7 +327,6 @@
             </h2>
             <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    <form action="gestacional.php" method="post">
                     <banner>
                         <div class="dest2">
                             <div>Período da gestação</div>
@@ -519,12 +511,8 @@
                                         name="nome_bebe" placeholder="Digite o nome do bebê" required />
                                 </div>
                             </div>
-                            <br>
-                            <!-- Botão de Envio -->
-                        <input type="submit" name="Salvar" value="Salvar e Continuar" />
-                            <br>
+                            <br>                           
                     </banner>
-                    </form>
                 </div>
             </div>
         </div>
@@ -537,7 +525,6 @@
             </h2>
             <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    <form action="tipoocorrencia.php" method="post">
                     <banner>
                         <div>
                             <div class="causas">
@@ -672,10 +659,7 @@
                                 </div>
                             </div>
                         </div>
-                        <input type="submit" name="Salvar" value="Salvar e Continuar" />
-
                     </banner>
-                    </form>
                 </div>
             </div>
         </div>
@@ -700,162 +684,162 @@
                                 </tr>
                                 <tr class="dest4">
                                     <td><label for="resp">Espontânea</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="resp"
+                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="espontanea"
                                             value="resp">4
                                     </td>
                                     <td><label for="resp">Espontânea</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="resp"
+                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="espontanea"
                                             value="resp">4
                                     </td>
                                 </tr>
                                 <tr>
                                     <td><label for="resp">Comando Verbal</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="resp"
+                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="comando_verbal"
                                             value="resp">3
                                     </td>
                                     <td><label for="resp">Comando Verbal</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="resp"
+                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="comando_verbal"
                                             value="resp">3
                                     </td>
                                 </tr>
                                 <tr class="dest4">
                                     <td><label for="resp">Estímulo Doloroso</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="resp"
+                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="estimulo_doloroso"
                                             value="resp">2
                                     </td>
                                     <td><label for="resp">Estímulo Doloroso</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="resp"
+                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="estimulo_doloroso"
                                             value="resp">2
                                     </td>
                                 </tr>
                                 <tr>
                                     <td><label for="resp">Nenhuma</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="resp"
+                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="nenhuma"
                                             value="resp">1
                                     </td>
                                     <td><label for="resp">Nenhuma</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="resp"
+                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="nenhuma"
                                             value="resp">1
                                     </td>
                                 </tr>
                                 <th rowspan="6">RESPOSTA <br> VERBAL</th>
                                 <tr class="dest4">
                                     <td><label for="resp">Orientado</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="" name="resp"
+                                        <input type="checkbox" class="checkmark" class="checkmark" id="" name="orientado"
                                             value="resp">5
                                     </td>
                                     <td><label for="resp">Palavras e Frase Apropriadas</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="" name="resp"
+                                        <input type="checkbox" class="checkmark" class="checkmark" id="" name="palavras_frase_apropriadas"
                                             value="resp">5
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td><label for="resp">Confliso</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="" name="resp"
+                                    <td><label for="resp">Conflito</label>
+                                        <input type="checkbox" class="checkmark" class="checkmark" id="" name="conflito"
                                             value="resp">4
                                     </td>
                                     <td><label for="resp">Palavras Inapropriadas</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="" name="resp"
+                                        <input type="checkbox" class="checkmark" class="checkmark" id="" name="palavras_inapropriadas"
                                             value="resp">4
                                     </td>
                                 </tr>
                                 <tr class="dest4">
                                     <td><label for="resp">Palavras Inapropriadas</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="" name="resp"
+                                        <input type="checkbox" class="checkmark" class="checkmark" id="" name="palavras_inapropriadas2"
                                             value="resp">3
                                     </td>
                                     <td><label for="resp">Choro Persistente ou Gritos</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="" name="resp"
+                                        <input type="checkbox" class="checkmark" class="checkmark" id="" name="choro_persistente"
                                             value="resp">3
                                     </td>
                                 </tr>
                                 <tr>
                                     <td><label for="resp">Palavras Incompreensíveis</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="" name="resp"
+                                        <input type="checkbox" class="checkmark" class="checkmark" id="" name="palavras_incompreensiveis"
                                             value="resp">2
                                     </td>
                                     <td><label for="resp">Sons Incompreensíveis</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="" name="resp"
+                                        <input type="checkbox" class="checkmark" class="checkmark" id="" name="sons_incompreensiveis"
                                             value="resp">2
                                     </td>
                                 </tr>
                                 <tr class="dest4">
                                     <td><label for="resp">Nenhuma</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="" name="resp"
+                                        <input type="checkbox" class="checkmark" class="checkmark" id="" name="nenhuma_resposta_verbal"
                                             value="resp">1
                                     </td>
                                     <td><label for="resp">Nenhuma Resposta Verbal</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="resp"
+                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="nenhuma_resposta_verbal"
                                             value="resp">1
                                     </td>
                                 </tr>
                                 <th rowspan="7">RESPOSTA <br> MOTORA</th>
                                 <tr>
                                     <td><label for="resp">Obedece Comandos</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="resp"
+                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="obedece_comandos"
                                             value="resp">6
                                     </td>
                                     <td><label for="resp">Obedece Prontamente</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="resp"
+                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="obedece_prontamente"
                                             value="resp">6
                                     </td>
                                 </tr>
                                 <tr class="dest4">
                                     <td><label for="resp">Localiza Dor</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="resp"
+                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="localiza_dor"
                                             value="resp">5
                                     </td>
                                     <td><label for="resp">Localiza Dor ou Estímulo Tatil</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="resp"
+                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="localiza_dor_ou_estimulo_tatil"
                                             value="resp">5
                                     </td>
                                 </tr>
                                 <tr>
                                     <td><label for="resp">Movimento de retirada</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="resp"
+                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="movimento_de_retirada"
                                             value="resp">4
                                     </td>
                                     <td><label for="resp">Retirada do Segmento Estimulado</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="resp"
+                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name=""retirada_do_segmento_estimulado"
                                             value="resp">4
                                     </td>
                                 </tr>
                                 <tr class="dest4">
                                     <td><label for="resp">Flexão Anormal</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="resp"
+                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="flexao_anormal"
                                             value="resp">3
                                     </td>
                                     <td><label for="resp">Flexão Anormal (Decorticação)</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="resp"
+                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="flexao_anormal2"
                                             value="resp">3
                                     </td>
                                 </tr>
                                 <tr>
                                     <td><label for="resp">Extensão Anormal</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="resp"
+                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="extensao_anormal"
                                             value="resp">2
                                     </td>
                                     <td><label for="resp">Extensão Anormal (Decerebração)</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="resp"
+                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="extensao_anormal2"
                                             value="resp">2
                                     </td>
                                 </tr>
                                 <tr class="dest4">
                                     <td><label for="resp">Nenhuma</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="resp"
+                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="nenhuma_resposta_motora"
                                             value="resp">1
                                     </td>
                                     <td><label for="resp">Ausência (Paralisia Flácida, Hipotônia)</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="resp"
+                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="ausencia"
                                             value="resp">1
                                     </td>
                                 </tr>
                                 <th colspan="2"><label for="resp">TOTAL (GCS)(3-15)</label><br>
-                                    <input type="text" class="inputs" id="resp" name="resp" placeholder="Digite o total"
+                                    <input type="text" class="inputs" id="resp" name="total_gcs_1" placeholder="Digite o total"
                                         required />
                                 </th>
                                 <th colspan="2"><label for="resp">TOTAL (GCS)(3-15)</label><br>
-                                    <input type="text" class="inputs" id="resp" name="resp" placeholder="Digite o total"
+                                    <input type="text" class="inputs" id="resp" name="total_gcs_2" placeholder="Digite o total"
                                         required />
                                 </th>
                             </table>
@@ -948,76 +932,6 @@
 
                     <br>
 
-                    <!--Formulário Problemas Encontrados Suspeitos-->
-                    <banner>
-                        <titulos id="problemas">Problemas Encontrados Suspeitos</titulos>
-                        <div>
-
-                            <div class="dest2">
-                                <input type="checkbox" class="checkmark" class="checkmark" id="psiquiatrico"
-                                    name="psiquiatrico" value="psiquiatrico">
-                                <label for="psiquiatrico">Psiquiátrico</label>
-                            </div>
-
-                            <div class="dest2">
-                                <input type="checkbox" class="checkmark" class="checkmark" id="respiratório"
-                                    name="respiratório" value="respiratório">
-                                <label for="respiratório">Respiratório:</label><br>
-                                <select class="le" name="respiratório">
-                                    <option value="respiratório"></option>
-                                    <option value="respiratório">DPOC</option>
-                                    <option value="respiratório">Inalação Fumaça</option>
-                                </select>
-                            </div>
-
-                            <div class="dest2">
-                                <input type="checkbox" class="checkmark" class="checkmark" id="diabetes" name="diabetes"
-                                    value="diabetes">
-                                <label for="diabetes">Diabetes:</label><br>
-                                <select class="le" name="diabetes">
-                                    <option value="diabetes"></option>
-                                    <option value="diabetes">Hiperglicemia</option>
-                                    <option value="diabetes">Hipoglicemia</option>
-                                </select>
-                            </div>
-
-                            <div class="dest2">
-                                <input type="checkbox" class="checkmark" class="checkmark" id="obstetrico"
-                                    name="obstetrico" value="obstetrico">
-                                <label for="obstetrico">Obstétrico:</label><br>
-                                <select class="le" name="obstetrico">
-                                    <option value="obstetrico"></option>
-                                    <option value="obstetrico">Parto Emergencial</option>
-                                    <option value="obstetrico">Gestante</option>
-                                    <option value="obstetrico">Hemor. Excessiva</option>
-                                </select>
-                            </div>
-
-                            <div class="dest2">
-                                <input type="checkbox" class="checkmark" class="checkmark" id="transporte"
-                                    name="transporte" value="transporte">
-                                <label for="transporte">Transporte:</label><br>
-                                <select class="le" name="transporte">
-                                    <option value="transporte"></option>
-                                    <option value="transporte">Aéreo</option>
-                                    <option value="transporte">Clínico</option>
-                                    <option value="transporte">Emergencial</option>
-                                    <option value="transporte">Pós-trauma</option>
-                                    <option value="transporte">Samu</option>
-                                    <option value="transporte">Sem remoção</option>
-                                    <option value="transporte">Outros</option>
-                                </select>
-                            </div>
-
-                            <div class="dest2">
-                                <input type="checkbox" class="checkmark" class="checkmark" id="prob-outros"
-                                    name="prob-outros" value="prob-outros">
-                                <label for="prob-outros">Outros:</label><br>
-                                <input type="text" class="form-control" id="prob-outros" name="prob-outros"
-                                    placeholder="Digite os outros" required />
-                            </div>
-                        </div>
-                    </banner>
                 </div>
             </div>
         </div>
@@ -2877,8 +2791,12 @@
                                 </div>
                             </div>
                         </banner>
+                        <!-- Botão de Envio -->
+                        
                     </div>
                 </div>
+                <input type="submit" name="Salvar" value="Salvar e Continuar" />
+                        </form>
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
