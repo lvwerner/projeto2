@@ -106,7 +106,7 @@
                             <div class="dest2">
                                 <div>O que aconteceu (sinais e sintomas)</div>
                                 <div><input class="inputs" type="text" id="oq-aconteceu" name="oq_aconteceu"
-                                        placeholder="Digite o que aconteceu" required />
+                                        placeholder="Digite o que aconteceu" >
                                 </div>
                                 <br>
                             </div>
@@ -130,7 +130,7 @@
                             <div class="dest2">
                                 <div>A quanto tempo aconteceu?</div>
                                 <div><input class="inputs" type="text" id="tempo-aconteceu" name="tempo_aconteceu"
-                                        placeholder="Digite a quanto tempo aconteceu" required />
+                                        placeholder="Digite a quanto tempo aconteceu" >
                                 </div>
                             </div>
                             <br>
@@ -155,7 +155,7 @@
                             <div class="dest2">
                                 <div>Quais?</div>
                                 <div><input class="inputs" type="text" id="p-quais" name="quais_doencas"
-                                        placeholder="Digite quais doenças" required />
+                                        placeholder="Digite quais doenças" >
                                 </div>
                             </div>
                             <br>
@@ -189,7 +189,7 @@
                             <div class="dest2">
                                 <div>Quais?</div>
                                 <div><input class="inputs" type="text" id="m-quais" name="quais_medicacoes"
-                                        placeholder="Digite quais medicações" required />
+                                        placeholder="Digite quais medicações" >
                                 </div>
                             </div>
                             <br>
@@ -213,7 +213,7 @@
                             <div class="dest2">
                                 <div>Se sim, especifique</div>
                                 <div><input class="inputs" type="text" id="ss-alergia" name="especificacao_alergia"
-                                        placeholder="Digite a alérgia" required />
+                                        placeholder="Digite a alérgia" >
                                 </div>
                             </div>
                             <br>
@@ -221,12 +221,16 @@
                             <div class="dest2">
                                 <div class="duplo">
                                     <div>Ingeriu alimento ou líquido ≥ 6 horas:</div>
-                                    <input type="checkbox" class="checkmark" class="checkmark" id="ingeriu"
-                                        name="ingeriu_limento_liquido" value="ingeriu">
-                                    <label for="ingeriu">Sim</label>
-                                    <input type="checkbox" class="checkmark" class="checkmark" id="nao_ingere"
-                                        name="ingeriu_limento_liquido" value="nao_ingere">
-                                    <label for="nao_ingere">Não</label>
+                                    <div class="form-check form-check-inline mb-3">
+                                        <input class="form-check-input" type="radio" name="sexo"
+                                            id="inlineRadio41" value="option41">
+                                        <label class="form-check-label " for="inlineRadio41">Sim</label>
+                                    </div>
+    
+                                    <div class="form-check form-check-inline mb-3">
+                                        <input class="form-check-input" type="radio" name="sexo"
+                                            id="inlineRadio42" value="option42">
+                                        <label class="form-check-label" for="inlineRadio42">Não</label>
                                 </div>
                             </div>
                             <br>
@@ -261,9 +265,16 @@
                                 <div class="duplo">
                                     <div class="checkbox">
                                         <label for="sexo">Sexo:</label>
-                                        <input name="sexo" class="b1" type="checkbox" class="checkmark"
-                                            id="s-f">Feminino
-                                        <input name="sexo" type="checkbox" class="checkmark" id="s-m">Masculino
+                                        <div class="form-check form-check-inline mb-3">
+                                            <input class="form-check-input" type="radio" name="alergico_alguma_coisa"
+                                                id="inlineRadio39" value="option39">
+                                            <label class="form-check-label " for="inlineRadio39">Masculino</label>
+                                        </div>
+        
+                                        <div class="form-check form-check-inline mb-3">
+                                            <input class="form-check-input" type="radio" name="alergico_alguma_coisa"
+                                                id="inlineRadio40" value="option40">
+                                            <label class="form-check-label" for="inlineRadio40">Feminino</label>
                                     </div>
                                 </div>
                             </div>
@@ -271,19 +282,19 @@
                             <div class="dest2">
                                 <label for="nome-hospital">Nome do Hospital:</label><br>
                                 <input type="text" class="inputs" id="nome-hospital" name="nome_hospital"
-                                    placeholder="Digite o nome do Hospital" required />
+                                    placeholder="Digite o nome do Hospital" >
                             </div>
 
                             <div class="dest2">
                                 <label for="nome-paciente">Nome:</label><br>
                                 <input type="text" class="inputs" id="nome-paciente" name="nome_paciente"
-                                    placeholder="Digite o nome do paciente" required />
+                                    placeholder="Digite o nome do paciente" >
                             </div>
 
                             <div class="dest2">
                                 <label for="idade">Idade;</label><br>
                                 <input type="number" class="inputs" id="idade" name="idade"
-                                    placeholder="Digite a idade do paciente" required />
+                                    placeholder="Digite a idade do paciente" >
                             </div>
 
                             <div class="dest2">
@@ -299,19 +310,19 @@
                             <div class="dest2">
                                 <label for="nome-acompanhante">Acompanhante:</label><br>
                                 <input type="text" class="inputs" id="nome-acompanhante" class="inputs"
-                                    name="nome_acompanhante" placeholder="Digite o nome do acompanhante" required />
+                                    name="nome_acompanhante" placeholder="Digite o nome do acompanhante" >
                             </div>
 
                             <div class="dest2">
                                 <label for="idade-acompanhante">Idade:</label><br>
                                 <input type="text" class="inputs" id="idade-acompanhante" name="idade_acompanhante"
-                                    placeholder="Digite a idade do acompanhante" required />
+                                    placeholder="Digite a idade do acompanhante" >
                             </div>
 
                             <div class="dest2">
                                 <label for="local-ocorrencia">Local da Ocorrência:</label><br>
                                 <input type="text" class="inputs" id="local-ocorrencia" name="local_ocorrencia"
-                                    placeholder="Digite o local da ocorrência" required />
+                                    placeholder="Digite o local da ocorrência" >
                             </div>
                         </div>
                     </banner>
@@ -332,7 +343,7 @@
                             <div>Período da gestação</div>
                             <div>
                                 <input class="inputs" type="text" id="nome-hospital" name="periodo_gestacao"
-                                    placeholder="Digite o período da gestação" required />
+                                    placeholder="Digite o período da gestação" >
                             </div>
                         </div>
 
@@ -357,7 +368,7 @@
                             <div>Nome do médico</div>
                             <div>
                                 <input class="inputs" type="text" id="nome-hospital" name="nome_medico"
-                                    placeholder="Digite o nome do médico" required />
+                                    placeholder="Digite o nome do médico" >
                             </div>
                         </div>
 
@@ -397,7 +408,7 @@
                             <div class="dest2">
                                 <div>Quantos?</div>
                                 <div><input class="inputs" type="number" id="nome-hospital" name="quantidade_filhos"
-                                        placeholder="Digite a quantidade de filhos" required />
+                                        placeholder="Digite a quantidade de filhos" >
                                 </div>
                             </div>
 
@@ -508,7 +519,7 @@
                                 <div class="duplo">
                                     <div>Nome do bebê:</div>
                                     <input class="inputs" type="text" id="nome-acompanhante" class="inputs"
-                                        name="nome_bebe" placeholder="Digite o nome do bebê" required />
+                                        name="nome_bebe" placeholder="Digite o nome do bebê" >
                                 </div>
                             </div>
                             <br>                           
@@ -806,11 +817,11 @@
                                 </tr>
                                 <tr class="dest4">
                                     <td><label for="resp">Flexão Anormal</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="flexao_anormal"
+                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="anormal"
                                             value="resp">3
                                     </td>
                                     <td><label for="resp">Flexão Anormal (Decorticação)</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="flexao_anormal2"
+                                        <input type="checkbox" class="checkmark" class="checkmark" id="resp" name="anormal2"
                                             value="resp">3
                                     </td>
                                 </tr>
@@ -836,11 +847,11 @@
                                 </tr>
                                 <th colspan="2"><label for="resp">TOTAL (GCS)(3-15)</label><br>
                                     <input type="text" class="inputs" id="resp" name="total_gcs_1" placeholder="Digite o total"
-                                        required />
+                                        >
                                 </th>
                                 <th colspan="2"><label for="resp">TOTAL (GCS)(3-15)</label><br>
                                     <input type="text" class="inputs" id="resp" name="total_gcs_2" placeholder="Digite o total"
-                                        required />
+                                        >
                                 </th>
                             </table>
                         </div>
@@ -862,17 +873,17 @@
                             <div class="dest2">
                                 <label for="pressao-arteral">Pressão Arterial:</label>
                                 <input type="text" class="inputs" size="25" id="pressao-arteral" name="pressao-arteral"
-                                    placeholder="Digite" required />
+                                    placeholder="Digite" >
                                 <label for="pressao-arteral"> X </label>
                                 <input type="text" class="inputs" id="pressao-arteral" name="pressao-arteral"
-                                    placeholder="Digite" required /> <label for="pressao-arteral"> mmHg
+                                    placeholder="Digite" > <label for="pressao-arteral"> mmHg
                                 </label>
                             </div>
 
                             <div class="dest2">
                                 <label for="pulso">Pulso:</label>
                                 <input type="text" class="inputs" id="pulso" name="pulso" placeholder="Digite"
-                                    required />
+                                    >
                                 <label for="pulso">
                                     B.C.P.M.</label>
                             </div>
@@ -880,24 +891,24 @@
                             <div class="dest2">
                                 <label for="respiração">Respiração: </label>
                                 <input type="text" class="inputs" id="respiração" name="respiração" placeholder="Digite"
-                                    required /> <label for="respiração"> M.R.M.
+                                    > <label for="respiração"> M.R.M.
                                 </label>
                             </div>
 
                             <div class="dest2">
                                 <label for="pulsacao">Pulsação:</label>
                                 <input type="text" class="inputs" id="pulsacao" name="pulsacao" placeholder="Digite"
-                                    required /><label for="pulsacao"> % /
+                                    ><label for="pulsacao"> % /
                                     HGT:</label>
                                 <input type="text" class="inputs" id="pulsacao" name="pulsacao" placeholder="Digite"
-                                    required />
+                                    >
                             </div>
 
                             <div class="dest2">
                                 <div class="duplo">
                                     <label for="temperatura">Temperatura:</label>
                                     <input type="text" class="inputs" id="temperatura" name="temperatura"
-                                        placeholder="Digite" required />
+                                        placeholder="Digite" >
                                     <label for="temperatura"> °C </label>
                                 </div>
                             </div>
@@ -1010,7 +1021,7 @@
                                     name="prob-outros" value="prob-outros">
                                 <label for="prob-outros">Outros:</label><br>
                                 <input type="text" class="form-control inputs" id="prob-outros" name="prob-outros"
-                                    placeholder="Digite os outros" required />
+                                    placeholder="Digite os outros" >
                             </div>
                         </div>
                     </banner>
@@ -1057,7 +1068,7 @@
                                 <tr class="destaque">
                                     <td>
                                         <input type="text" class="form-control inputs" id="ferimentos"
-                                            name="nome-hospital" placeholder="Digite o local do ferimento" required />
+                                            name="nome-hospital" placeholder="Digite o local do ferimento" >
                                     </td>
                                     <td>
                                         <select class="checkmark check2" name="ferimentos">
@@ -1088,7 +1099,7 @@
                                 <tr>
                                     <td>
                                         <input type="text" class="form-control" id="ferimentos" name="nome-hospital"
-                                            placeholder="Digite o local do ferimento" required />
+                                            placeholder="Digite o local do ferimento" >
                                     </td>
                                     <td>
                                         <select class="checkmark check2" name="ferimentos">
@@ -1119,7 +1130,7 @@
                                 <tr class="destaque">
                                     <td>
                                         <input type="text" class="form-control inputs" id="ferimentos"
-                                            name="nome-hospital" placeholder="Digite o local do ferimento" required />
+                                            name="nome-hospital" placeholder="Digite o local do ferimento" >
                                     </td>
                                     <td>
                                         <select class="checkmark check2" name="ferimentos">
@@ -1150,7 +1161,7 @@
                                 <tr>
                                     <td>
                                         <input type="text" class="form-control inputs" id="ferimentos"
-                                            name="nome-hospital" placeholder="Digite o local do ferimento" required />
+                                            name="nome-hospital" placeholder="Digite o local do ferimento" >
                                     </td>
                                     <td>
                                         <select class="checkmark check2" name="ferimentos">
@@ -1181,7 +1192,7 @@
                                 <tr class="destaque">
                                     <td>
                                         <input type="text" class="form-control inputs" id="ferimentos"
-                                            name="nome-hospital" placeholder="Digite o local do ferimento" required />
+                                            name="nome-hospital" placeholder="Digite o local do ferimento" >
                                     </td>
                                     <td>
                                         <select class="checkmark check2" name="ferimentos">
@@ -1212,7 +1223,7 @@
                                 <tr>
                                     <td>
                                         <input type="text" class="form-control inputs" id="ferimentos"
-                                            name="nome-hospital" placeholder="Digite o local do ferimento" required />
+                                            name="nome-hospital" placeholder="Digite o local do ferimento" >
                                     </td>
                                     <td>
                                         <select class="checkmark check2" name="ferimentos">
@@ -1243,7 +1254,7 @@
                                 <tr class="destaque">
                                     <td>
                                         <input type="text" class="form-control inputs" id="ferimentos"
-                                            name="nome-hospital" placeholder="Digite o local do ferimento" required />
+                                            name="nome-hospital" placeholder="Digite o local do ferimento" >
                                     </td>
                                     <td>
                                         <select class="checkmark check2" name="ferimentos">
@@ -1274,7 +1285,7 @@
                                 <tr>
                                     <td>
                                         <input type="text" class="form-control inputs" id="ferimentos"
-                                            name="nome-hospital" placeholder="Digite o local do ferimento" required />
+                                            name="nome-hospital" placeholder="Digite o local do ferimento">
                                     </td>
                                     <td>
                                         <select class="checkmark check2" name="ferimentos">
@@ -1305,7 +1316,7 @@
                                 <tr class="destaque">
                                     <td>
                                         <input type="text" class="form-control inputs" id="ferimentos"
-                                            name="nome-hospital" placeholder="Digite o local do ferimento" required />
+                                            name="nome-hospital" placeholder="Digite o local do ferimento">
                                     </td>
                                     <td>
                                         <select class="checkmark check2" name="ferimentos">
@@ -1336,7 +1347,7 @@
                                 <tr>
                                     <td>
                                         <input type="text" class="form-control" id="ferimentos" name="nome-hospital"
-                                            placeholder="Digite o local do ferimento" required />
+                                            placeholder="Digite o local do ferimento">
                                     </td>
                                     <td>
                                         <select class="checkmark check2" name="ferimentos">
@@ -1522,7 +1533,7 @@
                     <banner>
                         <div class="centerr">
                             <input type="text" class="inputs" id="objetos-recolhidos" name="objetos-recolhidos"
-                                placeholder="Digite os objetos recolhidos" required />
+                                placeholder="Digite os objetos recolhidos" >
                         </div>
                     </banner>
                 </div>
@@ -2113,7 +2124,7 @@
                                         id="meio-auxiliares" name="meio-auxiliares" value="meio-auxiliares">
                                     <label for="reanimador">Reanimador</label>
                                     <input class="mi" type="text" id="reanimador" name="reanimador" placeholder="Digite"
-                                        required />
+                                        >
                                     <label for="reanimador">LPM</label>
                                 </div>
 
@@ -2175,7 +2186,7 @@
                                     <input type="checkbox" class="checkmark" class="checkmark" id="p-efetuados"
                                         name="p-efetuados" value="p-efetuados">
                                     <input class="di" type="text" id="p-efetuados" name="p-efetuados"
-                                        placeholder="Digite" required />
+                                        placeholder="Digite" >
                                 </div>
                             </div>
                         </banner>
@@ -2219,7 +2230,7 @@
                                             </div>
                                         </td>
                                         <td><input class="qt" type="number" id="mud" name="mud"
-                                                placeholder="Digite a quantidade" required />
+                                                placeholder="Digite a quantidade" >
                                         </td>
                                         <td>
                                             <input type="checkbox" class="checkmark" class="checkmark" id="mud"
@@ -2227,7 +2238,7 @@
                                             <label for="mud">Manta aluminizada</label>
                                         </td>
                                         <td><input class="qt" type="number" id="mud" name="mud"
-                                                placeholder="Digite a quantidade" required />
+                                                placeholder="Digite a quantidade" >
                                         </td>
                                     </tr>
 
@@ -2238,7 +2249,7 @@
                                             <label for="vehicle1">Cateter TP. Ocúlos</label>
                                         </td>
                                         <td><input class="qt" type="number" id="nome-acompanhante" class="inputs"
-                                                name="nome-acompanhante" placeholder="Digite a quantidade" required />
+                                                name="nome-acompanhante" placeholder="Digite a quantidade" >
                                         </td>
                                         <td>
                                             <input type="checkbox" class="checkmark" class="checkmark" id="vehicle1"
@@ -2246,7 +2257,7 @@
                                             <label for="vehicle1">Pás do DEA</label>
                                         </td>
                                         <td><input class="qt" type="number" id="nome-acompanhante" class="inputs"
-                                                name="nome-acompanhante" placeholder="Digite a quantidade" required />
+                                                name="nome-acompanhante" placeholder="Digite a quantidade" >
                                         </td>
                                     </tr>
 
@@ -2257,7 +2268,7 @@
                                             <label for="vehicle1">Compressa comum</label>
                                         </td>
                                         <td><input class="qt" type="number" id="nome-acompanhante" class="inputs"
-                                                name="nome-acompanhante" placeholder="Digite a quantidade" required />
+                                                name="nome-acompanhante" placeholder="Digite a quantidade" >
                                         </td>
                                         <td>
                                             <input type="checkbox" class="checkmark" class="checkmark" id="vehicle1"
@@ -2265,7 +2276,7 @@
                                             <label for="vehicle1">Sonda de aspiração</label>
                                         </td>
                                         <td><input class="qt" type="number" id="nome-acompanhante" class="inputs"
-                                                name="nome-acompanhante" placeholder="Digite a quantidade" required />
+                                                name="nome-acompanhante" placeholder="Digite a quantidade" >
                                         </td>
                                     </tr>
 
@@ -2287,7 +2298,7 @@
                                             </div>
                                         </td>
                                         <td><input class="qt" type="number" id="nome-acompanhante" class="inputs"
-                                                name="nome-acompanhante" placeholder="Digite a quantidade" required />
+                                                name="nome-acompanhante" placeholder="Digite a quantidade" >
                                         </td>
                                         <td>
                                             <input type="checkbox" class="checkmark" class="checkmark" id="vehicle1"
@@ -2295,7 +2306,7 @@
                                             <label for="vehicle1">Soro fisiológico</label>
                                         </td>
                                         <td><input class="qt" type="number" id="nome-acompanhante" class="inputs"
-                                                name="nome-acompanhante" placeholder="Digite a quantidade" required />
+                                                name="nome-acompanhante" placeholder="Digite a quantidade" >
                                         </td>
                                     </tr>
 
@@ -2306,7 +2317,7 @@
                                             <label for="vehicle1">Luvas Desc. (Pares)</label>
                                         </td>
                                         <td><input class="qt" type="number" id="nome-acompanhante" class="inputs"
-                                                name="nome-acompanhante" placeholder="Digite a quantidade" required />
+                                                name="nome-acompanhante" placeholder="Digite a quantidade" >
                                         </td>
                                         <td>
                                             <input type="checkbox" class="checkmark" class="checkmark" id="vehicle1"
@@ -2322,7 +2333,7 @@
                                             </div>
                                         </td>
                                         <td><input class="qt" type="number" id="nome-acompanhante" class="inputs"
-                                                name="nome-acompanhante" placeholder="Digite a quantidade" required />
+                                                name="nome-acompanhante" placeholder="Digite a quantidade" >
                                         </td>
                                     </tr>
 
@@ -2333,16 +2344,16 @@
                                             <label for="vehicle1">Máscara Desc.</label>
                                         </td>
                                         <td><input class="qt" type="number" id="nome-acompanhante" class="inputs"
-                                                name="nome-acompanhante" placeholder="Digite a quantidade" required />
+                                                name="nome-acompanhante" placeholder="Digite a quantidade" >
                                         </td>
                                         <td>
                                             <input type="checkbox" class="checkmark" class="checkmark" id="vehicle1"
                                                 name="vehicle1" value="Bike">
                                             <input class="qt" type="text" id="nome-acompanhante" class="inputs"
-                                                name="nome-acompanhante" placeholder="Outro material" required />
+                                                name="nome-acompanhante" placeholder="Outro material" >
                                         </td>
                                         <td><input class="qt" type="number" id="nome-acompanhante" class="inputs"
-                                                name="nome-acompanhante" placeholder="Digite a quantidade" required />
+                                                name="nome-acompanhante" placeholder="Digite a quantidade" >
                                         </td>
                                     </tr>
                                 </table>
@@ -2377,7 +2388,7 @@
                                             <label for="vehicle1">Base do Estabiliza</label>
                                         </td>
                                         <td><input class="qt" type="number" id="nome-acompanhante" class="inputs"
-                                                name="nome-acompanhante" placeholder="Digite a quantidade" required />
+                                                name="nome-acompanhante" placeholder="Digite a quantidade" >
                                         </td>
                                         <td>
                                             <input type="checkbox" class="checkmark" class="checkmark" id="vehicle1"
@@ -2393,7 +2404,7 @@
                                             </div>
                                         </td>
                                         <td><input class="qt" type="number" id="nome-acompanhante" class="inputs"
-                                                name="nome-acompanhante" placeholder="Digite a quantidade" required />
+                                                name="nome-acompanhante" placeholder="Digite a quantidade" >
                                         </td>
                                     </tr>
 
@@ -2415,7 +2426,7 @@
                                             </div>
                                         </td>
                                         <td><input class="qt" type="number" id="nome-acompanhante" class="inputs"
-                                                name="nome-acompanhante" placeholder="Digite a quantidade" required />
+                                                name="nome-acompanhante" placeholder="Digite a quantidade" >
                                         </td>
                                         <td>
                                             <input type="checkbox" class="checkmark" class="checkmark" id="vehicle1"
@@ -2423,7 +2434,7 @@
                                             <label for="vehicle1">Tirante Aranha</label>
                                         </td>
                                         <td><input class="qt" type="number" id="nome-acompanhante" class="inputs"
-                                                name="nome-acompanhante" placeholder="Digite a quantidade" required />
+                                                name="nome-acompanhante" placeholder="Digite a quantidade" >
                                         </td>
                                     </tr>
 
@@ -2442,11 +2453,11 @@
                                                 <input type="checkbox" class="checkmark" class="checkmark" id="vehicle1"
                                                     name="vehicle1" value="Bike">
                                                 <input class="i" type="text" id="nome-acompanhante" class="inputs"
-                                                    name="nome-acompanhante" placeholder="." required />
+                                                    name="nome-acompanhante" placeholder="." >
                                             </div>
                                         </td>
                                         <td><input class="qt" type="number" id="nome-acompanhante" class="inputs"
-                                                name="nome-acompanhante" placeholder="Digite a quantidade" required />
+                                                name="nome-acompanhante" placeholder="Digite a quantidade" >
                                         </td>
                                         <td>
                                             <input type="checkbox" class="checkmark" class="checkmark" id="vehicle1"
@@ -2454,7 +2465,7 @@
                                             <label for="vehicle1">Tirante de Cabeça</label>
                                         </td>
                                         <td><input class="qt" type="number" id="nome-acompanhante" class="inputs"
-                                                name="nome-acompanhante" placeholder="Digite a quantidade" required />
+                                                name="nome-acompanhante" placeholder="Digite a quantidade" >
                                         </td>
                                     </tr>
 
@@ -2465,7 +2476,7 @@
                                             <label for="vehicle1">Coxins Estabiliza.</label>
                                         </td>
                                         <td><input class="qt" type="number" id="nome-acompanhante" class="inputs"
-                                                name="nome-acompanhante" placeholder="Digite a quantidade" required />
+                                                name="nome-acompanhante" placeholder="Digite a quantidade" >
                                         </td>
                                         <td>
                                             <input type="checkbox" class="checkmark" class="checkmark" id="vehicle1"
@@ -2473,7 +2484,7 @@
                                             <label for="vehicle1">Cânula</label>
                                         </td>
                                         <td><input class="qt" type="number" id="nome-acompanhante" class="inputs"
-                                                name="nome-acompanhante" placeholder="Digite a quantidade" required />
+                                                name="nome-acompanhante" placeholder="Digite a quantidade" >
                                         </td>
                                     </tr>
 
@@ -2492,16 +2503,16 @@
                                             </div>
                                         </td>
                                         <td><input class="qt" type="number" id="nome-acompanhante" class="inputs"
-                                                name="nome-acompanhante" placeholder="Digite a quantidade" required />
+                                                name="nome-acompanhante" placeholder="Digite a quantidade" >
                                         </td>
                                         <td>
                                             <input type="checkbox" class="checkmark" class="checkmark" id="vehicle1"
                                                 name="vehicle1" value="Bike">
                                             <input class="qt" type="text" id="nome-acompanhante" class="inputs"
-                                                name="nome-acompanhante" placeholder="Outro material" required />
+                                                name="nome-acompanhante" placeholder="Outro material" >
                                         </td>
                                         <td><input class="qt" type="number" id="nome-acompanhante" class="inputs"
-                                                name="nome-acompanhante" placeholder="Digite a quantidade" required />
+                                                name="nome-acompanhante" placeholder="Digite a quantidade" >
                                         </td>
                                     </tr>
 
@@ -2512,16 +2523,16 @@
                                             <label for="vehicle1">Maca Rígida</label>
                                         </td>
                                         <td><input class="qt" type="number" id="nome-acompanhante" class="inputs"
-                                                name="nome-acompanhante" placeholder="Digite a quantidade" required />
+                                                name="nome-acompanhante" placeholder="Digite a quantidade" >
                                         </td>
                                         <td>
                                             <input type="checkbox" class="checkmark" class="checkmark" id="vehicle1"
                                                 name="vehicle1" value="Bike">
                                             <input class="qt" type="text" id="nome-acompanhante" class="inputs"
-                                                name="nome-acompanhante" placeholder="Outro material" required />
+                                                name="nome-acompanhante" placeholder="Outro material" >
                                         </td>
                                         <td><input class="qt" type="number" id="nome-acompanhante" class="inputs"
-                                                name="nome-acompanhante" placeholder="Digite a quantidade" required />
+                                                name="nome-acompanhante" placeholder="Digite a quantidade" >
                                         </td>
                                     </tr>
                                 </table>
@@ -2542,7 +2553,7 @@
                         <banner>
                             <div class="center">
                                 <input type="text" class="inputs" id="objetos-recolhidos" name="objetos-recolhidos"
-                                    placeholder="Digite os objetos recolhidos" required />
+                                    placeholder="Digite os objetos recolhidos" >
                             </div>
                         </banner>
                     </div>
@@ -2656,22 +2667,22 @@
                                     <div class="dest2">
                                         <label for="vehicle">N° Usd.</label><br>
                                         <input type="number" id="n-usd" name="n-usd" placeholder="Digite o N° Usd"
-                                            required />
+                                            >
                                     </div>
                                     <div class="dest2">
                                         <label for="vehicle">N° Ocorr.</label><br>
                                         <input type="number" id="n-ocorr" name="n-ocorr"
-                                            placeholder="Digite o N° Ocorr." required />
+                                            placeholder="Digite o N° Ocorr." >
                                     </div>
                                     <div class="dest2">
                                         <label for="vehicle">Desp</label><br>
                                         <input type="text1" id="desp" name="desp" placeholder="Digite o desp"
-                                            required />
+                                            >
                                     </div>
                                     <div class="dest2">
                                         <label for="vehicle">Km Final</label><br>
                                         <input type="number" id="km-final" name="km-final"
-                                            placeholder="Digite o KM final" required />
+                                            placeholder="Digite o KM final" >
                                     </div>
                                     <div class="dest2">
                                         <label for="vehicle1">Cód. Ir</label><br>
@@ -2686,12 +2697,12 @@
                                     <div class="dest2">
                                         <label for="vehicle">H. Ch.</label><br>
                                         <input type="text1" id="h-ch" name="h-ch" placeholder="Digite o H. ch"
-                                            required />
+                                            >
                                     </div>
                                     <div class="dest2">
                                         <label for="vehicle">Cód. SIA/SUS </label><br>
                                         <input type="text1" id="cod-sia-sus" name="cod-sia-sus"
-                                            placeholder="Digite o Cód. SIA/SUS" required />
+                                            placeholder="Digite o Cód. SIA/SUS" >
                                     </div>
                                 </div>
                             </div>
@@ -2712,7 +2723,7 @@
                             <div class="centerr">
                                 <div class="dest2">
                                     Eu <input class="inputs" type="text" id="nome-acompanhante" class="inputs"
-                                        name="nome-acompanhante" placeholder="Digite" required />
+                                        name="nome-acompanhante" placeholder="Digite" >
                                     portador da carteira de indentidade RG N° <input type="number"
                                         class="form-control cpf-mask inputs" placeholder="000.000.000-00">
                                     inscrito no CPF sob N° <input type="number" class="form-control cpf-mask inputs"
@@ -2727,27 +2738,27 @@
                                 <div class="dest2">
                                     <label for="nome-hospital">Ass:</label> <br>
                                     <input type="text" class="form-control inputs" id="nome-hospital"
-                                        name="nome-hospital" placeholder="Assinatura" required />
+                                        name="nome-hospital" placeholder="Assinatura" >
                                 </div>
                                 <div class="dest2">
                                     <label for="nome-hospital">Testemunha:</label>
                                     <input type="text" class="form-control inputs" id="nome-hospital"
-                                        name="nome-hospital" placeholder="Digite o nome da testemunha" required />
+                                        name="nome-hospital" placeholder="Digite o nome da testemunha" >
                                 </div>
                                 <div class="dest2">
                                     <label for="nome-hospital">Doc:</label> <br>
                                     <input type="number" class="form-control inputs" id="nome-hospital"
-                                        name="nome-hospital" placeholder="Digite o CPF/RG da testemunha" required />
+                                        name="nome-hospital" placeholder="Digite o CPF/RG da testemunha" >
                                 </div>
                                 <div class="dest2">
                                     <label for="nome-hospital">Testemunha:</label>
                                     <input type="text" class="form-control inputs" id="nome-hospital"
-                                        name="nome-hospital" placeholder="Digite o nome da testemunha" required />
+                                        name="nome-hospital" placeholder="Digite o nome da testemunha" >
                                 </div>
                                 <div class="dest2">
                                     <label for="nome-hospital">Doc:</label> <br>
                                     <input type="number" class="form-control inputs" id="nome-hospital"
-                                        name="nome-hospital" placeholder="Digite o CPF/RG da testemunha" required />
+                                        name="nome-hospital" placeholder="Digite o CPF/RG da testemunha" >
                                 </div>
                             </div>
                         </banner>
@@ -2767,27 +2778,27 @@
                             <div>
                                 <div class="dest2"><label for="vehicle1">M:</label>
                                     <input type="text" id="nome-acompanhante" class="inputs" name="nome-acompanhante"
-                                        placeholder="Digite" required />
+                                        placeholder="Digite" >
                                 </div>
                                 <div class="dest2"><label for="vehicle1">S1:</label>
                                     <input type="text" id="nome-acompanhante" class="inputs" name="nome-acompanhante"
-                                        placeholder="Digite" required />
+                                        placeholder="Digite" >
                                 </div>
                                 <div class="dest2"><label for="vehicle1">S2:</label>
                                     <input type="text" id="nome-acompanhante" class="inputs" name="nome-acompanhante"
-                                        placeholder="Digite" required />
+                                        placeholder="Digite" >
                                 </div>
                                 <div class="dest2"><label for="vehicle1">S3:</label>
                                     <input type="text" id="nome-acompanhante" class="inputs" name="nome-acompanhante"
-                                        placeholder="Digite" required />
+                                        placeholder="Digite" >
                                 </div>
                                 <div class="dest2"><label for="vehicle1">Demandante:</label>
                                     <input type="text" id="nome-acompanhante" class="inputs" name="nome-acompanhante"
-                                        placeholder="Digite" required />
+                                        placeholder="Digite" >
                                 </div>
                                 <div class="dest2"><label for="vehicle1">Equipe:</label>
                                     <input type="text" id="nome-acompanhante" class="inputs" name="nome-acompanhante"
-                                        placeholder="Digite" required />
+                                        placeholder="Digite" >
                                 </div>
                             </div>
                         </banner>
@@ -2795,6 +2806,7 @@
                         
                     </div>
                 </div>
+                <br>
                 <input type="submit" name="Salvar" value="Salvar e Continuar" />
                         </form>
             </div>
