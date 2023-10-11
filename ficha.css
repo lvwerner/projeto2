@@ -52,6 +52,12 @@ banner {
     column-count: 3;
     display: block;
 }
+#causa{
+    font-weight: 400;
+    line-height: 25px;
+    column-count: 3;
+    display: block;
+}
 
 /* Criar o checkbox customizado */
 .checkmark {

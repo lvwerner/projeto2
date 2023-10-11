@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Ficha de Ocorrência</title>
     <link rel="stylesheet" href="perfil.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -44,7 +44,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar- bg-light d-none d-lg-block">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand mb-0 h1" href="#">Ficha de Ocorrência</a>
             <ul class="navbar-nav ml-auto">
@@ -67,10 +67,6 @@
         </div>
     </nav>
 
-    <div class="d-lg-none">
-        <!-- Seu código para o menu offcanvas aqui... -->
-    </div>
-
     <div class="container user-data">
         <?php
         session_start();
@@ -81,7 +77,7 @@
             exit();
         }
 
-        $mysqli = new mysqli("localhost", "root", "", "sa_bombeiros");
+        $mysqli = new mysqli("localhost", "root", "root", "sa_bombeiros");
 
         if ($mysqli->connect_error) {
             die("Erro de conexão com o banco de dados: " . $mysqli->connect_error);
@@ -107,6 +103,8 @@
 
     <!-- Seu código HTML existente continua aqui... -->
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-eA2FpH/T4XuG5f6Kd3zZDr/CXBUw5iBRi15W5zt79MXIgdXTZWRpfaSGfIfDj5" crossorigin="anonymous"></script>
 </body>
 
 </html>
