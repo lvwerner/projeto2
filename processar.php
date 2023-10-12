@@ -104,9 +104,22 @@ $diabetes = isset($_POST['diabetes']) ? $_POST['diabetes'] : '';
 $obstetrico = isset($_POST['obstetrico']) ? $_POST['obstetrico'] : '';
 $transporte = isset($_POST['transporte']) ? $_POST['transporte'] : '';
 $prob_outros = isset($_POST['prob-outros']) ? $_POST['prob-outros'] : '';
+$localFerimento = $_POST['localFerimento'];
+$lado = $_POST['lado'];
+$face = $_POST['face'];
+$tipo = $_POST['tipo'];
+$cabeca_grau = $_POST['cabeca_grau'];
+$pescoco_grau = $_POST['pescoco_grau'];
+$tant_grau = $_POST['tant_grau'];
+$tpos_grau = $_POST['tpos_grau'];
+$genital_grau = $_POST['genital_grau'];
+$mid_direito_grau = $_POST['mid_direito_grau'];
+$mid_esquerdo_grau = $_POST['mid_esquerdo_grau'];
+$msd_grau = $_POST['msd_grau'];
+$mse_grau = $_POST['mse_grau'];
 
 // Insira os dados no banco de dados usando uma declaração preparada
-$sql = "INSERT INTO ficha_ocorrencia (oq_aconteceu, aconteceu_outros_vezes, tempo_aconteceu, possui_problema_saude, quais_doencas, faz_uso_medicacao, horario_ultima_medicacao, quais_medicacoes, alergico_alguma_coisa, especificacao_alergia, ingeriu_limento_liquido, horas_ingeriu, dia, sexo_paciente, nome_hospital, nome_paciente, idade, fone, rg_cpf_paciente, nome_acompanhante, idade_acompanhante, local_ocorrencia, periodo_gestacao, faz_uso_medicacao_2, nome_medico, complicacoes, primeiro_filho, quantidade_filhos, inicio_contracoes, duracao_contracoes, intervalo_contracoes, pressao_evacuar, ruptura_bolsa, inspecao_visual, hora_nascimento, sexo_bebe, nome_bebe, causas_animais, causas_meio_transporte, causas_desmoronamento, causas_emergencia_medica, causas_queda_altura2m, causas_tentativa_suicidio, causas_queda_propria_altura, causas_afogamento, causas_agressao, causas_atropelamento, causas_choque_eletrico, causas_desabamento, causas_domestico, causas_esportivo, causas_intoxicacao, causas_queda_bicicleta, causas_queda_moto, causas_queda_nivel_2m, causas_trabalho, causas_transferencia, outras_causas, espontanea, comando_verbal, estimulo_doloroso, nenhuma, orientado, palavras_frase_apropriadas, conflito, palavras_inapropriadas, palavras_inapropriadas2, choro_persistente, palavras_incompreensiveis, sons_incompreensiveis, nenhuma_resposta_verbal, obedece_comandos, obedece_prontamente, localiza_dor, localiza_dor_ou_estimulo_tatil, movimento_de_retirada, retirada_do_segmento_estimulado, flexao_anormal, flexao_anormal2, extensao_anormal, extensao_anormal2, nenhuma_resposta_motora, ausencia, total_gcs_1, total_gcs_2, pressao_arterial1, pressao_arterial2, pulso, respiracao, pulsacao1, pulsacao2, temperatura, perfusao, anormal, normal, psiquiatrico, respiratorio, diabetes, obstetrico, transporte, prob_outros) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+$sql = "INSERT INTO ficha_ocorrencia (oq_aconteceu, aconteceu_outros_vezes, tempo_aconteceu, possui_problema_saude, quais_doencas, faz_uso_medicacao, horario_ultima_medicacao, quais_medicacoes, alergico_alguma_coisa, especificacao_alergia, ingeriu_limento_liquido, horas_ingeriu, dia, sexo_paciente, nome_hospital, nome_paciente, idade, fone, rg_cpf_paciente, nome_acompanhante, idade_acompanhante, local_ocorrencia, periodo_gestacao, faz_uso_medicacao_2, nome_medico, complicacoes, primeiro_filho, quantidade_filhos, inicio_contracoes, duracao_contracoes, intervalo_contracoes, pressao_evacuar, ruptura_bolsa, inspecao_visual, hora_nascimento, sexo_bebe, nome_bebe, causas_animais, causas_meio_transporte, causas_desmoronamento, causas_emergencia_medica, causas_queda_altura2m, causas_tentativa_suicidio, causas_queda_propria_altura, causas_afogamento, causas_agressao, causas_atropelamento, causas_choque_eletrico, causas_desabamento, causas_domestico, causas_esportivo, causas_intoxicacao, causas_queda_bicicleta, causas_queda_moto, causas_queda_nivel_2m, causas_trabalho, causas_transferencia, outras_causas, espontanea, comando_verbal, estimulo_doloroso, nenhuma, orientado, palavras_frase_apropriadas, conflito, palavras_inapropriadas, palavras_inapropriadas2, choro_persistente, palavras_incompreensiveis, sons_incompreensiveis, nenhuma_resposta_verbal, obedece_comandos, obedece_prontamente, localiza_dor, localiza_dor_ou_estimulo_tatil, movimento_de_retirada, retirada_do_segmento_estimulado, flexao_anormal, flexao_anormal2, extensao_anormal, extensao_anormal2, nenhuma_resposta_motora, ausencia, total_gcs_1, total_gcs_2, pressao_arterial1, pressao_arterial2, pulso, respiracao, pulsacao1, pulsacao2, temperatura, perfusao, anormal, normal, psiquiatrico, respiratorio, diabetes, obstetrico, transporte, prob_outros, local_ferimento, lado, face, tipo, cabeca_grau, pescoco_grau, tant_grau, tpos_grau, genital_grau, mid_direito_grau, mid_esquerdo_grau, msd_grau, mse_grau) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
 // Prepare a declaração
 $stmt = $conexao->prepare($sql);
@@ -114,7 +127,7 @@ $stmt = $conexao->prepare($sql);
 // Verifique se a declaração foi preparada com sucesso
 if ($stmt) {
     // Faça o binding dos parâmetros com os valores
-    $stmt->bind_param("sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss",
+    $stmt->bind_param("sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssiiiiiiiii",
         $oq_aconteceu, $aconteceu_outros_vezes, $tempo_aconteceu, $possui_problema_saude, $quais_doencas, $faz_uso_medicacao,
         $horario_ultima_medicacao, $quais_medicacoes, $alergico_alguma_coisa, $especificacao_alergia, $ingeriu_limento_liquido,
         $horas_ingeriu, $dia, $sexo_paciente, $nome_hospital, $nome_paciente, $idade, $fone, $rg_cpf_paciente, $nome_acompanhante,
@@ -131,7 +144,8 @@ if ($stmt) {
         $movimento_de_retirada, $retirada_do_segmento_estimulado, $flexao_anormal, $flexao_anormal2, $extensao_anormal, $extensao_anormal2,
         $nenhuma_resposta_motora, $ausencia, $total_gcs_1, $total_gcs_2, $pressao_arterial1, $pressao_arterial2, $pulso,
         $respiracao, $pulsacao1, $pulsacao2, $temperatura, $perfusao, $anormal, $normal, $psiquiatrico, $respiratorio, $diabetes,
-        $obstetrico, $transporte, $prob_outros);
+        $obstetrico, $transporte, $prob_outros, $localFerimento, $lado, $face, $tipo, $cabeca_grau, $pescoco_grau, $tant_grau, $tpos_grau,
+         $genital_grau, $mid_direito_grau, $mid_esquerdo_grau, $msd_grau, $mse_grau);
 
     // Execute a declaração
     if ($stmt->execute()) {

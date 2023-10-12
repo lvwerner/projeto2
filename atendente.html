@@ -12,7 +12,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
 </head>
+<style>
+    .card-header{
+    text-align: center;
+}
+.card{
+    width: 50%;
+    margin-top: 3%;
+    left: 3%;
+    right: 3%;
+}
+#card-title{
+    text-align: center;
+}
+.btn-primary{
+    align-items: center;
+}
 
+</style>
 <body>
     <nav class="navbar navbar-expand-lg navbar- bg-light d-none d-lg-block">
         <div class="container">
@@ -21,9 +38,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="ficha.html">Página Inicial</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="sobre.html">Sobre</a>
-                </li>
+                
                 <li class="nav-item">
                     <a class="nav-link" href="perfil.php">Perfil</a>
                 </li>
@@ -68,9 +83,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="ficha.html">Página Inicial</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="sobre.html">Sobre</a>
-                    </li>
+                
                     <li class="nav-item">
                         <a class="nav-link" href="perfil.php">Perfil</a>
                     </li>
@@ -95,15 +108,15 @@
         <div class="card">
             <h5 class="card-header">Cadastrar</h5>
             <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="cadastro.html" class="btn btn-primary">Cadastre um Bombeiro</a>
+                <h5 class="card-title" id="card-title">Cadastre um novo Bombeiro</h5>
+                
+                <a href="cadastro.html" class="btn btn-primary">Cadastrar</a>
             </div>
         </div>
         <div class="card">
             <h5 class="card-header">Ocorrências</h5>
             <div class="card-body">
-                <h5 class="card-title">Histórico de Ocorrências</h5>
+                <h5 class="card-title" id="card-title">Histórico de Ocorrências</h5>
                 <p class="card-text">Você pode visualizar ou gerar o PDF das ocorrências registradas no sistema.</p>
                 <button class="btn btn-primary" id="ver-button">Ver</button>
                 <a href="#" class="btn btn-primary">Gerar PDF</a>
