@@ -96,7 +96,7 @@
             <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                         <banner>
-                        <div id="causa">
+                        <div >
                             <div class="dest2 ">
                                 <div>O que aconteceu (sinais e sintomas)</div>
                                 <div><input class="inputs" type="text" id="oq-aconteceu" name="oq_aconteceu"
@@ -250,7 +250,7 @@
                     <banner>
                         <div>
                             <div class="dest2">
-                                <label for="data">Data:</label><br>
+                                <label for="data">Data:</label>
                                 <input type="date" name="dia" class="inputs" placeholder="dd/mm/checkmarka" data-mask="00/00/0000"
                                     maxlength="10" autocomplete="off">
                             </div>
@@ -258,6 +258,7 @@
                             <div class="dest2">
                                 <div class="duplo">
                                     <div class="checkbox">
+                                        <br>
                                         <label for="sexo">Sexo:</label>
                                         <div class="form-check form-check-inline mb-3">
                                             <input class="form-check-input" type="radio" name="alergico_alguma_coisa"
@@ -274,47 +275,47 @@
                             </div>
 
                             <div class="dest2">
-                                <label for="nome-hospital">Nome do Hospital:</label><br>
+                                <label for="nome-hospital">Nome do Hospital:</label>
                                 <input type="text" class="inputs" id="nome-hospital" name="nome_hospital"
                                     placeholder="Digite o nome do Hospital" >
                             </div>
 
                             <div class="dest2">
-                                <label for="nome-paciente">Nome:</label><br>
+                                <label for="nome-paciente">Nome:</label>
                                 <input type="text" class="inputs" id="nome-paciente" name="nome_paciente"
                                     placeholder="Digite o nome do paciente" >
                             </div>
 
                             <div class="dest2">
-                                <label for="idade">Idade;</label><br>
+                                <label for="idade">Idade;</label>
                                 <input type="number" class="inputs" id="idade" name="idade"
                                     placeholder="Digite a idade do paciente" >
                             </div>
 
                             <div class="dest2">
-                                <label for="fone">Fone:</label><br>
-                                <input type="text" name="fone" class="inputs phone-mask" placeholder="0000-0000">
+                                <label for="fone">Fone:</label>
+                                <input type="text" name="fone" class="inputs phone-mask" placeholder="(00)00000-0000">
                             </div>
 
                             <div class="dest2">
-                                <label for="cpf">RG/CPF Paciente:</label><br>
+                                <label for="cpf">RG/CPF Paciente:</label>
                                 <input type="text" name="rg_cpf_paciente" class="inputs cpf-mask" placeholder="000.000.000-00">
                             </div>
 
                             <div class="dest2">
-                                <label for="nome-acompanhante">Acompanhante:</label><br>
+                                <label for="nome-acompanhante">Acompanhante:</label>
                                 <input type="text" class="inputs" id="nome-acompanhante" class="inputs"
                                     name="nome_acompanhante" placeholder="Digite o nome do acompanhante" >
                             </div>
 
                             <div class="dest2">
-                                <label for="idade-acompanhante">Idade:</label><br>
+                                <label for="idade-acompanhante">Idade:</label>
                                 <input type="text" class="inputs" id="idade-acompanhante" name="idade_acompanhante"
                                     placeholder="Digite a idade do acompanhante" >
                             </div>
 
                             <div class="dest2">
-                                <label for="local-ocorrencia">Local da Ocorrência:</label><br>
+                                <label for="local-ocorrencia">Local da Ocorrência:</label>
                                 <input type="text" class="inputs" id="local-ocorrencia" name="local_ocorrencia"
                                     placeholder="Digite o local da ocorrência" >
                             </div>
@@ -862,14 +863,14 @@
             <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                     <banner>
-                        <div>
+                        <div id="causa">
 
-                            <div class="dest2">
+                            <div class="dest2" >
                                 <label for="pressao-arteral">Pressão Arterial:</label>
-                                <input type="text" class="inputs" size="25" id="pressao-arteral" name="pressao-arteral"
+                                <input type="text" class="inputs " size="25" id="input" name="pressao-arteral"
                                     placeholder="Digite" >
                                 <label for="pressao-arteral"> X </label>
-                                <input type="text" class="inputs" id="pressao-arteral" name="pressao-arteral"
+                                <input type="text" class="inputs " id="input" name="pressao-arteral"
                                     placeholder="Digite" > <label for="pressao-arteral"> mmHg
                                 </label>
                             </div>
@@ -952,52 +953,53 @@
                 <div class="accordion-body">
 
                     <banner>
-                        <div>
+                        <div id="causa1">
 
                             <div class="dest2">
-                                <input type="checkbox" class="checkmark" class="checkmark" id="psiquiatrico"
+                                <p> <input type="radio" class="checkmark" class="checkmark" id="psiquiatrico"
                                     name="psiquiatrico" value="psiquiatrico">
-                                <label for="psiquiatrico">Psiquiátrico</label>
+                                Psiquiátrico</p>
                             </div>
 
-                            <div class="dest2">
-                                <input type="checkbox" class="checkmark" class="checkmark" id="respiratório"
+                            <div class="dest2"><p>
+                                <input type="radio" class="checkmark" class="checkmark" id="respiratório"
                                     name="respiratório" value="respiratório">
-                                <label for="respiratório">Respiratório:</label><br>
+                                Respiratório:   
                                 <select class="le" name="respiratório">
                                     <option value="respiratório"></option>
                                     <option value="respiratório">DPOC</option>
                                     <option value="respiratório">Inalação Fumaça</option>
-                                </select>
+                                </select></p>
                             </div>
 
                             <div class="dest2">
-                                <input type="checkbox" class="checkmark" class="checkmark" id="diabetes" name="diabetes"
+                                <p><input type="radio" class="checkmark" class="checkmark" id="diabetes" name="diabetes"
                                     value="diabetes">
-                                <label for="diabetes">Diabetes:</label><br>
+                                Diabetes:ㅤ 
                                 <select class="le" name="diabetes">
                                     <option value="diabetes"></option>
                                     <option value="diabetes">Hiperglicemia</option>
                                     <option value="diabetes">Hipoglicemia</option>
                                 </select>
+                            </p>
                             </div>
 
                             <div class="dest2">
-                                <input type="checkbox" class="checkmark" class="checkmark" id="obstetrico"
+                                <p><input type="radio" class="checkmark" class="checkmark" id="obstetrico"
                                     name="obstetrico" value="obstetrico">
-                                <label for="obstetrico">Obstétrico:</label><br>
+                                Obstétrico:
                                 <select class="le" name="obstetrico">
                                     <option value="obstetrico"></option>
                                     <option value="obstetrico">Parto Emergencial</option>
                                     <option value="obstetrico">Gestante</option>
                                     <option value="obstetrico">Hemor. Excessiva</option>
-                                </select>
+                                </select></p>
                             </div>
 
                             <div class="dest2">
-                                <input type="checkbox" class="checkmark" class="checkmark" id="transporte"
+                                <p><input type="radio" class="checkmark" class="checkmark" id="transporte"
                                     name="transporte" value="transporte">
-                                <label for="transporte">Transporte:</label><br>
+                                Transporte:
                                 <select class="le" name="transporte">
                                     <option value="transporte"></option>
                                     <option value="transporte">Aéreo</option>
@@ -1007,15 +1009,15 @@
                                     <option value="transporte">Samu</option>
                                     <option value="transporte">Sem remoção</option>
                                     <option value="transporte">Outros</option>
-                                </select>
+                                </select></p>
                             </div>
 
                             <div class="dest2">
-                                <input type="checkbox" class="checkmark" class="checkmark" id="prob-outros"
+                                <p><input type="radio" class="checkmark" id="prob-outros"
                                     name="prob-outros" value="prob-outros">
-                                <label for="prob-outros">Outros:</label><br>
+                                Outros:
                                 <input type="text" class="form-control inputs" id="prob-outros" name="prob-outros"
-                                    placeholder="Digite os outros" >
+                                    placeholder="Digite os outros" ></p>
                             </div>
                         </div>
                     </banner>
@@ -1543,104 +1545,113 @@
             <div id="collapseTwelve" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                     <banner>
-                        <div>
+                        <div id="causa">
                             <div class="ss">
 
-                                <div class="dest2"><input type="checkbox" class="checkmark" class="checkmark"
+                                <div class="dest2">
+                                    <p><input type="checkbox" class="checkmark" class="checkmark"
                                         id="sinais-sintomas" name="sinais-sintomas" value="sinais-sintomas">
-                                    <label for="sinais-sintomas">Abdomem sensível ou rígido</label>
+                                    Abdomem sensível ou rígido</p>
                                 </div>
 
-                                <div class="dest2"><input type="checkbox" class="checkmark" class="checkmark"
+                                <div class="dest2">
+                                    <p><input type="checkbox" class="checkmark" class="checkmark"
                                         id="sinais-sintomas" name="sinais-sintomas" value="sinais-sintomas">
-                                    <label for="sinais-sintomas">Afundamento de crânio</label>
+                                    Afundamento de crânio</p>
                                 </div>
 
-                                <div class="dest2"><input type="checkbox" class="checkmark" class="checkmark"
+                                <div class="dest2">
+                                    <p><input type="checkbox" class="checkmark" class="checkmark"
                                         id="sinais-sintomas" name="sinais-sintomas" value="sinais-sintomas">
-                                    <label for="sinais-sintomas">Agitação</label>
+                                    Agitação</p>
                                 </div>
 
-                                <div class="dest2"><input type="checkbox" class="checkmark" class="checkmark"
+                                <div class="dest2">
+                                    <p><input type="checkbox" class="checkmark" class="checkmark"
                                         id="sinais-sintomas" name="sinais-sintomas" value="sinais-sintomas">
-                                    <label for="sinais-sintomas">Apinéia</label>
+                                   Apinéia</labpel>
                                 </div>
 
-                                <div class="dest2"><input type="checkbox" class="checkmark" class="checkmark"
+                                <div class="dest2">
+                                    <p><input type="checkbox" class="checkmark" class="checkmark"
                                         id="sinais-sintomas" name="sinais-sintomas" value="sinais-sintomas">
-                                    <label for="sinais-sintomas">Bracicardia</label>
+                                    Bracicardia</p>
                                 </div>
 
-                                <div class="dest2"><input type="checkbox" class="checkmark" class="checkmark"
+                                <div class="dest2">
+                                    <p><input type="checkbox" class="checkmark" class="checkmark"
                                         id="sinais-sintomas" name="sinais-sintomas" value="sinais-sintomas">
-                                    <label for="sinais-sintomas">Bradipnéia</label>
+                                    Bradipnéia</p>
                                 </div>
 
-                                <div class="dest2"><input type="checkbox" class="checkmark" class="checkmark"
+                                <div class="dest2">
+                                    <p><input type="checkbox" class="checkmark" class="checkmark"
                                         id="sinais-sintomas" name="sinais-sintomas" value="sinais-sintomas">
-                                    <label for="sinais-sintomas">Bronco-aspirando</label>
+                                    Bronco-aspirando</p>
                                 </div>
 
-                                <div class="dest2"><input type="checkbox" class="checkmark" class="checkmark"
+                                <div class="dest2">
+                                    <p><input type="checkbox" class="checkmark" class="checkmark"
                                         id="sinais-sintomas" name="sinais-sintomas" value="sinais-sintomas">
-                                    <label for="sinais-sintomas">Cefaléia</label>
+                                    Cefaléia</p>
                                 </div>
 
-                                <div class="dest2"><input type="checkbox" class="checkmark" class="checkmark"
+                                <div class="dest2">
+                                    <p><input type="checkbox" class="checkmark" class="checkmark"
                                         id="sinais-sintomas" name="sinais-sintomas" value="sinais-sintomas">
-                                    <label for="cianose">Cianose</label><br>
-                                    <div class="cmpp">
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="cianose"
+                                    Cianose</p>
+                                    <div class="dest2">
+                                        <p><input type="checkbox" class="checkmark" class="checkmark" id="cianose"
                                             name="cianose" value="cianose">
-                                        <label for="cianose">Lábios</label>
-                                        <br>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="cianose"
+                                        Lábios</p>
+                                        
+                                        <p><input type="checkbox" class="checkmark" class="checkmark" id="cianose"
                                             name="cianose" value="cianose">
-                                        <label for="cianose">Extremidade</label>
+                                        Extremidade</p>
                                     </div>
                                 </div>
 
                                 <div class="dest2">
                                     <input type="checkbox" class="checkmark" class="checkmark" id="sinais-sintomas"
                                         name="sinais-sintomas" value="sinais-sintomas">
-                                    <label for="sinais-sintomas">Convulsão</label>
+                                    Convulsão</label>
                                 </div>
 
                                 <div class="dest2">
                                     <input type="checkbox" class="checkmark" class="checkmark" id="sinais-sintomas"
                                         name="sinais-sintomas" value="sinais-sintomas">
-                                    <label for="sinais-sintomas">Decorticação</label>
+                                    Decorticação</label>
                                 </div>
 
                                 <div class="dest2">
                                     <input type="checkbox" class="checkmark" class="checkmark" id="sinais-sintomas"
                                         name="sinais-sintomas" value="sinais-sintomas">
-                                    <label for="sinais-sintomas">Deformidade</label>
+                                    Deformidade</label>
                                 </div>
 
                                 <div class="dest2"><input type="checkbox" class="checkmark" class="checkmark"
                                         id="sinais-sintomas" name="sinais-sintomas" value="sinais-sintomas">
-                                    <label for="sinais-sintomas">Descerebração</label>
+                                    Descerebração</label>
                                 </div>
 
                                 <div class="dest2"><input type="checkbox" class="checkmark" class="checkmark"
                                         id="sinais-sintomas" name="sinais-sintomas" value="sinais-sintomas">
-                                    <label for="sinais-sintomas">Desmaio</label>
+                                    Desmaio</label>
                                 </div>
 
                                 <div class="dest2"><input type="checkbox" class="checkmark" class="checkmark"
                                         id="sinais-sintomas" name="sinais-sintomas" value="sinais-sintomas">
-                                    <label for="sinais-sintomas">Desvio de Traquéia</label>
+                                    Desvio de Traquéia</label>
                                 </div>
 
                                 <div class="dest2"><input type="checkbox" class="checkmark" class="checkmark"
                                         id="sinais-sintomas" name="sinais-sintomas" value="sinais-sintomas">
-                                    <label for="sinais-sintomas">Dispnéia</label>
+                                    Dispnéia</label>
                                 </div>
 
                                 <div class="dest2"><input type="checkbox" class="checkmark" class="checkmark"
                                         id="sinais-sintomas" name="sinais-sintomas" value="sinais-sintomas">
-                                    <label for="sinais-sintomas">Dor Local</label>
+                                    Dor Local</label>
                                 </div>
 
                                 <div class="dest2"><input type="checkbox" class="checkmark" class="checkmark"
@@ -1659,27 +1670,27 @@
 
                                 <div class="dest2"><input type="checkbox" class="checkmark" class="checkmark"
                                         id="sinais-sintomas" name="sinais-sintomas" value="sinais-sintomas">
-                                    <label for="sinais-sintomas">Enfisema Subcutâneo</label>
+                                    Enfisema Subcutâneo</label>
                                 </div>
 
                                 <div class="dest2"><input type="checkbox" class="checkmark" class="checkmark"
                                         id="sinais-sintomas" name="sinais-sintomas" value="sinais-sintomas">
-                                    <label for="sinais-sintomas">Êstase de Jugular</label>
+                                    Êstase de Jugular</label>
                                 </div>
 
                                 <div class="dest2"><input type="checkbox" class="checkmark" class="checkmark"
                                         id="sinais-sintomas" name="sinais-sintomas" value="sinais-sintomas">
-                                    <label for="sinais-sintomas">Face pálida</label>
+                                    Face pálida</label>
                                 </div>
 
                                 <div class="dest2"><input type="checkbox" class="checkmark" class="checkmark"
                                         id="sinais-sintomas" name="sinais-sintomas" value="sinais-sintomas">
-                                    <label for="sinais-sintomas">Hipertensão</label>
+                                    Hipertensão</label>
                                 </div>
 
                                 <div class="dest2"><input type="checkbox" class="checkmark" class="checkmark"
                                         id="sinais-sintomas" name="sinais-sintomas" value="sinais-sintomas">
-                                    <label for="sinais-sintomas">Hipotensão</label>
+                                    Hipotensão</label>
                                 </div>
 
                                 <div class="dest2"><input type="checkbox" class="checkmark" class="checkmark"
@@ -1697,27 +1708,27 @@
 
                                 <div class="dest2"><input type="checkbox" class="checkmark" class="checkmark"
                                         id="sinais-sintomas" name="sinais-sintomas" value="sinais-sintomas">
-                                    <label for="sinais-sintomas">Náuseas e vômitos</label>
+                                    Náuseas e vômitos</label>
                                 </div>
 
                                 <div class="dest2"><input type="checkbox" class="checkmark" class="checkmark"
                                         id="sinais-sintomas" name="sinais-sintomas" value="sinais-sintomas">
-                                    <label for="sinais-sintomas">Nasoragia</label>
+                                    Nasoragia</label>
                                 </div>
 
                                 <div class="dest2"><input type="checkbox" class="checkmark" class="checkmark"
                                         id="sinais-sintomas" name="sinais-sintomas" value="sinais-sintomas">
-                                    <label for="sinais-sintomas">Óbito</label>
+                                    Óbito</label>
                                 </div>
 
                                 <div class="dest2"><input type="checkbox" class="checkmark" class="checkmark"
                                         id="sinais-sintomas" name="sinais-sintomas" value="sinais-sintomas">
-                                    <label for="sinais-sintomas">Otorréia</label>
+                                    Otorréia</label>
                                 </div>
 
                                 <div class="dest2"><input type="checkbox" class="checkmark" class="checkmark"
                                         id="sinais-sintomas" name="sinais-sintomas" value="sinais-sintomas">
-                                    <label for="sinais-sintomas">O.V.A.C.E.</label>
+                                    O.V.A.C.E.</label>
                                 </div>
 
                                 <div class="dest2"><input type="checkbox" class="checkmark" class="checkmark"
@@ -1735,12 +1746,12 @@
 
                                 <div class="dest2"><input type="checkbox" class="checkmark" class="checkmark"
                                         id="sinais-sintomas" name="sinais-sintomas" value="sinais-sintomas">
-                                    <label for="sinais-sintomas">Priaprismo</label>
+                                    Priaprismo</label>
                                 </div>
 
                                 <div class="dest2"><input type="checkbox" class="checkmark" class="checkmark"
                                         id="sinais-sintomas" name="sinais-sintomas" value="sinais-sintomas">
-                                    <label for="sinais-sintomas">Prurido na pele</label>
+                                    Prurido na pele</label>
                                 </div>
 
                                 <div class="dest2"><input type="checkbox" class="checkmark" class="checkmark"
@@ -1770,37 +1781,37 @@
 
                                 <div class="dest2"><input type="checkbox" class="checkmark" class="checkmark"
                                         id="sinais-sintomas" name="sinais-sintomas" value="sinais-sintomas">
-                                    <label for="sinais-sintomas">Sede</label>
+                                    Sede</label>
                                 </div>
 
                                 <div class="dest2"><input type="checkbox" class="checkmark" class="checkmark"
                                         id="sinais-sintomas" name="sinais-sintomas" value="sinais-sintomas">
-                                    <label for="sinais-sintomas">Sinal de Battle</label>
+                                    Sinal de Battle</label>
                                 </div>
 
                                 <div class="dest2"><input type="checkbox" class="checkmark" class="checkmark"
                                         id="sinais-sintomas" name="sinais-sintomas" value="sinais-sintomas">
-                                    <label for="sinais-sintomas">Sinal de Guaxinim</label>
+                                    Sinal de Guaxinim</label>
                                 </div>
 
                                 <div class="dest2"><input type="checkbox" class="checkmark" class="checkmark"
                                         id="sinais-sintomas" name="sinais-sintomas" value="sinais-sintomas">
-                                    <label for="sinais-sintomas">Sudorese</label>
+                                    Sudorese</label>
                                 </div>
 
                                 <div class="dest2"><input type="checkbox" class="checkmark" class="checkmark"
                                         id="sinais-sintomas" name="sinais-sintomas" value="sinais-sintomas">
-                                    <label for="sinais-sintomas">Taquipnéia</label>
+                                    Taquipnéia</label>
                                 </div>
 
                                 <div class="dest2"><input type="checkbox" class="checkmark" class="checkmark"
                                         id="sinais-sintomas" name="sinais-sintomas" value="sinais-sintomas">
-                                    <label for="sinais-sintomas">Taquicardia</label>
+                                    Taquicardia</label>
                                 </div>
 
                                 <div class="dest2"><input type="checkbox" class="checkmark" class="checkmark"
                                         id="sinais-sintomas" name="sinais-sintomas" value="sinais-sintomas">
-                                    <label for="sinais-sintomas">Tontura</label>
+                                    Tontura</label>
                                 </div>
 
                                 <div class="dest2">
@@ -1825,24 +1836,24 @@
                 <div id="collapseThirteen" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <banner>
-                            <div>
+                            <div id="causa">
                                 <div class="dsn">
                                     <div class="dest2">
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="forma-conducao"
+                                        <p><input type="checkbox" class="checkmark" class="checkmark" id="forma-conducao"
                                             name="forma-conducao" value="forma-conducao">
-                                        <label for="forma-conducao">Deitada</label>
+                                        Deitada</p>
                                     </div>
 
                                     <div class="dest2">
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="forma-conducao"
+                                        <p><input type="checkbox" class="checkmark" class="checkmark" id="forma-conducao"
                                             name="forma-conducao" value="forma-conducao">
-                                        <label for="forma-conducao">Semi-deitada</label>
+                                        Semi-deitada</p>
                                     </div>
 
                                     <div class="dest2">
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="forma-conducao"
+                                        <p><input type="checkbox" class="checkmark" class="checkmark" id="forma-conducao"
                                             name="forma-conducao" value="forma-conducao">
-                                        <label for="forma-conducao">Sentada</label>
+                                        Sentada</p>
                                     </div>
                                 </div>
                             </div>
@@ -1910,7 +1921,7 @@
                     </button>
                 </h2>
                 <div id="collapseFifteen" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
+                    <div class="accordion-body" id="causa">
                         <banner>
                             <div class="dsn">
                                 <div class="dest2"><input type="checkbox" class="checkmark" class="checkmark"
@@ -2567,10 +2578,10 @@
                                 <div class="dest2">
                                     <div class="eit">
                                         <div>Distúrbio de Comportamento</div>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="vehicle1"
+                                        <input type="radio" class="checkmark" class="checkmark" id="vehicle1"
                                             name="vehicle1" value="Bike">
                                         <label for="nome-hospital">Sim</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="vehicle1"
+                                        <input type="radio" class="checkmark" class="checkmark" id="vehicle1"
                                             name="vehicle1" value="Bike">
                                         <label for="nome-hospital">Não</label>
                                     </div>
@@ -2578,10 +2589,10 @@
                                 <div class="dest2">
                                     <div class="eit">
                                         <div>Encontrado de Capacete</div>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="vehicle1"
+                                        <input type="radio" class="checkmark" class="checkmark" id="vehicle1"
                                             name="vehicle2" value="Bike">
                                         <label for="nome-hospital">Sim</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="vehicle1"
+                                        <input type="radio" class="checkmark" class="checkmark" id="vehicle1"
                                             name="vehicle2" value="Bike">
                                         <label for="nome-hospital">Não</label>
                                     </div>
@@ -2589,21 +2600,21 @@
                                 <div class="dest2">
                                     <div class="eit">
                                         <div>Encontrado de Cinto</div>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="vehicle1"
+                                        <input type="radio" class="checkmark" class="checkmark" id="vehicle1"
                                             name="vehicle3" value="Bike">
                                         <label for="nome-hospital">Sim</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="vehicle1"
-                                            name="vehicle3" value="Bike">
+                                        <input type="radio" class="checkmark" class="checkmark" id="vehicle1"
+                                            name="vehicle3" value="">
                                         <label for="nome-hospital">Não</label>
                                     </div>
                                 </div>
                                 <div class="dest2">
                                     <div class="eit">
                                         <div>Para-brisas Avariado</div>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="vehicle1"
+                                        <input type="radio" class="checkmark" class="checkmark" id="vehicle1"
                                             name="vehicle4" value="Bike">
                                         <label for="nome-hospital">Sim</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="vehicle1"
+                                        <input type="radio" class="checkmark" class="checkmark" id="vehicle1"
                                             name="vehicle4" value="Bike">
                                         <label for="nome-hospital">Não</label>
                                     </div>
@@ -2611,10 +2622,10 @@
                                 <div class="dest2">
                                     <div class="eit">
                                         <div>Caminhando na cena</div>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="vehicle1"
+                                        <input type="radio" class="checkmark" class="checkmark" id="vehicle1"
                                             name="vehicle5" value="Bike">
                                         <label for="nome-hospital">Sim</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="vehicle1"
+                                        <input type="radio" class="checkmark" class="checkmark" id="vehicle1"
                                             name="vehicle5" value="Bike">
                                         <label for="nome-hospital">Não</label>
                                     </div>
@@ -2622,10 +2633,10 @@
                                 <div class="dest2">
                                     <div class="eit">
                                         <div>Painel Avariado</div>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="vehicle1"
+                                        <input type="radio" class="checkmark" class="checkmark" id="vehicle1"
                                             name="vehicle6" value="Bike">
                                         <label for="nome-hospital">Sim</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="vehicle1"
+                                        <input type="radio" class="checkmark" class="checkmark" id="vehicle1"
                                             name="vehicle6" value="Bike">
                                         <label for="nome-hospital">Não</label>
                                     </div>
@@ -2633,10 +2644,10 @@
                                 <div class="dest2">
                                     <div class="eit">
                                         <div>Volante Torcido</div>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="vehicle1"
+                                        <input type="radio" class="checkmark" class="checkmark" id="vehicle1"
                                             name="vehicle7" value="Bike">
                                         <label for="nome-hospital">Sim</label>
-                                        <input type="checkbox" class="checkmark" class="checkmark" id="vehicle1"
+                                        <input type="radio" class="checkmark" class="checkmark" id="vehicle1"
                                             name="vehicle7" value="Bike">
                                         <label for="nome-hospital">Não</label>
                                     </div>
@@ -2659,43 +2670,43 @@
                             <div>
                                 <div class="c2">
                                     <div class="dest2">
-                                        <label for="vehicle">N° Usd.</label><br>
-                                        <input type="number" id="n-usd" name="n-usd" placeholder="Digite o N° Usd"
+                                        <label for="vehicle">N° Usd.</label>
+                                        <input type="number" class="inputs" id="n-usd" name="n-usd" placeholder="Digite o N° Usd"
                                             >
                                     </div>
                                     <div class="dest2">
-                                        <label for="vehicle">N° Ocorr.</label><br>
-                                        <input type="number" id="n-ocorr" name="n-ocorr"
+                                        <label for="vehicle">N° Ocorr.</label>
+                                        <input type="number" id="n-ocorr" class="inputs" name="n-ocorr"
                                             placeholder="Digite o N° Ocorr." >
                                     </div>
                                     <div class="dest2">
-                                        <label for="vehicle">Desp</label><br>
-                                        <input type="text1" id="desp" name="desp" placeholder="Digite o desp"
+                                        <label for="vehicle">Desp</label>
+                                        <input type="text" id="desp" name="desp" class="inputs" placeholder="Digite o desp"
                                             >
                                     </div>
                                     <div class="dest2">
-                                        <label for="vehicle">Km Final</label><br>
-                                        <input type="number" id="km-final" name="km-final"
+                                        <label for="vehicle">Km Final</label>
+                                        <input type="number" id="km-final" name="km-final" class="inputs"
                                             placeholder="Digite o KM final" >
                                     </div>
                                     <div class="dest2">
-                                        <label for="vehicle1">Cód. Ir</label><br>
-                                        <input type="checkbox" class="checkmark" class="eee" id="cod-ir" name="cod-ir"
+                                        <label for="vehicle1">Cód. Ir</label>
+                                        <input type="number"  class="inputs" id="cod-ir" name="cod-ir"
                                             value="ir">
                                     </div>
                                     <div class="dest2">
-                                        <label for="vehicle1">Cód. Ps</label><br>
-                                        <input type="checkbox" class="checkmark" class="eee" id="cod-ps" name="cod-ps"
+                                        <label for="vehicle1">Cód. Ps</label>
+                                        <input type="number"  class="inputs" id="cod-ps" name="cod-ps"
                                             value="ps">
                                     </div>
                                     <div class="dest2">
-                                        <label for="vehicle">H. Ch.</label><br>
-                                        <input type="text1" id="h-ch" name="h-ch" placeholder="Digite o H. ch"
+                                        <label for="vehicle">H. Ch.</label>
+                                        <input type="text" id="h-ch" name="h-ch" class="inputs" placeholder="Digite o H. ch"
                                             >
                                     </div>
                                     <div class="dest2">
-                                        <label for="vehicle">Cód. SIA/SUS </label><br>
-                                        <input type="text1" id="cod-sia-sus" name="cod-sia-sus"
+                                        <label for="vehicle">Cód. SIA/SUS </label>
+                                        <input type="text" id="cod-sia-sus" name="cod-sia-sus" class="inputs"
                                             placeholder="Digite o Cód. SIA/SUS" >
                                     </div>
                                 </div>

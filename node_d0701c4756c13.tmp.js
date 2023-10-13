@@ -2,7 +2,7 @@
 // Conexão com o banco de dados (substitua com suas configurações)
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "root";
 $dbname = "sa_bombeiros";
 
 $conn = new mysqli($servername, $username, $password, $dbname);

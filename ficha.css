@@ -1,5 +1,5 @@
 body {
-    background-color: #BDD8F4;
+    background-color: rgba(67, 67, 67, 0.361);
 }
 
 .dest2 {
@@ -11,12 +11,17 @@ body {
     grid-template-rows: auto;
     grid-gap: 10px;
 }
-
+.dest2 >p>select{
+    width: 40%;
+    border-radius: 10px;
+}
 banner {
     display: block;
 
 }
-
+#input{
+    width: 10%;
+}
 .inputs {
     width: 50%;
     height: 100%;
@@ -25,6 +30,7 @@ banner {
     border-radius: 5px;
     margin: 0 0 10px 0px;
 }
+
 
 .accordion-body {
     background-color: #BDD8F4;
@@ -57,6 +63,10 @@ banner {
     line-height: 25px;
     column-count: 3;
     display: block;
+}
+#causa1{
+    column-count: 2;
+
 }
 
 /* Criar o checkbox customizado */
@@ -110,4 +120,10 @@ banner {
 }
 .form-check-input{
     width: 987654323px;
+}
+.press{
+    display: flex;
+}
+.sodps .hidden {
+    display: none;
 }
