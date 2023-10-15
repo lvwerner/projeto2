@@ -127,3 +127,27 @@ banner {
 .sodps .hidden {
     display: none;
 }
+
+  #envio {
+    text-align: center;
+  }
+
+  #envio input[type="submit"] {
+    background-color: #005eff; /* Azul ciano */
+    border: 1px solid #fff; /* Borda branca de 1px */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno (ajuste conforme necessário) */
+    color: #fff; /* Cor do texto (branco) */
+    cursor: pointer; /* Cursor de mão para indicar que é um botão */
+  }
+
+.fotolocal{
+    column-count: 2;
+    display: flex;
+    gap: 10px;
+    margin-left: 10%;
+    background-color: white;
+}
+  .fotolocal >img{
+    height: 500px;
+  }
