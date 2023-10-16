@@ -151,3 +151,11 @@ banner {
   .fotolocal >img{
     height: 500px;
   }
+
+.table >table{
+    margin-left: 60px;
+}
+
+.destaque {
+    margin-left: 60px;
+}

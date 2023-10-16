@@ -28,6 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             // Login falhou, redirecionar para a página de login novamente
             header("Location: login.html");
+            // alert
         }
     } elseif (isset($_POST['cadastro'])) {
         // Receber dados do formulário de cadastro

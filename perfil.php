@@ -77,7 +77,7 @@
             exit();
         }
 
-        $mysqli = new mysqli("localhost", "root", "", "sa_bombeiros");
+        $mysqli = new mysqli("localhost", "root", "root", "sa_bombeiros");
 
         if ($mysqli->connect_error) {
             die("Erro de conexão com o banco de dados: " . $mysqli->connect_error);
@@ -89,7 +89,6 @@
 
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
-            echo "ID: " . $row["id"] . "<br>";
             echo "Nome Completo: " . $row["nome_completo"] . "<br>";
             echo "Email: " . $row["email"] . "<br>";
             echo "CPF: " . $row["cpf"] . "<br>";
