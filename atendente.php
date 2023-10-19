@@ -1,3 +1,18 @@
+<?php
+session_start();
+
+// Verificar se o usuário está autenticado e é do tipo "atendente"
+if (!isset($_SESSION['cpf']) || $_SESSION['tipo'] !== 'atendente') {
+    // Se não atender às condições, redirecionar para uma página de erro ou qualquer outra página apropriada
+    header("Location: pagina_de_erro.html");
+    exit; // Certifique-se de sair do script após o redirecionamento
+}
+
+// Se o usuário é um "atendente", ele pode continuar a visualizar o conteúdo da página "atendente.html"
+
+// Restante do código da página "atendente.html"
+// ...
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -185,4 +200,3 @@
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
                 crossorigin="anonymous"></script>        </body>
-

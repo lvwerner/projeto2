@@ -117,7 +117,6 @@ $mid_direito_grau = $_POST['mid_direito_grau'];
 $mid_esquerdo_grau = $_POST['mid_esquerdo_grau'];
 $msd_grau = $_POST['msd_grau'];
 $mse_grau = $_POST['mse_grau'];
-// Recupere as variáveis dos dados enviados via POST
 $Abdomem_sensivel_rigido = isset($_POST['Abdomem_sensivel_rigido']) ? 1 : 0;
 $Afundamento_cranio = isset($_POST['Afundamento_cranio']) ? 1 : 0;
 $Agitacao = isset($_POST['Agitacao']) ? 1 : 0;

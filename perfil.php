@@ -92,6 +92,7 @@
             echo "Nome Completo: " . $row["nome_completo"] . "<br>";
             echo "Email: " . $row["email"] . "<br>";
             echo "CPF: " . $row["cpf"] . "<br>";
+            echo $_SESSION['tipo'];
         } else {
             echo "Não foram encontrados registros para o usuário logado.";
         }

@@ -20,11 +20,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $result = $mysqli->query($query);
 
         if ($result->num_rows == 1) {
-            // Login bem-sucedido, criar uma sessão
-            $_SESSION['cpf'] = $cpf;
+            $usuario = $result->fetch_assoc();
 
-            // Redirecionar para a página protegida (ficha.html)
-            header("Location: ficha.html");
+            // Verificar o tipo de usuário
+            if ($usuario['tipo'] == 'atendente') {
+                // Login bem-sucedido para atendente, criar uma sessão
+                $_SESSION['cpf'] = $cpf;
+                $_SESSION['tipo'] = 'atendente';
+
+                // Redirecionar para a página protegida (ficha.html)
+                header("Location: ficha.html");
+            } elseif ($usuario['tipo'] == 'bombeiro') {
+                // Login bem-sucedido para bombeiro, criar uma sessão
+                $_SESSION['cpf'] = $cpf;
+                $_SESSION['tipo'] = 'bombeiro'; 
+
+                // Redirecionar para a página protegida (outras.html) para bombeiros
+                header("Location: ficha.html");
+            }
         } else {
             // Login falhou, redirecionar para a página de login novamente
             header("Location: login.html");
@@ -38,13 +51,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $senha = $_POST['Senha'];
 
         // Inserir os dados na tabela de usuários
-        $query = "INSERT INTO usuarios (nome_completo, email, cpf, senha) VALUES ('$nome_completo', '$email', '$cpf', '$senha')";
+        $query = "INSERT INTO usuarios (nome_completo, email, cpf, senha, tipo) VALUES ('$nome_completo', '$email', '$cpf', '$senha', 'bombeiro')";
         
         if ($mysqli->query($query) === TRUE) {
-            // Cadastro bem-sucedido, criar uma sessão
+            // Cadastro bem-sucedido para bombeiro, criar uma sessão
             $_SESSION['cpf'] = $cpf;
 
-            // Redirecionar para a página protegida (ficha.html)
+            // Redirecionar para a página protegida (outras.html) para bombeiros
             header("Location: ficha.html");
         } else {
             // Erro no cadastro, redirecionar para a página de cadastro novamente
@@ -52,7 +65,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 }
-
 
 // Fechar a conexão com o banco de dados
 $mysqli->close();

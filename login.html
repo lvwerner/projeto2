@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
     <!-- Adiciona o script jQuery -->
     <script type="text/javascript" src="jquery-1.8.2.min.js"></script>
 </head>
+
 <body>
     <!-- Formulário de Login -->
     <form action="conexao.php" method="post">
@@ -22,15 +24,24 @@
             </div>
             <!-- Campo CPF -->
             <p>Insira seu CPF</p>
-            <input type="number" class="login-input" id="CPF" name="CPF" value="" placeholder="xxx.xxx.xxx-xx" maxlength="11" minlength="11"/>
+            <input type="number" class="login-input" id="CPF" name="CPF" value="" placeholder="xxx.xxx.xxx-xx"
+                maxlength="11" minlength="11" />
             <!-- Div para exibir mensagens de erro para o CPF -->
             <div id="cpf-error" style="display: none; color: red;"></div>
             <!-- Campo Senha -->
+            <!-- Campo Senha -->
             <p>Insira sua Senha</p>
-            <input type="password" class="login-input" id="Senha" name="Senha" value="" placeholder="********" maxlength="15" minlength="8"/>
+            <input type="password" class="login-input" id="Senha" name="Senha" value="" placeholder="********"
+                maxlength="15" minlength="8" />
+
+            <!-- Adicione um elemento para exibir a mensagem de erro -->
+            <div id="senha-error" style="display: none; color: red;"></div>
+
             <!-- Botão de Login -->
             <input type="submit" name="login" value="Login" class="login-button" />
+
         </div>
     </form>
 </body>
+
 </html>
