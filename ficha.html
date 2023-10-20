@@ -28,7 +28,7 @@
                     <a class="nav-link" href="login.html">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="atendente.php">ATENDENTE</a>
+                    <a class="nav-link" href="atendente.php">Atendimento</a>
                 </li>
                 <form action="logout.php" method="post">
                     <input type="submit" name="logout" value="Sair" class="logout-button nav-link" />
@@ -74,9 +74,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="login.html">Login</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="atendente.php">Atendimento</a>
+                    </li>
                 </ul>
                 <form action="logout.php" method="post">
-                    <input type="submit" name="logout" value="Logout" class="logout-button" />
+                    <input type="submit" name="logout" value="Sair" class="logout-button nav-link" />
                 </form>
 
             </div>
@@ -1929,7 +1932,7 @@
                                 <div class="four">
 
                                     <div class="dest2">
-                                        <div class="emoji">&#128577;<br>
+                                        <div class="emoji"><br>
                                             <input type="checkbox" class="checkmark" class="checkmark" id="d-transporte"
                                                 name="d-transporte" value="d-transporte">
                                             <label for="d-transporte">Crítico</label>
@@ -1937,7 +1940,7 @@
                                     </div>
 
                                     <div class="dest2">
-                                        <div class="emoji">&#1285s34;<br>
+                                        <div class="emoji"><br>
                                             <input type="checkbox" class="checkmark" class="checkmark" id="d-transporte"
                                                 name="d-transporte" value="d-transporte">
                                             <label for="d-transporte">Instável</label>
@@ -1945,7 +1948,7 @@
                                     </div>
 
                                     <div class="dest2">
-                                        <div class="emoji">&#128528;<br>
+                                        <div class="emoji"><br>
                                             <input type="checkbox" class="checkmark" class="checkmark" id="d-transporte"
                                                 name="d-transporte" value="d-transporte">
                                             <label for="d-transporte">Potencialmente instável</label>
@@ -1953,7 +1956,7 @@
                                     </div>
 
                                     <div class="dest2">
-                                        <div class="emoji">&#128578;<br>
+                                        <div class="emoji"><br>
                                             <input type="checkbox" class="checkmark" class="checkmark" id="d-transporte"
                                                 name="d-transporte" value="d-transporte">
                                             <label for="d-transporte">Deitada</label>
@@ -2756,6 +2759,72 @@
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwentyThree                      " aria-expanded="false" aria-controls="collapseTwentyThree">
+                    Vítima era
+                  </button>
+                </h2>
+                <div id="collapseTwentyThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <banner>
+                        <titulos id="vitimaera">Vítima era</titulos>
+                        <div>
+                            <div class="simnao">
+                                <div class="destaqueclaro"><input type="checkbox" name="ciclista"
+                                        value="sim">
+                                    <label for="ciclista">Ciclista</label>
+                                </div>
+    
+                                <div class="destaqueclaro"><input type="checkbox" name="condutor_moto"
+                                        value="sim">
+                                    <label for="condutor_moto">Condutor moto</label>
+                                </div>
+    
+                                <div class="destaqueclaro"><input type="checkbox"  name="gestante"
+                                        value="sim">
+                                    <label for="gestante">Gestante</label>
+                                </div>
+    
+                                <div class="destaqueclaro"><input type="checkbox"
+                                        name="passageiro_bancofrente" value="sim">
+                                    <label for="passageiro_bancofrente">Passageiro Banco Frente</label>
+                                </div>
+    
+                                <div class="destaqueclaro"><input type="checkbox" 
+                                        name="passageiro_moto" value="sim">
+                                    <label for="passageiro_moto">Passageiro Moto</label>
+                                </div>
+    
+                                <div class="destaqueclaro"><input type="checkbox" name="condutor_carro"
+                                        value="sim">
+                                    <label for="condutor_carro">Condutor Carro</label>
+                                </div>
+    
+                                <div class="destaqueclaro"><input type="checkbox" name="clinico"
+                                        value="sim">
+                                    <label for="clinico">Clínico</label>
+                                </div>
+    
+                                <div class="destaqueclaro"><input type="checkbox" name="trauma" value="sim">
+                                    <label for="trauma">Trauma</label>
+                                </div>
+    
+                                <div class="destaqueclaro"><input type="checkbox" 
+                                        name="passageiro_btras" value="sim">
+                                    <label for="passageiro_btras">Passageiro Banco Trás</label>
+                                </div>
+    
+                                <div class="destaqueclaro"><input type="checkbox" name="pedestre"
+                                        value="sim">
+                                    <label for="pedestre">Pedestre</label>
+                                </div>
+                            </div>
+                        </div>
+                    </banner>
+                  </div>
+                </div>
+              </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseTwentyOne" aria-expanded="false" aria-controls="collapseTwentyOne">
                         Termo de Recusa de Atendimento e/ou Transporte
@@ -2766,10 +2835,10 @@
                         <banner>
                             <div class="centerr">
                                 <div class="dest2">
-                                    Eu <input class="inputs" type="text" id="nome-acompanhante" class="inputs"
+                                    Eu <input class="inputs input3" type="text" id="nome-acompanhante" class="inputs input3"
                                         name="nome-acompanhante" placeholder="Digite">
                                     portador da carteira de indentidade RG N° <input type="number"
-                                        class="form-control cpf-mask inputs" placeholder="000.000.000-00">
+                                        class="form-control cpf-mask inputs input3" placeholder="000.000.000-00">
                                     inscrito no CPF sob N° <input type="number" class="form-control cpf-mask inputs"
                                         placeholder="000.000.000-00">
                                     na qualidade de vítima/paciente, usando dos direitos que a lei me garante,
@@ -2781,27 +2850,27 @@
                                 </div>
                                 <div class="dest2">
                                     <label for="nome-hospital">Ass:</label> <br>
-                                    <input type="text" class="form-control inputs" id="nome-hospital"
+                                    <input type="text" class="form-control inputs input3" id="nome-hospital"
                                         name="nome-hospital" placeholder="Assinatura">
                                 </div>
                                 <div class="dest2">
                                     <label for="nome-hospital">Testemunha:</label>
-                                    <input type="text" class="form-control inputs" id="nome-hospital"
+                                    <input type="text" class="form-control inputs input3" id="nome-hospital"
                                         name="nome-hospital" placeholder="Digite o nome da testemunha">
                                 </div>
                                 <div class="dest2">
                                     <label for="nome-hospital">Doc:</label> <br>
-                                    <input type="number" class="form-control inputs" id="nome-hospital"
+                                    <input type="number" class="form-control inputs input3" id="nome-hospital"
                                         name="nome-hospital" placeholder="Digite o CPF/RG da testemunha">
                                 </div>
                                 <div class="dest2">
                                     <label for="nome-hospital">Testemunha:</label>
-                                    <input type="text" class="form-control inputs" id="nome-hospital"
+                                    <input type="text" class="form-control inputs input3" id="nome-hospital"
                                         name="nome-hospital" placeholder="Digite o nome da testemunha">
                                 </div>
                                 <div class="dest2">
                                     <label for="nome-hospital">Doc:</label> <br>
-                                    <input type="number" class="form-control inputs" id="nome-hospital"
+                                    <input type="number" class="form-control inputs input3" id="nome-hospital"
                                         name="nome-hospital" placeholder="Digite o CPF/RG da testemunha">
                                 </div>
                             </div>

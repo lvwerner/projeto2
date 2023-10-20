@@ -22,6 +22,11 @@
             <input type="number" class="login-input" id="CPF" name="CPF" value="" placeholder="xxx.xxx.xxx-xx" maxlength="11" minlength="11"/>
             <div id="cpf-error" style="display: none; color: red;"></div>
             <p>Insira o email</p><input type="email" class="login-input" id="Email" name="Email" value="" placeholder="********" >
+            <p>Selecione o tipo</p>
+            <select class="login-input" id="tipo" name="tipo" value="" >
+                <option value="">Atendente</option>
+                <option value="">Bombeiro</option>
+            </select>
             <p>Crie uma Senha</p>
             <input type="password" class="login-input" id="Senha" name="Senha" value="" placeholder="********" maxlength="15" minlength="8" onblur="validarSenha()"/>
             <input type="submit" name="cadastro" value="Cadastrar" class="login-button" />

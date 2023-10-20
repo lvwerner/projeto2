@@ -31,6 +31,10 @@ banner {
     margin: 0 0 10px 0px;
 }
 
+.input3{
+    width: 25%;
+}
+
 
 .accordion-body {
     background-color: #BDD8F4;

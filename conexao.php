@@ -49,9 +49,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email = $_POST['Email'];
         $cpf = $_POST['CPF'];
         $senha = $_POST['Senha'];
+        $tipo = $_POST['tipo'];
 
         // Inserir os dados na tabela de usuários
-        $query = "INSERT INTO usuarios (nome_completo, email, cpf, senha, tipo) VALUES ('$nome_completo', '$email', '$cpf', '$senha', 'bombeiro')";
+        $query = "INSERT INTO usuarios (nome_completo, email, cpf, senha, tipo) VALUES ('$nome_completo', '$email', '$cpf', '$senha', '$tipo')";
         
         if ($mysqli->query($query) === TRUE) {
             // Cadastro bem-sucedido para bombeiro, criar uma sessão
