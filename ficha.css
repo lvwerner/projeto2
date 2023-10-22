@@ -1,5 +1,16 @@
-body {
-    background-color: rgba(67, 67, 67, 0.361);
+#body {
+    background-color: rgba(173, 172, 191, 0.361);
+    font-family: 'Open Sans', coursive;
+}
+#navbarra{
+    background-color: transparent;
+    font-weight: 400;
+}
+
+#btnacord{
+    background-color: #7190c5c9;
+    color: black;
+    border: 1px solid white;
 }
 
 .dest2 {

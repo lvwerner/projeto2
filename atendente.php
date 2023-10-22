@@ -124,7 +124,7 @@ if (!isset($_SESSION['cpf']) || $_SESSION['tipo'] !== 'atendente') {
                             </form>
                         </ul>
                         <form action="logout.php" method="post">
-                            <input type="submit" name="logout" value="Logout" class="logout-button" />
+                            <input type="submit" name="logout" value="Logout" class="logout-button nav-link" />
                         </form>
 
                     </div>

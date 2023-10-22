@@ -14,14 +14,14 @@
 
     <style>
         body {
-            background-color: #e6f7ff; /* Fundo azul claro */
-            font-family: 'Open Sans', sans-serif;
+            background-color: rgba(173, 172, 191, 0.361);
+            font-family: 'Open Sans', coursive;
             margin: 0;
             padding: 0;
         }
 
         .navbar {
-            background-color: #1E90FF !important; /* Cor azul para a barra de navegação */
+            background-color: transparent !important; /* Cor azul para a barra de navegação */
         }
 
         .navbar-light .navbar-toggler-icon {
@@ -52,13 +52,13 @@
                     <a class="nav-link" href="ficha.html">Página Inicial</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="sobre.html">Sobre</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="perfil.html">Perfil</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="login.html">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="atendente.php">Atendimento</a>
                 </li>
                 <form action="logout.php" method="post">
                     <input type="submit" name="logout" value="Sair" class="logout-button nav-link" />
@@ -66,6 +66,7 @@
             </ul>
         </div>
     </nav>
+    
 
     <div class="container user-data">
         <?php
@@ -77,7 +78,7 @@
             exit();
         }
 
-        $mysqli = new mysqli("localhost", "root", "root", "sa_bombeiros");
+        $mysqli = new mysqli("localhost", "root", "", "sa_bombeiros");
 
         if ($mysqli->connect_error) {
             die("Erro de conexão com o banco de dados: " . $mysqli->connect_error);

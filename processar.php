@@ -260,7 +260,7 @@ $stmt = $conexao->prepare($sql);
 // Verifique se a declaração foi preparada com sucesso
 if ($stmt) {
     // Faça o binding dos parâmetros com os valores
-    $stmt->bind_param("sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssiiiiiiiii",
+    $stmt->bind_param("sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssiiiiiiiiisssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss",
         $oq_aconteceu, $aconteceu_outros_vezes, $tempo_aconteceu, $possui_problema_saude, $quais_doencas, $faz_uso_medicacao,
         $horario_ultima_medicacao, $quais_medicacoes, $alergico_alguma_coisa, $especificacao_alergia, $ingeriu_limento_liquido,
         $horas_ingeriu, $dia, $sexo_paciente, $nome_hospital, $nome_paciente, $idade, $fone, $rg_cpf_paciente, $nome_acompanhante,
@@ -278,7 +278,21 @@ if ($stmt) {
         $nenhuma_resposta_motora, $ausencia, $total_gcs_1, $total_gcs_2, $pressao_arterial1, $pressao_arterial2, $pulso,
         $respiracao, $pulsacao1, $pulsacao2, $temperatura, $perfusao, $anormal, $normal, $psiquiatrico, $respiratorio, $diabetes,
         $obstetrico, $transporte, $prob_outros, $localFerimento, $lado, $face, $tipo, $cabeca_grau, $pescoco_grau, $tant_grau, $tpos_grau,
-         $genital_grau, $mid_direito_grau, $mid_esquerdo_grau, $msd_grau, $mse_grau, $Abdomen_sensivel_rigido);
+        $genital_grau, $mid_direito_grau, $mid_esquerdo_grau, $msd_grau, $mse_grau, $Abdomen_sensivel_rigido, $Afundamento_cranio, $Agitacao,
+        $Apineia, $Bradicardia, $Bradipneia, $Bronco_aspirando, $Cianose_labios, $Cianose_extremidade, $Convulsao, $Decorticacao, $Deformidade, 
+        $Descerebracao, $Desmaio, $Desvio_traqueia, $Dispneia, $Dor_local, $Edema_generalizados, $Edema_localizados, $Enfisema_subcutaneo, 
+        $Estase_jugular, $Face_palida, $Hipertensao, $Hipotensao, $Hemorragia_interna, $Hemorragia_externa, $Nauseas_vomitos, $Nasoragia, $Obito, 
+        $Otorreia, $OVACE, $Parada_cardiaca, $Parada_respiratoria, $Priaprismo, $Prurido_pele, $Pupilas_anisocoria, $Pupilas_isocoria, $Pupilas_midriase, 
+        $Pupilas_miose, $Pupilas_reagente, $Pupilas_nao_reagente, $Sede, $Sinal_battle, $Sinal_guaxinim, $Sudorese, $Taquipneia, $Taquicardia, 
+        $Tontura, $Outros, $Deitada, $Semi_deitada, $Sentada, $Aspiração, $Avaliacao_Inicial, $Avaliacao_Dirigida, $Avaliacao_Continuada, $Chave_de_Rautek, 
+        $Canula_de_Guedel, $Desobstrução_de_VA, $Emprego_do_DEA, $Gerenciamento_de_Riscos, $Limpeza_de_Ferimento, $Curativos, $Compressivo, $Encravamento, 
+        $Ocular, $Queimadura, $Simples, $Tres_pontas, $Imobilizações, $Membro_Inf_Dir, $Membro_Inf_Esq, $Membro_Sup_Dir, $Membro_Sup_Esq, $Quadril, $Cervical, 
+        $Maca_sobre_rodas, $Maca_rigida, $Ponte, $Retirado_capacete, $RCP, $Rolamento_90, $Rolamento_180, $Tomada_decisao, $Tratado_choque, $Uso_de_canula, 
+        $Uso_colar, $Tam_colar, $Uso_Ked, $Uso_Ttf, $Ventilacao_suporte, $Oxigenioterapia, $LPM, $Reanimador, $Meio_auxiliares, $CELESC, $Def_civil, $Policia, 
+        $Policia_Civil, $Policia_Militar, $Policia_PRE, $Policia_PRF, $Samu, $EUA, $USB, $CIT, $Digite, $material, $quantidade, $material_extra, 
+        $quantidade_extra, $objetos_recolhidos, $encontr_capacete, $encontr_cinto, $para_brisas_avariado, $caminhando_na_cena, $painel_avariado, $volante_torcido, 
+        $n_usd, $n_ocorr, $desp, $km_final, $cod_ir, $cod_ps, $h_ch, $cod_sia_sus, $medico_responsavel, $socorrista1, $socorrista2, $socorrista3, $demandante, $equipe
+        );
 
     // Execute a declaração
     if ($stmt->execute()) {
