@@ -112,14 +112,38 @@ $cabecaGrau =  isset($_POST['cabecaGrau']) ? 1 : 0;
 $cabecaGrau2 =  isset($_POST['cabecaGrau2']) ? 1 : 0;
 $cabecaGrau3 =  isset($_POST['cabecaGrau3']) ? 1 : 0;
 $cabecaGrau4 =  isset($_POST['cabecaGrau4']) ? 1 : 0;
-$pescoco_grau = $_POST['pescoco_grau'];
-$tant_grau = $_POST['tant_grau'];
-$tpos_grau = $_POST['tpos_grau'];
-$genital_grau = $_POST['genital_grau'];
-$mid_direito_grau = $_POST['mid_direito_grau'];
-$mid_esquerdo_grau = $_POST['mid_esquerdo_grau'];
-$msd_grau = $_POST['msd_grau'];
-$mse_grau = $_POST['mse_grau'];
+$pescocoGrau = isset($_POST['pescocoGrau']) ? 1 : 0;
+$pescocoGrau2 = isset($_POST['pescocoGrau2']) ? 1 : 0;
+$pescocoGrau3 = isset($_POST['pescocoGrau3']) ? 1 : 0;
+$pescocoGrau4 = isset($_POST['pescocoGrau4']) ? 1 : 0;
+$tantGrau = isset($_POST['tantGrau']) ? 1 : 0;
+$tantGrau2 = isset($_POST['tantGrau2']) ? 1 : 0;
+$tantGrau3 = isset($_POST['tantGrau3']) ? 1 : 0;
+$tantGrau4 = isset($_POST['tantGrau4']) ? 1 : 0;
+$tposGrau = isset($_POST['tposGrau']) ? 1 : 0;
+$tposGrau2 = isset($_POST['tposGrau2']) ? 1 : 0;
+$tposGrau3 = isset($_POST['tposGrau3']) ? 1 : 0;
+$tposGrau4 = isset($_POST['tposGrau4']) ? 1 : 0;
+$genitalGrau = isset($_POST['genitalGrau']) ? 1 : 0;
+$genitalGrau2 = isset($_POST['genitalGrau2']) ? 1 : 0;
+$genitalGrau3 = isset($_POST['genitalGrau3']) ? 1 : 0;
+$genitalGrau4 = isset($_POST['genitalGrau4']) ? 1 : 0;
+$middireitoGrau = isset($_POST['middireitoGrau']) ? 1 : 0;
+$middireitoGrau2 = isset($_POST['middireitoGrau2']) ? 1 : 0;
+$middireitoGrau3 = isset($_POST['middireitoGrau3']) ? 1 : 0;
+$middireitoGrau4 = isset($_POST['middireitoGrau4']) ? 1 : 0;
+$midesquerdoGrau = isset($_POST['midesquerdoGrau']) ? 1 : 0;
+$midesquerdoGrau2 = isset($_POST['midesquerdoGrau2']) ? 1 : 0;
+$midesquerdoGrau3 = isset($_POST['midesquerdoGrau3']) ? 1 : 0;
+$midesquerdoGrau4 = isset($_POST['midesquerdoGrau4']) ? 1 : 0;
+$msdGrau = isset($_POST['msd_grau']) ? 1 : 0;
+$msdGrau2 = isset($_POST['msd_grau2']) ? 1 : 0;
+$msdGrau3 = isset($_POST['msd_grau3']) ? 1 : 0;
+$msdGrau4 = isset($_POST['msd_grau4']) ? 1 : 0;
+$mseGrau = isset($_POST['mse_grau']) ? 1 : 0;
+$mseGrau2 = isset($_POST['mse_grau2']) ? 1 : 0;
+$mseGrau3 = isset($_POST['mse_grau3']) ? 1 : 0;
+$mseGrau4 = isset($_POST['mse_grau4']) ? 1 : 0;
 $Abdomem_sensivel_rigido = isset($_POST['Abdomem_sensivel_rigido']) ? 1 : 0;
 $Afundamento_cranio = isset($_POST['Afundamento_cranio']) ? 1 : 0;
 $Agitacao = isset($_POST['Agitacao']) ? 1 : 0;
@@ -263,7 +287,7 @@ $stmt = $conexao->prepare($sql);
 // Verifique se a declaração foi preparada com sucesso
 if ($stmt) {
     // Faça o binding dos parâmetros com os valores
-    $stmt->bind_param("ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss",
+    $stmt->bind_param("sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss",
         $oq_aconteceu, $aconteceu_outros_vezes, $tempo_aconteceu, $possui_problema_saude, $quais_doencas, $faz_uso_medicacao,
         $horario_ultima_medicacao, $quais_medicacoes, $alergico_alguma_coisa, $especificacao_alergia, $ingeriu_limento_liquido,
         $horas_ingeriu, $dia, $sexo_paciente, $nome_hospital, $nome_paciente, $idade, $fone, $rg_cpf_paciente, $nome_acompanhante,
@@ -280,8 +304,8 @@ if ($stmt) {
         $movimento_de_retirada, $retirada_do_segmento_estimulado, $flexao_anormal, $flexao_anormal2, $extensao_anormal, $extensao_anormal2,
         $nenhuma_resposta_motora, $ausencia, $total_gcs_1, $total_gcs_2, $pressao_arterial1, $pressao_arterial2, $pulso,
         $respiracao, $pulsacao1, $pulsacao2, $temperatura, $perfusao, $anormal, $normal, $psiquiatrico, $respiratorio, $diabetes,
-        $obstetrico, $transporte, $prob_outros, $localFerimento, $lado, $face, $tipo, $cabecaGrau, $pescoco_grau, $tant_grau, $tpos_grau,
-        $genital_grau, $mid_direito_grau, $mid_esquerdo_grau, $msd_grau, $mse_grau, $Abdomen_sensivel_rigido, $Afundamento_cranio, $Agitacao,
+        $obstetrico, $transporte, $prob_outros, $localFerimento, $lado, $face, $tipo, $cabecaGrau, $cabecaGrau2, $cabecaGrau3, $cabecaGrau4, $pescocoGrau, $pescocoGrau2, $pescocoGrau3, $pescocoGrau4, $tantGrau, $tantGrau2, $tantGrau3, $tantGrau4, $tposGrau, $tposGrau2, $tposGrau3, $tposGrau4,
+        $genitalGrau, $genitalGrau2, $genitalGrau3, $genitalGrau4, $middireitoGrau, $middireitoGrau2, $middireitoGrau3, $middireitoGrau4, $midesquerdoGrau, $midesquerdoGrau2, $midesquerdoGrau3, $midesquerdoGrau4, $msdGrau, $msdGrau2, $msdGrau3, $msdGrau4, $mseGrau, $mseGrau2, $mseGrau3, $mseGrau4, $Abdomen_sensivel_rigido, $Afundamento_cranio, $Agitacao,
         $Apineia, $Bradicardia, $Bradipneia, $Bronco_aspirando, $Cianose_labios, $Cianose_extremidade, $Convulsao, $Decorticacao, $Deformidade, 
         $Descerebracao, $Desmaio, $Desvio_traqueia, $Dispneia, $Dor_local, $Edema_generalizados, $Edema_localizados, $Enfisema_subcutaneo, 
         $Estase_jugular, $Face_palida, $Hipertensao, $Hipotensao, $Hemorragia_interna, $Hemorragia_externa, $Nauseas_vomitos, $Nasoragia, $Obito, 
