@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    const imageContainer = document.getElementById('image-container');
+    const desfazerButton = document.getElementById('desfazer');
+    const circles = [];
+
+    imageContainer.addEventListener('click', function (e) {
+        const clickCircle = document.createElement('div');
+        clickCircle.className = 'click-circle';
+        const size = 10; // Tamanho do círculo
+        const x = e.offsetX - size / 0.5;
+        const y = e.offsetY - size / 1;
+        clickCircle.style.width = size + 'px';
+        clickCircle.style.height = size + 'px';
+        clickCircle.style.left = x + 'px';
+        clickCircle.style.top = y + 'px';
+        imageContainer.appendChild(clickCircle);
+
+        circles.push({ element: clickCircle, x, y });
+    });
+
+    desfazerButton.addEventListener('click', function () {
+        if (circles.length > 0) {
+            const lastCircle = circles.pop();
+            imageContainer.removeChild(lastCircle.element);
+        }
+    });
+</script>
+
+<body>
+    <div class="texto" id="localizacao-traumas">Localização dos traumas</div>
+
+    <br>
+
+    <div id="captura">
+        <div id="image-container">
+            <img src="https://i.pinimg.com/originals/58/de/42/58de422ac1de8428c3c43a719dd96205.png"
+                alt="Imagem do corpo" class="hidden" id="imagem-corpo-adulto">
+        </div>
+        <div id="image-container-crn">
+            <img src="https://i.pinimg.com/originals/87/c6/fb/87c6fb29c276cc56187274991e32ee66.png"
+                alt="Imagem do corpo" class="hidden" id="imagem-corpo-crianca">
+        </div>
+    </div>
+
+    <button id="desfazer">Desfazer</button>
+
+
+    <br>
+
+
+
+    <div class="grid_ocorrencia">
+        <div>
+            <input type="checkbox" name="checkBox[]" class="checkbox-block" id="checkbox-id-1">
+            <label for="checkbox-id-1">Queimadura</label>
+        </div>
+        <div>
+            <input type="checkbox" name="checkBox[]" class="checkbox-block" id="checkbox-id-1">
+            <label for="checkbox-id-1">Escorição</label>
+        </div>
+        <div>
+            <input type="checkbox" name="checkBox[]" class="checkbox-block" id="checkbox-id-1">
+            <label for="checkbox-id-1">Ferimento Contuso</label>
+        </div>
+        <div>
+            <input type="checkbox" name="checkBox[]" class="checkbox-block" id="checkbox-id-1">
+            <label for="checkbox-id-1">Ferimento perfurante</label>
+        </div>
+        <div>
+            <input type="checkbox" name="checkBox[]" class="checkbox-block" id="checkbox-id-1">
+            <label for="checkbox-id-1">Laceração</label>
+        </div>
+        <div>
+            <input type="checkbox" name="checkBox[]" class="checkbox-block" id="checkbox-id-1">
+            <label for="checkbox-id-1">Contusão</label>
+        </div>
+        <div>
+            <input type="checkbox" name="checkBox[]" class="checkbox-block" id="checkbox-id-1">
+            <label for="checkbox-id-1">Fratura aberta</label>
+        </div>
+        <div>
+            <input type="checkbox" name="checkBox[]" class="checkbox-block" id="checkbox-id-1">
+            <label for="checkbox-id-1">Fratura fechada</label>
+        </div>
+        <div>
+            <input type="checkbox" name="checkBox[]" class="checkbox-block" id="checkbox-id-1">
+            <label for="checkbox-id-1">Luxação</label>
+        </div>
+        <div>
+            <input type="checkbox" name="checkBox[]" class="checkbox-block" id="checkbox-id-1">
+            <label for="checkbox-id-1">Hemorragia</label>
+        </div>
+    </div>
+    ΠΙΜΕ
+    <h2>Upload input</h2>
+    <img alt="">
+    <form action="index.html" method="post"> <input type="file" name="file" id="file"> <label for="file">Select a file
+            ... </label>
+    </form>
+</body>
+<script>
+    const image document.querySelector('img'); = const input = document.querySelector('input');
+    input.addEventListener('change', (e) ⇒ {
+        image.src = URL.createObjectURL(e.target.files[0]);
+    });
+</script>
+
+</html>

@@ -60,7 +60,7 @@ if (!isset($_SESSION['cpf']) || $_SESSION['tipo'] !== 'atendente') {
 </style>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar- bg-light d-none d-lg-block">
+    <nav id="navbarra" class="navbar navbar-expand-lg navbar- d-none d-lg-block">
         <div class="container">
             <a class="navbar-brand mb-0 h1" href="ficha.html">Ficha de Ocorrência</a>
             <ul class="navbar-nav ml-auto">

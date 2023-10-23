@@ -1065,16 +1065,18 @@
                                         <!-- Adicione as opções de trauma aqui -->
                                         <option value="Trauma 1">Trauma 1</option>
                                         <option value="Trauma 2">Trauma 2</option>
+                                        <option value="Trauma 3">Trauma 3</option>
+                                        <option value="Trauma 4">Trauma 4</option>
                                     </select>
-                                    <div class="row position-relative">
+                                    <div class="col position-relative">
                                         <!-- Adicione um id à imagem e faça-a cobrir a div -->
                                         <img id="HumanBody"
                                             src="https://i.pinimg.com/564x/b3/aa/63/b3aa63fba6d97786a4c8f99440d132ee.jpg"
-                                            alt="imagem adulto">
-                                        <img id="HumanBody2"
-                                            src="https://i.pinimg.com/564x/11/05/bc/1105bc74348865beb8535fe139b75593.jpg"
-                                            alt="imagem criança">
-
+                                            alt="imagem adulto" style="width: 100%; height: auto; max-width: 564px;">
+                                        <div id="markerPurple" class="position-absolute" style="width: 10px; height: 10px; background-color: purple; border-radius: 50%; display: none;"></div>
+                                        <div id="markerRed" class="position-absolute" style="width: 10px; height: 10px; background-color: red; border-radius: 50%; display: none;"></div>
+                                        <div id="markerOrange" class="position-absolute" style="width: 10px; height: 2px; background-color: orange; display: none;"></div>
+                                        <div id="markerYellow" class="position-absolute" style="width: 10px; height: 10px; background-color: yellow; display: none;"></div>
                                     </div>
                                     <!-- Adicione um local para exibir os resultados -->
                                     <div id="results"></div>
@@ -1082,6 +1084,51 @@
                                     </div>
                                 </form>
                             </banner>
+                            
+                            <script>
+                                // Adicione um evento de clique à imagem
+                                document.getElementById('HumanBody').addEventListener('click', function(event) {
+                                    // Obtenha as coordenadas do clique
+                                    const x = event.offsetX;
+                                    const y = event.offsetY;
+                                    
+                                    // Obtenha os marcadores
+                                    const markerPurple = document.getElementById('markerPurple');
+                                    const markerRed = document.getElementById('markerRed');
+                                    const markerOrange = document.getElementById('markerOrange');
+                                    const markerYellow = document.getElementById('markerYellow');
+                                    
+                                    // Verifique a seleção do tipo de trauma
+                                    const selectedTrauma = document.getElementById('traumaType').value;
+                                    
+                                    // Oculte todos os marcadores
+                                    markerPurple.style.display = 'none';
+                                    markerRed.style.display = 'none';
+                                    markerOrange.style.display = 'none';
+                                    markerYellow.style.display = 'none';
+                                    
+                                    // Atualize a posição do marcador apropriado
+                                    if (selectedTrauma === 'Trauma 1') {
+                                        markerPurple.style.left = x - 5 + 'px'; // 5 é a metade da largura do marcador
+                                        markerPurple.style.top = y - 5 + 'px';  // 5 é a metade da altura do marcador
+                                        markerPurple.style.display = 'block';
+                                    } else if (selectedTrauma === 'Trauma 2') {
+                                        markerRed.style.left = x - 5 + 'px';
+                                        markerRed.style.top = y - 5 + 'px';
+                                        markerRed.style.display = 'block';
+                                    } else if (selectedTrauma === 'Trauma 3') {
+                                        markerOrange.style.left = x - 5 + 'px';
+                                        markerOrange.style.top = y - 1 + 'px';
+                                        markerOrange.style.display = 'block';
+                                    } else if (selectedTrauma === 'Trauma 4') {
+                                        markerYellow.style.left = x - 5 + 'px';
+                                        markerYellow.style.top = y - 5 + 'px';
+                                        markerYellow.style.display = 'block';
+                                    }
+                                });
+                            </script>
+                            
+                            
                         </div>
                     </div>
              
