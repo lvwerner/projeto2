@@ -231,12 +231,11 @@ $Tomada_decisao = isset($_POST['Tomada_decisao']) ? 1 : 0;
 $Tratado_choque = isset($_POST['Tratado_choque']) ? 1 : 0;
 $Uso_de_canula = isset($_POST['Uso_de_canula']) ? 1 : 0;
 $Uso_colar = isset($_POST['Uso_colar']) ? 1 : 0;
-$Tam_colar = $_POST['Tam_colar'];
+$tam_colar = $_POST['tam_colar'];
 $Uso_Ked = isset($_POST['Uso_Ked']) ? 1 : 0;
 $Uso_Ttf = isset($_POST['Uso_Ttf']) ? 1 : 0;
 $Ventilacao_suporte = isset($_POST['Ventilacao_suporte']) ? 1 : 0;
 $Oxigenioterapia = $_POST['Oxigenioterapia'];
-$LPM = $_POST['LPM'];
 $Reanimador = $_POST['Reanimador'];
 $Meio_auxiliares = isset($_POST['Meio_auxiliares']) ? 1 : 0;
 $CELESC = isset($_POST['CELESC']) ? 1 : 0;
@@ -247,22 +246,18 @@ $Policia_Militar = isset($_POST['Policia_Militar']) ? 1 : 0;
 $Policia_PRE = isset($_POST['Policia_PRE']) ? 1 : 0;
 $Policia_PRF = isset($_POST['Policia_PRF']) ? 1 : 0;
 $Samu = isset($_POST['Samu']) ? 1 : 0;
-$EUA = isset($_POST['EUA']) ? 1 : 0;
+$USA = isset($_POST['USA']) ? 1 : 0;
 $USB = isset($_POST['USB']) ? 1 : 0;
 $CIT = isset($_POST['CIT']) ? 1 : 0;
 $Digite = $_POST['Digite'];
-$material = $_POST['material'];
-$quantidade = $_POST['quantidade'];
-$material_extra = $_POST['material_extra'];
-$quantidade_extra = $_POST['quantidade_extra'];
 $objetos_recolhidos = $_POST['objetos_recolhidos'];
-$encontr_capacete = $_POST['encontr_capacete'];
-$encontr_cinto = $_POST['encontr_cinto'];
-$para_brisas_avariado = $_POST['para_brisas_avariado'];
-$caminhando_na_cena = $_POST['caminhando_na_cena'];
-$painel_avariado = $_POST['painel_avariado'];
-$volante_torcido = $_POST['volante_torcido'];
-$n_usd = $_POST['n_usd'];
+$encontr_capacete = isset($_POST['encontr_capacete']) ? 1 : 0;
+$encontr_cinto = isset($_POST['encontr_cinto']) ? 1 : 0;
+$para_brisas_avariado = isset($_POST['para_brisas_avariado']) ? 1 : 0;
+$caminhando_na_cena = isset($_POST['caminhando_na_cena']) ? 1 : 0;
+$painel_avariado = isset($_POST['painel_avariado']) ? 1 : 0;
+$volante_torcido = isset($_POST['volante_torcido']) ? 1 : 0;
+$nUsd = $_POST['nUsd'];
 $n_ocorr = $_POST['n_ocorr'];
 $desp = $_POST['desp'];
 $km_final = $_POST['km_final'];
@@ -279,7 +274,7 @@ $equipe = $_POST['equipe'];
 
 
 // Insira os dados no banco de dados usando uma declaração preparada
-$sql = "INSERT INTO ficha_ocorrencia (oq_aconteceu, aconteceu_outros_vezes, tempo_aconteceu, possui_problema_saude, quais_doencas, faz_uso_medicacao, horario_ultima_medicacao, quais_medicacoes, alergico_alguma_coisa, especificacao_alergia, ingeriu_limento_liquido, horas_ingeriu, dia, sexo_paciente, nome_hospital, nome_paciente, idade, fone, rg_cpf_paciente, nome_acompanhante, idade_acompanhante, local_ocorrencia, periodo_gestacao, faz_uso_medicacao_2, nome_medico, complicacoes, primeiro_filho, quantidade_filhos, inicio_contracoes, duracao_contracoes, intervalo_contracoes, pressao_evacuar, ruptura_bolsa, inspecao_visual, hora_nascimento, sexo_bebe, nome_bebe, causas_animais, causas_meio_transporte, causas_desmoronamento, causas_emergencia_medica, causas_queda_altura2m, causas_tentativa_suicidio, causas_queda_propria_altura, causas_afogamento, causas_agressao, causas_atropelamento, causas_choque_eletrico, causas_desabamento, causas_domestico, causas_esportivo, causas_intoxicacao, causas_queda_bicicleta, causas_queda_moto, causas_queda_nivel_2m, causas_trabalho, causas_transferencia, outras_causas, espontanea, comando_verbal, estimulo_doloroso, nenhuma, orientado, palavras_frase_apropriadas, conflito, palavras_inapropriadas, palavras_inapropriadas2, choro_persistente, palavras_incompreensiveis, sons_incompreensiveis, nenhuma_resposta_verbal, obedece_comandos, obedece_prontamente, localiza_dor, localiza_dor_ou_estimulo_tatil, movimento_de_retirada, retirada_do_segmento_estimulado, flexao_anormal, flexao_anormal2, extensao_anormal, extensao_anormal2, nenhuma_resposta_motora, ausencia, total_gcs_1, total_gcs_2, pressao_arterial1, pressao_arterial2, pulso, respiracao, pulsacao1, pulsacao2, temperatura, perfusao, anormal, normal, psiquiatrico, respiratorio, diabetes, obstetrico, transporte, prob_outros, localFerimento, lado, face, tipo, cabecaGrau, cabecaGrau2, cabecaGrau3, cabecaGrau4, pescoco_grau, tant_grau, tpos_grau, genital_grau, mid_direito_grau, mid_esquerdo_grau, msd_grau, mse_grau, Abdomem_sensivel_rigido, Afundamento_cranio, Agitacao, Apineia, Bradicardia, Bradipneia, Bronco_aspirando, Cianose_labios, Cianose_extremidade, Convulsao, Decorticacao, Deformidade, Descerebracao, Desmaio, Desvio_traqueia, Dispneia, Dor_local, Edema_generalizados, Edema_localizados, Enfisema_subcutaneo, Estase_jugular, Face_palida, Hipertensao, Hipotensao, Hemorragia_interna, Hemorragia_externa, Nauseas_vomitos, Nasoragia, Obito, Otorreia, OVACE, Parada_cardiaca, Parada_respiratoria, Priaprismo, Prurido_pele, Pupilas_anisocoria, Pupilas_isocoria, Pupilas_midriase, Pupilas_miose, Pupilas_reagente, Pupilas_nao_reagente, Sede, Sinal_battle, Sinal_guaxinim, Sudorese, Taquipneia, Taquicardia, Tontura, Outros, Deitada, Semi_deitada, Sentada, Aspiração, Avaliacao_Inicial, Avaliacao_Dirigida, Avaliacao_Continuada, Chave_de_Rautek, Canula_de_Guedel, Desobstrução_de_VA, Emprego_do_DEA, Gerenciamento_de_Riscos, Limpeza_de_Ferimento, Curativos, Compressivo, Encravamento, Ocular, Queimadura, Simples, Tres_pontas, Imobilizações, Membro_Inf_Dir, Membro_Inf_Esq, Membro_Sup_Dir, Membro_Sup_Esq, Quadril, Cervical, Maca_sobre_rodas, Maca_rigida, Ponte, Retirado_capacete, RCP, Rolamento_90, Rolamento_180, Tomada_decisao, Tratado_choque, Uso_de_canula, Uso_colar, Tam_colar, Uso_Ked, Uso_Ttf, Ventilacao_suporte, Oxigenioterapia, LPM, Reanimador, Meio_auxiliares, CELESC, Def_civil, Policia, Policia_Civil, Policia_Militar, Policia_PRE, Policia_PRF, Samu, EUA, USB, CIT, Digite, material, quantidade, material_extra, quantidade_extra, objetos_recolhidos, encontr_capacete, encontr_cinto, para_brisas_avariado, caminhando_na_cena, painel_avariado, volante_torcido, n_usd, n_ocorr, desp, km_final, cod_ir, cod_ps, h_ch, cod_sia_sus, medico_responsavel, socorrista1, socorrista2, socorrista3, demandante, equipe) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+$sql = "INSERT INTO ficha_ocorrencia (oq_aconteceu, aconteceu_outros_vezes, tempo_aconteceu, possui_problema_saude, quais_doencas, faz_uso_medicacao, horario_ultima_medicacao, quais_medicacoes, alergico_alguma_coisa, especificacao_alergia, ingeriu_limento_liquido, horas_ingeriu, dia, sexo_paciente, nome_hospital, nome_paciente, idade, fone, rg_cpf_paciente, nome_acompanhante, idade_acompanhante, local_ocorrencia, periodo_gestacao, faz_uso_medicacao_2, nome_medico, complicacoes, primeiro_filho, quantidade_filhos, inicio_contracoes, duracao_contracoes, intervalo_contracoes, pressao_evacuar, ruptura_bolsa, inspecao_visual, hora_nascimento, sexo_bebe, nome_bebe, causas_animais, causas_meio_transporte, causas_desmoronamento, causas_emergencia_medica, causas_queda_altura2m, causas_tentativa_suicidio, causas_queda_propria_altura, causas_afogamento, causas_agressao, causas_atropelamento, causas_choque_eletrico, causas_desabamento, causas_domestico, causas_esportivo, causas_intoxicacao, causas_queda_bicicleta, causas_queda_moto, causas_queda_nivel_2m, causas_trabalho, causas_transferencia, outras_causas, espontanea, comando_verbal, estimulo_doloroso, nenhuma, orientado, palavras_frase_apropriadas, conflito, palavras_inapropriadas, palavras_inapropriadas2, choro_persistente, palavras_incompreensiveis, sons_incompreensiveis, nenhuma_resposta_verbal, obedece_comandos, obedece_prontamente, localiza_dor, localiza_dor_ou_estimulo_tatil, movimento_de_retirada, retirada_do_segmento_estimulado, flexao_anormal, flexao_anormal2, extensao_anormal, extensao_anormal2, nenhuma_resposta_motora, ausencia, total_gcs_1, total_gcs_2, pressao_arterial1, pressao_arterial2, pulso, respiracao, pulsacao1, pulsacao2, temperatura, perfusao, anormal, normal, psiquiatrico, respiratorio, diabetes, obstetrico, transporte, prob_outros, localFerimento, lado, face, tipo, cabecaGrau, cabecaGrau2, cabecaGrau3, cabecaGrau4, pescocoGrau, pescocoGrau2, pescocoGrau3, pescocoGrau4, tantGrau, tantGrau2, tantGrau3, tantGrau4, tposGrau, tposGrau2, tposGrau3, tposGrau4, genitalGrau, genitalGrau2, genitalGrau3, genitalGrau4, middireitoGrau, middireitoGrau2, middireitoGrau3, middireitoGrau4, midesquerdoGrau, midesquerdoGrau2, midesquerdoGrau3, midesquerdoGrau4, msdGrau, msdGrau2, msdGrau3, msdGrau4, mseGrau, mseGrau2, mseGrau3, mseGrau4, Abdomem_sensivel_rigido, Afundamento_cranio, Agitacao, Apineia, Bradicardia, Bradipneia, Bronco_aspirando, Cianose_labios, Cianose_extremidade, Convulsao, Decorticacao, Deformidade, Descerebracao, Desmaio, Desvio_traqueia, Dispneia, Dor_local, Edema_generalizados, Edema_localizados, Enfisema_subcutaneo, Estase_jugular, Face_palida, Hipertensao, Hipotensao, Hemorragia_interna, Hemorragia_externa, Nauseas_vomitos, Nasoragia, Obito, Otorreia, OVACE, Parada_cardiaca, Parada_respiratoria, Priaprismo, Prurido_pele, Pupilas_anisocoria, Pupilas_isocoria, Pupilas_midriase, Pupilas_miose, Pupilas_reagente, Pupilas_nao_reagente, Sede, Sinal_battle, Sinal_guaxinim, Sudorese, Taquipneia, Taquicardia, Tontura, Outros, Deitada, Semi_deitada, Sentada, Aspiração, Avaliacao_Inicial, Avaliacao_Dirigida, Avaliacao_Continuada, Chave_de_Rautek, Canula_de_Guedel, Desobstrução_de_VA, Emprego_do_DEA, Gerenciamento_de_Riscos, Limpeza_de_Ferimento, Curativos, Compressivo, Encravamento, Ocular, Queimadura, Simples, Tres_pontas, Imobilizações, Membro_Inf_Dir, Membro_Inf_Esq, Membro_Sup_Dir, Membro_Sup_Esq, Quadril, Cervical, Maca_sobre_rodas, Maca_rigida, Ponte, Retirado_capacete, RCP, Rolamento_90, Rolamento_180, Tomada_decisao, Tratado_choque, Uso_de_canula, Uso_colar, tam_colar, Uso_Ked, Uso_Ttf, Ventilacao_suporte, Oxigenioterapia, Reanimador, Meio_auxiliares, CELESC, Def_civil, Policia, Policia_Civil, Policia_Militar, Policia_PRE, Policia_PRF, Samu, USA, USB, CIT, Digite, objetos_recolhidos, encontr_capacete, encontr_cinto, para_brisas_avariado, caminhando_na_cena, painel_avariado, volante_torcido, nUsd, n_ocorr, desp, km_final, cod_ir, cod_ps, h_ch, cod_sia_sus, medico_responsavel, socorrista1, socorrista2, socorrista3, demandante, equipe) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
 // Prepare a declaração
 $stmt = $conexao->prepare($sql);
@@ -287,7 +282,7 @@ $stmt = $conexao->prepare($sql);
 // Verifique se a declaração foi preparada com sucesso
 if ($stmt) {
     // Faça o binding dos parâmetros com os valores
-    $stmt->bind_param("sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss",
+    $stmt->bind_param("ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss",
         $oq_aconteceu, $aconteceu_outros_vezes, $tempo_aconteceu, $possui_problema_saude, $quais_doencas, $faz_uso_medicacao,
         $horario_ultima_medicacao, $quais_medicacoes, $alergico_alguma_coisa, $especificacao_alergia, $ingeriu_limento_liquido,
         $horas_ingeriu, $dia, $sexo_paciente, $nome_hospital, $nome_paciente, $idade, $fone, $rg_cpf_paciente, $nome_acompanhante,
@@ -315,10 +310,10 @@ if ($stmt) {
         $Canula_de_Guedel, $Desobstrução_de_VA, $Emprego_do_DEA, $Gerenciamento_de_Riscos, $Limpeza_de_Ferimento, $Curativos, $Compressivo, $Encravamento, 
         $Ocular, $Queimadura, $Simples, $Tres_pontas, $Imobilizações, $Membro_Inf_Dir, $Membro_Inf_Esq, $Membro_Sup_Dir, $Membro_Sup_Esq, $Quadril, $Cervical, 
         $Maca_sobre_rodas, $Maca_rigida, $Ponte, $Retirado_capacete, $RCP, $Rolamento_90, $Rolamento_180, $Tomada_decisao, $Tratado_choque, $Uso_de_canula, 
-        $Uso_colar, $Tam_colar, $Uso_Ked, $Uso_Ttf, $Ventilacao_suporte, $Oxigenioterapia, $LPM, $Reanimador, $Meio_auxiliares, $CELESC, $Def_civil, $Policia, 
-        $Policia_Civil, $Policia_Militar, $Policia_PRE, $Policia_PRF, $Samu, $EUA, $USB, $CIT, $Digite, $material, $quantidade, $material_extra, 
-        $quantidade_extra, $objetos_recolhidos, $encontr_capacete, $encontr_cinto, $para_brisas_avariado, $caminhando_na_cena, $painel_avariado, $volante_torcido, 
-        $n_usd, $n_ocorr, $desp, $km_final, $cod_ir, $cod_ps, $h_ch, $cod_sia_sus, $medico_responsavel, $socorrista1, $socorrista2, $socorrista3, $demandante, $equipe
+        $Uso_colar, $tam_colar, $Uso_Ked, $Uso_Ttf, $Ventilacao_suporte, $Oxigenioterapia, $Reanimador, $Meio_auxiliares, $CELESC, $Def_civil, $Policia, 
+        $Policia_Civil, $Policia_Militar, $Policia_PRE, $Policia_PRF, $Samu, $USA, $USB, $CIT, $Digite, 
+        $objetos_recolhidos, $encontr_capacete, $encontr_cinto, $para_brisas_avariado, $caminhando_na_cena, $painel_avariado, $volante_torcido, 
+        $nUsd, $n_ocorr, $desp, $km_final, $cod_ir, $cod_ps, $h_ch, $cod_sia_sus, $medico_responsavel, $socorrista1, $socorrista2, $socorrista3, $demandante, $equipe
         );
 
     // Execute a declaração

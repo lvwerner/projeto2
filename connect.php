@@ -1,8 +1,8 @@
 <?php
-$host = "localhost";
-$usuario = "root";
-$senha = "";
-$banco = "sa_bombeiros";
+$host = "localhostsql211.infinityfree.com";
+$usuario = "if0_35295512";
+$senha = "sabombinhas";
+$banco = "if0_35295512_sa_bombeiros";
 
 $conexao = new mysqli($host, $usuario, $senha, $banco);
 
