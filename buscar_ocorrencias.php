@@ -1,33 +1,41 @@
 <?php
-// Conexão com o banco de dados (substitua com suas configurações)
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "sa_bombeiros";
+// Inclua a conexão com o banco de dados
+include("connect.php"); // Substitua "conexao.php" pelo nome do arquivo de conexão real
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Verifique se o ID do bombeiro foi fornecido
+    if (isset($_POST['bombeiroId'])) {
+        // Obtenha o ID do bombeiro selecionado a partir do POST
+        $bombeiroId = $_POST['bombeiroId'];
 
-if ($conn->connect_error) {
-    die("Falha na conexão: " . $conn->connect_error);
-}
+        // Consulta SQL para buscar as ocorrências relacionadas ao bombeiro selecionado
+        $ocorrenciaQuery = "SELECT descricao FROM ficha_ocorrencia WHERE bombeiro = $bombeiroId";
 
-// Consulta para buscar as ocorrências
-$sql = "SELECT * FROM ficha_ocorrencia";
-$result = $conn->query($sql);
+        // Execute a consulta e obtenha os resultados
+        $ocorrenciaResult = $conn->query($ocorrenciaQuery);
 
-if ($result->num_rows > 0) {
-    $ocorrencias = array();
+        // Prepare um array para armazenar as ocorrências
+        $ocorrencias = array();
 
-    while ($row = $result->fetch_assoc()) {
-        $ocorrencias[] = $row;
+        if ($ocorrenciaResult) {
+            if ($ocorrenciaResult->num_rows > 0) {
+                while ($row = $ocorrenciaResult->fetch_assoc()) {
+                    $ocorrencias[] = $row;
+                }
+            }
+        } else {
+            // Trate erros na consulta
+            $ocorrencias = array("error" => "Erro na consulta.");
+        }
+
+        // Envie o array de ocorrências como resposta em formato JSON
+        header('Content-Type: application/json');
+        echo json_encode($ocorrencias);
+    } else {
+        // Trate o caso em que o ID do bombeiro não foi fornecido
+        echo json_encode(array("error" => "ID do bombeiro não fornecido."));
     }
-
-    // Retorna os dados no formato JSON
-    echo json_encode($ocorrencias);
 } else {
-    echo "Nenhuma ocorrência encontrada.";
+    // Trate outras solicitações (não POST)
+    echo json_encode(array("error" => "Método de solicitação inválido."));
 }
-
-$conn->close();
-?>
- 
