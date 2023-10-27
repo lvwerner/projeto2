@@ -15,7 +15,7 @@ function verificarAutenticacaoAtendente() {
 function conectarBancoDeDados() {
     $servername = "localhost";
     $username = "root";
-    $password = "";
+    $password = "root";
     $database = "sa_bombeiros";
 
     $conn = new mysqli($servername, $username, $password, $database);
@@ -185,7 +185,7 @@ $usuariosResult = $conn->query($usuariosQuery);
             <h5 class="card-header">Visualizar e Editar Usuários</h5>
             <div class="card-body">
                 <h5 class="card-title" id="card-title">Lista de Usuários</h5>
-                <table class="table table-striped">
+                <table class="table table-striped sm-col-6">
                     <thead>
                         <tr>
                             <th>ID do Bombeiro</th>
@@ -254,7 +254,7 @@ $usuariosResult = $conn->query($usuariosQuery);
                             <label for="novo_tipo">Tipo</label>
                             <select class="form-control" name="novo_tipo">
                                 <option value="atendente" <?php echo ($usuario["tipo"] === "atendente") ? "selected" : ""; ?>>Atendente</option>
-                                <option value="outro_tipo" <?php echo ($usuario["tipo"] !== "atendente") ? "selected" : ""; ?>>Outro Tipo</option>
+                                <option value="bombeiro" <?php echo ($usuario["tipo"] !== "atendente") ? "selected" : ""; ?>>Outro Tipo</option>
                             </select>
                         </div>
                         <button type="submit" class="btn btn-primary">Salvar Alterações</button>
