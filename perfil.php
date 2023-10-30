@@ -78,7 +78,7 @@
             exit();
         }
 
-        $mysqli = new mysqli("localhost", "root", "root", "sa_bombeiros");
+        $mysqli = new mysqli("localhost", "root", "", "sa_bombeiros");
 
         if ($mysqli->connect_error) {
             die("Erro de conexão com o banco de dados: " . $mysqli->connect_error);

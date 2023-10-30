@@ -15,7 +15,7 @@ function verificarAutenticacaoAtendente() {
 function conectarBancoDeDados() {
     $servername = "localhost";
     $username = "root";
-    $password = "root";
+    $password = "";
     $database = "sa_bombeiros";
 
     $conn = new mysqli($servername, $username, $password, $database);
