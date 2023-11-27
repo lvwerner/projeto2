@@ -254,7 +254,7 @@ $usuariosResult = $conn->query($usuariosQuery);
                             <label for="novo_tipo">Tipo</label>
                             <select class="form-control" name="novo_tipo">
                                 <option value="atendente" <?php echo ($usuario["tipo"] === "atendente") ? "selected" : ""; ?>>Atendente</option>
-                                <option value="bombeiro" <?php echo ($usuario["tipo"] !== "atendente") ? "selected" : ""; ?>>Outro Tipo</option>
+                                <option value="bombeiro" <?php echo ($usuario["tipo"] !== "atendente") ? "selected" : ""; ?>>Bombeiro</option>
                             </select>
                         </div>
                         <button type="submit" class="btn btn-primary">Salvar Alterações</button>
