@@ -274,18 +274,18 @@ $usuariosResult = $conn->query($usuariosQuery);
             <!-- Adicione o menu suspenso para selecionar um bombeiro pelo nome completo -->
             <select id="bombeiroSelect" class="form-select mb-3">
                 <option value="">Selecione um Bombeiro</option>
-                <?php
+                <option><?php
                 include("connect.php");
                 // Consulta para buscar os nomes de bombeiros distintos da tabela "usuario"
-                $bombeiroQuery = "SELECT id, nome_completo FROM usuarios";
+                $bombeiroQuery = "SELECT id_bombeiro, nome_completo FROM usuarios";
                 $bombeiroResult = $conn->query($bombeiroQuery);
                 if ($bombeiroResult->num_rows > 0) {
                     while ($row = $bombeiroResult->fetch_assoc()) {
                         // Exibe o nome completo do bombeiro na opção
-                        echo "<option value='" . $row["id"] . "'>" . $row["nome_completo"] . "</option>";
+                        echo "<option value='" . $row["id_bombeiro"] . "'>" . $row["nome_completo"] . "</option>";
                     }
                 }
-                ?>
+                ?></option>
             </select>
             <button class="btn btn-primary" id="ver-button">Ver</button>
             <a href="#" class="btn btn-primary">Gerar PDF</a>

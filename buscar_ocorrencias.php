@@ -2,40 +2,54 @@
 // Inclua a conexão com o banco de dados
 include("connect.php"); // Substitua "conexao.php" pelo nome do arquivo de conexão real
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Verifique se o ID do bombeiro foi fornecido
-    if (isset($_POST['bombeiroId'])) {
-        // Obtenha o ID do bombeiro selecionado a partir do POST
-        $bombeiroId = $_POST['bombeiroId'];
+// Consulta SQL para obter todos os dados e nomes de colunas da tabela ficha_ocorrencia
+$describeQuery = "DESCRIBE ficha_ocorrencia";
+$describeResult = $conn->query($describeQuery);
 
-        // Consulta SQL para buscar as ocorrências relacionadas ao bombeiro selecionado
-        $ocorrenciaQuery = "SELECT descricao FROM ficha_ocorrencia WHERE bombeiro = $bombeiroId";
+// Execute a consulta e obtenha os resultados das colunas da tabela
+$columnNames = array();
 
-        // Execute a consulta e obtenha os resultados
-        $ocorrenciaResult = $conn->query($ocorrenciaQuery);
-
-        // Prepare um array para armazenar as ocorrências
-        $ocorrencias = array();
-
-        if ($ocorrenciaResult) {
-            if ($ocorrenciaResult->num_rows > 0) {
-                while ($row = $ocorrenciaResult->fetch_assoc()) {
-                    $ocorrencias[] = $row;
-                }
-            }
-        } else {
-            // Trate erros na consulta
-            $ocorrencias = array("error" => "Erro na consulta.");
+if ($describeResult) {
+    if ($describeResult->num_rows > 0) {
+        while ($row = $describeResult->fetch_assoc()) {
+            $columnNames[] = $row['Field'];
         }
-
-        // Envie o array de ocorrências como resposta em formato JSON
-        header('Content-Type: application/json');
-        echo json_encode($ocorrencias);
-    } else {
-        // Trate o caso em que o ID do bombeiro não foi fornecido
-        echo json_encode(array("error" => "ID do bombeiro não fornecido."));
     }
 } else {
-    // Trate outras solicitações (não POST)
-    echo json_encode(array("error" => "Método de solicitação inválido."));
+    // Trate erros na consulta DESCRIBE
+    $columnNames = array("error" => "Erro ao obter nomes das colunas.");
 }
+
+// Consulta SQL para buscar todas as ocorrências da tabela ficha_ocorrencia
+$allDataQuery = "SELECT * FROM ficha_ocorrencia";
+$allDataResult = $conn->query($allDataQuery);
+
+// Prepare um array para armazenar todos os dados das ocorrências
+$allData = array();
+
+if ($allDataResult) {
+    if ($allDataResult->num_rows > 0) {
+        while ($row = $allDataResult->fetch_assoc()) {
+            $allData[] = $row;
+        }
+    }
+} else {
+    // Trate erros na consulta para buscar todos os dados
+    $allData = array("error" => "Erro ao buscar todos os dados.");
+}
+
+// Exibir os nomes das colunas
+echo "Nomes das colunas da tabela ficha_ocorrencia: <br>";
+foreach ($columnNames as $columnName) {
+    echo $columnName . "<br>";
+}
+
+// Exibir todos os dados da tabela ficha_ocorrencia
+echo "<br>Todos os dados da tabela ficha_ocorrencia: <br>";
+foreach ($allData as $data) {
+    foreach ($data as $key => $value) {
+        echo $key . ": " . $value . "<br>";
+    }
+    echo "<br>";
+}
+?>
