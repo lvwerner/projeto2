@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Atualize os dados do usuário no banco de dados se o ID for fornecido
     if ($editUsuarioId !== null) {
-        $atualizarQuery = "UPDATE usuarios SET nome_completo = '$novoNomeCompleto', email = '$novoEmail', cpf = '$novoCpf', senha = '$novaSenha', tipo = '$novoTipo' WHERE id_bombeiro = $editUsuarioId";
+        $atualizarQuery = "UPDATE usuarios SET nome_completo = '$novoNomeCompleto', email = '$novoEmail', cpf = '$novoCpf', senha = '$novaSenha', tipo = '$novoTipo' WHERE id = $editUsuarioId";
 
         if ($conn->query($atualizarQuery) === TRUE) {
             // Redirecione para a mesma página após a atualização
@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 // Consulta para buscar todos os usuários
-$usuariosQuery = "SELECT id_bombeiro, nome_completo, email, cpf, senha, tipo FROM usuarios";
+$usuariosQuery = "SELECT id, nome_completo, email, cpf, senha, tipo FROM usuarios";
 $usuariosResult = $conn->query($usuariosQuery);
 ?>
 
@@ -202,14 +202,14 @@ $usuariosResult = $conn->query($usuariosQuery);
                         if ($usuariosResult->num_rows > 0) {
                             while ($row = $usuariosResult->fetch_assoc()) {
                                 echo "<tr>";
-                                echo "<td>" . $row["id_bombeiro"] . "</td>";
+                                echo "<td>" . $row["id"] . "</td>";
                                 echo "<td>" . $row["nome_completo"] . "</td>";
                                 echo "<td>" . $row["email"] . "</td>";
                                 echo "<td>" . $row["cpf"] . "</td>";
                                 echo "<td>" . $row["senha"] . "</td>";
                                 echo "<td>" . $row["tipo"] . "</td>";
                                 // Adicione um botão para edição (vai para a mesma página com um parâmetro de ID)
-                                echo '<td><a href="?edit=' . $row["id_bombeiro"] . '" class="btn btn-primary">Editar</a></td>';
+                                echo '<td><a href="?edit=' . $row["id"] . '" class="btn btn-primary">Editar</a></td>';
                                 echo "</tr>";
                             }
                         } else {
@@ -225,7 +225,7 @@ $usuariosResult = $conn->query($usuariosQuery);
         <?php
         if ($editUsuarioId !== null) {
             // Recupera os dados do usuário com base no ID fornecido para edição
-            $query = "SELECT id_bombeiro, nome_completo, email, cpf, senha, tipo FROM usuarios WHERE id_bombeiro = $editUsuarioId";
+            $query = "SELECT id, nome_completo, email, cpf, senha, tipo FROM usuarios WHERE id = $editUsuarioId";
             $result = $conn->query($query);
             $usuario = $result->fetch_assoc();
         ?>
@@ -277,12 +277,12 @@ $usuariosResult = $conn->query($usuariosQuery);
                 <option><?php
                 include("connect.php");
                 // Consulta para buscar os nomes de bombeiros distintos da tabela "usuario"
-                $bombeiroQuery = "SELECT id_bombeiro, nome_completo FROM usuarios";
+                $bombeiroQuery = "SELECT id, nome_completo FROM usuarios";
                 $bombeiroResult = $conn->query($bombeiroQuery);
                 if ($bombeiroResult->num_rows > 0) {
                     while ($row = $bombeiroResult->fetch_assoc()) {
                         // Exibe o nome completo do bombeiro na opção
-                        echo "<option value='" . $row["id_bombeiro"] . "'>" . $row["nome_completo"] . "</option>";
+                        echo "<option value='" . $row["id"] . "'>" . $row["nome_completo"] . "</option>";
                     }
                 }
                 ?></option>

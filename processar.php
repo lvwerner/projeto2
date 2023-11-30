@@ -5,7 +5,7 @@ $conexao = include 'connect.php';
 // Recupere todas as variáveis dos dados enviados via POST
 $oq_aconteceu = $_POST['oq_aconteceu'];
 $aconteceu_outros_vezes = isset($_POST['aconteceu_outros_vezes']) ? 'Sim' : 'Não';
-$tempo_aconteceu = $_POST['tempo_aconteceu'];
+$tempo_aconteceu = if (isset(['tempo_aconteceu']), $_POST['tempo_aconteceu'], date("l jS \of F Y h:i:s A"));
 $possui_problema_saude = isset($_POST['possui_problema_saude']) ? 'Sim' : 'Não';
 $quais_doencas = $_POST['quais_doencas'];
 $faz_uso_medicacao = isset($_POST['faz_uso_medicacao']) ? 'Sim' : 'Não';
@@ -856,20 +856,29 @@ if ($stmt) {
         $nUsd, $n_ocorr, $desp, $km_final, $cod_ir, $cod_ps, $h_ch, $cod_sia_sus, $medico_responsavel, $socorrista1, $socorrista2, $socorrista3, $demandante, $equipe
         );
 
-    // Execute a declaração
-    if ($stmt->execute()) {
-        // Inserção bem-sucedida
-        echo "Inserção bem-sucedida no banco de dados.";
-    } else {
-        // Erro na inserção
-        echo "Erro ao inserir os dados no banco de dados: " . $stmt->error;
-    }
+        // Execute a declaração
+        if ($stmt->execute()) {
+            // Inserção bem-sucedida
+                echo "<script type='text/javascript'>
+                            alert('Inserção bem-sucedida no banco de dados.');
+                            window.location.href = 'ficha.html';
+                          </script>";
+        } else {
+            // Erro na inserção
+            echo "<script type='text/javascript'>
+                        alert('Erro ao inserir os dados no banco de dados: " . $stmt->error . "');
+                        window.location.href = 'ficha.html';
+                      </script>";
+        }
 
-    // Feche a declaração e a conexão com o banco de dados
-    $stmt->close();
-    $conexao->close();
-} else {
-    // Erro na preparação da declaração
-    echo "Erro na preparação da declaração: " . $conexao->error;
-}
-?>
+        // Feche a declaração e a conexão com o banco de dados
+        $stmt->close();
+        $conexao->close();
+    } else {
+        // Erro na preparação da declaração
+        echo "<script type='text/javascript'>
+                    alert('Erro na preparação da declaração: " . $conexao->error . "');
+                    window.location.href = 'ficha.html';
+                  </script>";
+    }
+    ?>
