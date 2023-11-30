@@ -5,7 +5,7 @@ $conexao = include 'connect.php';
 // Recupere todas as variáveis dos dados enviados via POST
 $oq_aconteceu = $_POST['oq_aconteceu'];
 $aconteceu_outros_vezes = isset($_POST['aconteceu_outros_vezes']) ? 'Sim' : 'Não';
-$tempo_aconteceu = if (isset(['tempo_aconteceu']), $_POST['tempo_aconteceu'], date("l jS \of F Y h:i:s A"));
+$tempo_aconteceu = isset($_POST['tempo_aconteceu']) ? $_POST['tempo_aconteceu'] : date("l jS \of F Y h:i:s A");
 $possui_problema_saude = isset($_POST['possui_problema_saude']) ? 'Sim' : 'Não';
 $quais_doencas = $_POST['quais_doencas'];
 $faz_uso_medicacao = isset($_POST['faz_uso_medicacao']) ? 'Sim' : 'Não';
