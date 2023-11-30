@@ -287,8 +287,8 @@ $usuariosResult = $conn->query($usuariosQuery);
                 }
                 ?></option>
             </select>
-            <button class="btn btn-primary" id="ver-button">Ver</button>
-            <a href="#" class="btn btn-primary">Gerar PDF</a>
+            <a href="buscar_ocorrencias.php"><button class="btn btn-primary" id="ver-button">Ver</button></a>
+            
         </div>
     </div>
     <div class="card card2">
@@ -326,9 +326,7 @@ $usuariosResult = $conn->query($usuariosQuery);
                             ocorrenciasList.append("<li class='list-group-item'>Nenhuma ocorrência encontrada para o bombeiro selecionado.</li>");
                         }
                     },
-                    error: function () {
-                        alert("Erro ao buscar as ocorrências.");
-                    }
+                    
                 });
             } else {
                 alert("Por favor, selecione um bombeiro.");
