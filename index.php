@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+// Verificar se a sessão não está ativa ou os dados do usuário não estão presentes
+if (!isset($_SESSION['cpf']) || !isset($_SESSION['tipo'])) {
+    // Redirecionar para a página de login
+    header("Location: login.html");
+    exit(); // Encerrar o script para evitar execução adicional
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -16,10 +27,10 @@
 <body id="body">
     <nav id="navbarra" class="navbar navbar-expand-lg d-none d-lg-block">
         <div class="container">
-            <a class="navbar-brand mb-0 h1" href="ficha.html">Ficha de Ocorrência</a>
+            <a class="navbar-brand mb-0 h1" href="index.php">Ficha de Ocorrência</a>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="ficha.html">Página Inicial</a>
+                    <a class="nav-link" href="index.php">Página Inicial</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="perfil.php">Perfil</a>
@@ -66,7 +77,7 @@
             <div class="offcanvas-body">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="ficha.html">Página Inicial</a>
+                        <a class="nav-link" href="index.php">Página Inicial</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="perfil.php">Perfil</a>

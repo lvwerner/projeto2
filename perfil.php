@@ -1,3 +1,12 @@
+<?php
+        session_start();
+
+        // Se o usuário não estiver logado, redirecionar para a página de login
+        if (!isset($_SESSION['cpf'])) {
+            header("Location: login.html");
+            exit();
+        }
+        ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,15 +53,15 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav id="navbarra" class="navbar navbar-expand-lg d-none d-lg-block">
         <div class="container">
-            <a class="navbar-brand mb-0 h1" href="#">Ficha de Ocorrência</a>
+            <a class="navbar-brand mb-0 h1" href="index.php">Ficha de Ocorrência</a>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="ficha.html">Página Inicial</a>
+                    <a class="nav-link" href="index.php">Página Inicial</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="perfil.html">Perfil</a>
+                    <a class="nav-link" href="perfil.php">Perfil</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="login.html">Login</a>
@@ -63,22 +72,66 @@
                 <form action="logout.php" method="post">
                     <input type="submit" name="logout" value="Sair" class="logout-button nav-link" />
                 </form>
+
             </ul>
         </div>
     </nav>
+    <!-- Menu em offcanva -->
+    <!-- Breve explicação das classes
+                - d-lg-none: Indica ao Bootstrap que este menu offcanvas não irá aparecer em telas maiores que 992px.
+                - navbar-toggler: Indica ao Bootstrap que este é um botão de alternância.
+                - data-bs-toggle: Indica que este botão será utilizado para alternar a visibilidade do offcanvas.
+                - data-bs-target: Indica qual elemento terá sua visibilidade alternada.
+                - offcanvas-start: Indica que o menu offcanvas deve começar com seus elementos alinhados à esquerda da tela.
+                - aria-label: É utilizado para melhorar a acessibilidade da página da web.
+            -->
+    <div class="d-lg-none">
+
+        <nav class="navbar navbar-light bg-light">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="#">S.A. Bombeiros</a>
+            </div>
+        </nav>
+
+        <div class="offcanvas offcanvas-start" id="offcanvasNav">
+
+            <div class="offcanvas-header">
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+            </div>
+
+            <div class="offcanvas-body">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php">Página Inicial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="perfil.php">Perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="atendente.php">Atendimento</a>
+                    </li>
+                </ul>
+                <form action="logout.php" method="post">
+                    <input type="submit" name="logout" value="Sair" class="logout-button nav-link" />
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+    </header>
     
-
     <div class="container user-data">
-        <?php
-        session_start();
+       <?php
 
-        // Se o usuário não estiver logado, redirecionar para a página de login
-        if (!isset($_SESSION['cpf'])) {
-            header("Location: login.html");
-            exit();
-        }
-
-        $mysqli = new mysqli("localhost", "root", "root", "sa_bombeiros");
+        $mysqli = new mysqli("localhost", "root", "", "sa_bombeiros");
 
         if ($mysqli->connect_error) {
             die("Erro de conexão com o banco de dados: " . $mysqli->connect_error);

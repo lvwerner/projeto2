@@ -22,15 +22,31 @@
     .erro>img{
         width: 80%;
         position: relative;
-
+        justify-content: center;
+    }
+    .btn{
+        border-radius: 15px;
+        border: 1px solid #000;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        background-color: #070e69;
+        color: aliceblue;
+        margin-left: 45%;
+        cursor: pointer;
+    }
+    .btn:hover{
+        background-color: rgb(7, 116, 211);
+        color: #fff;
     }
 </style>
 <body>
     <div class="erro"> 
         <img src="erro.png" >
         <p>Ops...<br> Parece que você não tem permissão<br> para acessar essa página</p>
-
     </div>
+    <a href="index.php"><button class="btn">Voltar a página inicial</button></a>
+
     
 </body>
 </html>

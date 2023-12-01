@@ -28,15 +28,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['cpf'] = $cpf;
                 $_SESSION['tipo'] = 'atendente';
 
-                // Redirecionar para a página protegida (ficha.html)
-                header("Location: ficha.html");
+                // Redirecionar para a página protegida (index.php)
+                header("Location: index.php");
             } elseif ($usuario['tipo'] == 'bombeiro') {
                 // Login bem-sucedido para bombeiro, criar uma sessão
                 $_SESSION['cpf'] = $cpf;
                 $_SESSION['tipo'] = 'bombeiro'; 
 
                 // Redirecionar para a página protegida (outras.html) para bombeiros
-                header("Location: ficha.html");
+                header("Location: index.php");
             }
         } else {
             // Login falhou, redirecionar para a página de login novamente
@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['cpf'] = $cpf;
 
             // Redirecionar para a página protegida (outras.html) para bombeiros
-            header("Location: ficha.html");
+            header("Location: index.php");
         } else {
             // Erro no cadastro, redirecionar para a página de cadastro novamente
             header("Location: cadastro.html");

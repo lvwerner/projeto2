@@ -15,7 +15,7 @@ function verificarAutenticacaoAtendente() {
 function conectarBancoDeDados() {
     $servername = "localhost";
     $username = "root";
-    $password = "root";
+    $password = "";
     $database = "sa_bombeiros";
 
     $conn = new mysqli($servername, $username, $password, $database);
@@ -107,10 +107,10 @@ $usuariosResult = $conn->query($usuariosQuery);
 <body>
 <nav id="navbarra" class="navbar navbar-expand-lg d-none d-lg-block">
         <div class="container">
-            <a class="navbar-brand mb-0 h1" href="ficha.html">Ficha de Ocorrência</a>
+            <a class="navbar-brand mb-0 h1" href="index.php">Ficha de Ocorrência</a>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="ficha.html">Página Inicial</a>
+                    <a class="nav-link" href="index.php">Página Inicial</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="perfil.php">Perfil</a>
@@ -157,7 +157,7 @@ $usuariosResult = $conn->query($usuariosQuery);
             <div class="offcanvas-body">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="ficha.html">Página Inicial</a>
+                        <a class="nav-link" href="index.php">Página Inicial</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="perfil.php">Perfil</a>
@@ -291,14 +291,7 @@ $usuariosResult = $conn->query($usuariosQuery);
             
         </div>
     </div>
-    <div class="card card2">
-        <h5 class="card-header">Ocorrências</h5>
-        <div class="card-body">
-            <h5 class="card-title" id="card-title">Histórico</h5>
-            <ul id="ocorrencias-list" class="list-group"></ul>
-        </div>
-    </div>
-</div>
+    
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>

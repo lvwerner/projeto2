@@ -861,13 +861,13 @@ if ($stmt) {
             // Inserção bem-sucedida
                 echo "<script type='text/javascript'>
                             alert('Inserção bem-sucedida no banco de dados.');
-                            window.location.href = 'ficha.html';
+                            window.location.href = 'index.php';
                           </script>";
         } else {
             // Erro na inserção
             echo "<script type='text/javascript'>
                         alert('Erro ao inserir os dados no banco de dados: " . $stmt->error . "');
-                        window.location.href = 'ficha.html';
+                        window.location.href = 'index.php';
                       </script>";
         }
 
@@ -878,7 +878,7 @@ if ($stmt) {
         // Erro na preparação da declaração
         echo "<script type='text/javascript'>
                     alert('Erro na preparação da declaração: " . $conexao->error . "');
-                    window.location.href = 'ficha.html';
+                    window.location.href = 'index.php';
                   </script>";
     }
     ?>
