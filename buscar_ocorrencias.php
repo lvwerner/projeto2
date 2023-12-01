@@ -1,55 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dados da Tabela</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
 <?php
-// Inclua a conexão com o banco de dados
-include("connect.php"); // Substitua "conexao.php" pelo nome do arquivo de conexão real
+// Configurações do banco de dados
+$servername = "localhost";
+$username = "root";
+$password = "root";
+$dbname = "sa_bombeiros"; // Nome do seu banco de dados
+$tablename = "ficha_ocorrencia"; // Nome da tabela a ser exibida
 
-// Consulta SQL para obter todos os dados e nomes de colunas da tabela ficha_ocorrencia
-$describeQuery = "DESCRIBE ficha_ocorrencia";
-$describeResult = $conn->query($describeQuery);
+// Cria a conexão com o banco de dados
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-// Execute a consulta e obtenha os resultados das colunas da tabela
-$columnNames = array();
+// Verifica a conexão
+if ($conn->connect_error) {
+    die("Erro na conexão com o banco de dados: " . $conn->connect_error);
+}
 
-if ($describeResult) {
-    if ($describeResult->num_rows > 0) {
-        while ($row = $describeResult->fetch_assoc()) {
-            $columnNames[] = $row['Field'];
+// Consulta SQL para selecionar todos os dados da tabela
+$sql = "SELECT * FROM $tablename";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    echo "<table><tr>";
+    // Exibe o cabeçalho da tabela com o nome das colunas
+    while ($row = $result->fetch_assoc()) {
+        foreach ($row as $key => $value) {
+            echo "<th>" . htmlspecialchars($key) . "</th>";
         }
+        break; // Apenas exibe o cabeçalho uma vez
     }
-} else {
-    // Trate erros na consulta DESCRIBE
-    $columnNames = array("error" => "Erro ao obter nomes das colunas.");
-}
+    echo "</tr>";
 
-// Consulta SQL para buscar todas as ocorrências da tabela ficha_ocorrencia
-$allDataQuery = "SELECT * FROM ficha_ocorrencia";
-$allDataResult = $conn->query($allDataQuery);
-
-// Prepare um array para armazenar todos os dados das ocorrências
-$allData = array();
-
-if ($allDataResult) {
-    if ($allDataResult->num_rows > 0) {
-        while ($row = $allDataResult->fetch_assoc()) {
-            $allData[] = $row;
+    // Exibe os dados da tabela
+    while ($row = $result->fetch_assoc()) {
+        echo "<tr>";
+        foreach ($row as $value) {
+            echo "<td>" . htmlspecialchars($value) . "</td>";
         }
+        echo "</tr>";
     }
+    echo "</table>";
 } else {
-    // Trate erros na consulta para buscar todos os dados
-    $allData = array("error" => "Erro ao buscar todos os dados.");
+    echo "Nenhum resultado encontrado na tabela '$tablename'.";
 }
 
-// Exibir os nomes das colunas
-echo "Nomes das colunas da tabela ficha_ocorrencia: <br>";
-foreach ($columnNames as $columnName) {
-    echo $columnName . "<br>";
-}
-
-// Exibir todos os dados da tabela ficha_ocorrencia
-echo "<br>Todos os dados da tabela ficha_ocorrencia: <br>";
-foreach ($allData as $data) {
-    foreach ($data as $key => $value) {
-        echo $key . ": " . $value . "<br>";
-    }
-    echo "<br>";
-}
+// Fecha a conexão com o banco de dados
+$conn->close();
 ?>
+
+</body>
+</html>
